@@ -5,7 +5,6 @@ date: 2019-02-15 +13:00
 published: false
 category: Dev
 tags: [spfx, sharepoint, sharedlibraries, spfxextensions, spfxwebparts, typescript, npm]
-image: /img/hello_world.jpeg
 ---
 
 The SharePoint Framework is **a complicated beast**, and there are a multitude of concepts that [this relatively new developer](https://nateforsyth.github.io/2019-02-14-from-dot-net-to-sharepoint/) has been struggling to understand.
@@ -43,16 +42,18 @@ I've used up a huge amount of my product development time this month on this top
 
 I very much doubt it, but I am very happy with what I've implemented.
 
+We now have a simple shared TypeScript _lbrary_ project that is built using Azure Pipelines CI and published to an Azure Artifacts feed. Configuring the feed with upstream sources enabled me to use that feed as an <b>npm</b> Registry replacement.
+
+We can simply <i>npm install project_name@latest</i> and access the _private_ shared code project including typings directly, along with all of the other lovely npm functionality that comes with an implementation such as this.
+
 The solution works very well for our needs and has allowed us to build a shared code project that has been deployed independently of our production SPFx Web Part and Extension project**s**.
 
-The shared project is built using Azure Pipelines and published to an Azure Artifacts feed. Configuring the feed with upstream sources enabled me to use that feed as an <b>npm</b> Registry replacement.
+## Has there been any tangible benefit from this exercise?
 
-## The end result
+Absolutely! Though I am not sure that this approach will work for everyones' use case.
 
 With this decoupling comes much better code re-use and complete [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) from the consuming projects. This separation has been at the behest of ease of debugging though - I'm still trying to figure out how best to handle this outside of Unit Testing.
 
-The end result is the ability to simply <i>npm install project_name@latest</i> and access the shared code project including typings directly, along with all of the other lovely npm functionality that comes with an implementation such as this.
+This was a long process and there are many steps that, I'm sure you can tell, have not even been mentioned in this post. Check back for new posts where I will go into detail about how this was implemented, configured within Azure DevOps CI to build and publish the project package, and consumed within our SPFx projects...
 
-This was a long process and there are many steps that I've not even mentioned in this post. Check back for part two where I will go into further detail about how this was implemented, consumed within our SPFx projects, and configured within Azure DevOps CI to build and publish the project...
-
-When I get around to writing it that is!
+...when I get around to writing them that is...
