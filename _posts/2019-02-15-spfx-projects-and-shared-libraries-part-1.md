@@ -22,7 +22,7 @@ I began scratching the surface, and boy was I surprised...
 
 ## Shared Libraries aren't supported within the SharePoint Framework - wait, what???
 
-Once you've spent a few months within the [SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview) you'll no doubt become familiar with what I have; **there's no _supported_ way to share your code between multiple projects**.
+Once you've spent a few months within the [SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview) you'll no doubt become familiar with what I have; **there's no _supported_ way to share your code between multiple projects** (yet).
 
 You'll have:  
 * Multiple projects.  
