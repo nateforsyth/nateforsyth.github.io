@@ -77,13 +77,13 @@ social-network-links:
   github: nateforsyth
   twitter: nathanforsyth
   reddit: sendintheotherclowns
-#  google-plus: +DeanAttali
+#  google-plus: +yourname
   linkedin: nateforsyth
 #  xing: yourname
-#  stackoverflow: "3943160/daattali"
-#  snapchat: deanat78
-#  instagram: deanat78
-#  youtube: user/deanat78
+#  stackoverflow: "yourname"
+#  snapchat: yourname
+#  instagram: yourname
+#  youtube: yourname
 #  spotify: yourname
 #  telephone: +14159998888
 #  steam: deanat78
@@ -124,7 +124,7 @@ url-pretty: "https://www.linkedin.com/in/nateforsyth/"  # eg. "deanattali.com/be
 # --- Comments --- #
 
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-# disqus: ""
+# disqus: "https-nateforsyth-github-io"
 
 # To use Facebook Comments, fill in a Facebook App ID
 # fb_comment_id: ""
