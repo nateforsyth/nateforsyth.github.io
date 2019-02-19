@@ -26,10 +26,10 @@ Once you've spent a few months within the [SharePoint Framework](https://docs.mi
 You'll have:  
 * Multiple projects.  
 * Multiple copies of _similar_ code implementations, be they utility functions, service wrappers for the various SharePoint APIs, or SharePoint Search query builders.  
-* Projects near identical utility functionality that _really should be shared_.
+* Projects with near identical utility functionality that _really should be shared_.
 
 There are many people much smarter than I am, that much is obvious. Some have even blogged about this very topic of course, but from the perspective of a Production solution, I've found what I've been reading to be either:  
-* [Overly generalised for production use](https://disq.us/url?url=https%3A%2F%2Fpaulryan.com.au%2F2017%2Fspfx-packaging-sharing-code-web-parts-extensions%2F%3AX9WxEr9F3Mfr4h8DWkrfZXXmG64&cuid=4032940) and unacceptable for our clients:  
+* [Overly generalised for production use](https://disq.us/url?url=https%3A%2F%2Fpaulryan.com.au%2F2017%2Fspfx-packaging-sharing-code-web-parts-extensions%2F%3AX9WxEr9F3Mfr4h8DWkrfZXXmG64&cuid=4032940) and unacceptable for _our_ clients:  
   >So take my word for it, add all your SPFx components to a single package and create multi-component bundles  
   
   Our clients pay only for specific component bundles. Bundling them all together opens us up to having to contractually support a component they've not paid for, but have managed to access through potential user error.
@@ -42,7 +42,7 @@ I've used up a huge amount of my product development time this month on this top
 
 I very much doubt it, but I am very happy with what I've implemented.
 
-We now have a simple shared TypeScript _lbrary_ project that is built using Azure Pipelines CI and published to an Azure Artifacts feed. Configuring the feed with upstream sources enabled me to use that feed as an <b>npm</b> Registry replacement.
+We now have a simple shared TypeScript _library_ project that is built using Azure Pipelines CI and published to an Azure Artifacts feed. Configuring the feed with upstream sources enabled me to use that feed as an <b>npm</b> Registry replacement.
 
 We can simply <i>npm install project_name@latest</i> and access the _private_ shared code project including typings directly, along with all of the other lovely npm functionality that comes with an implementation such as this.
 
