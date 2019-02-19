@@ -2,7 +2,7 @@
 layout: post
 title: SPFx projects and Shared Libraries - numero uno
 date: 2019-02-15 +13:00
-published: false
+published: true
 category: Dev
 tags: [spfx, sharepoint, sharedlibraries, spfxextensions, spfxwebparts, typescript, npm]
 ---
