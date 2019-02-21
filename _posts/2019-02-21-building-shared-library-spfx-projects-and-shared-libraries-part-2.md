@@ -15,6 +15,7 @@ It's now time to continue...
 
 - A litle more about what I do.
 - What the actual requirements of the Shared Code project were.
+- What was already tried.
 - The type of project chosen to meet those needs, and why.
 - Scaffolding and configuration of the project.
 - Early issues that were encountered.
@@ -44,24 +45,42 @@ It's probably worth a few more notes on each of the requirements.
 
 ### One shared code project for all service implementations including API wrappers.
 
+It was abundantly clear that the divergent code for our API wrappers, Utilities and other miscellaneous functionality was going to become a problem; having copies of SPOListManipulationService within 3 different Web Part projects, differing only by the fields that were being returned in the shaped data, quickly became a pain to maintain when changes were made in one and not another.
 
+Let's not even talk about when dependencies change or Microsoft makes an update.
 
-### Centralised storage of a built package accessible by any legacy or new SPFx project we use.
+### Centralised storage of a built package accessible by any legacy or _new_ SPFx project we use.
 
+We quite simply wanted an [npm](https://www.npmjs.com/) like experience, without having to use a private npm account. We needed to have a single package that we could rebuild as often as necessary, containing our shared code assets, that was always accessible.
 
+As mentioned below, we've got Azure DevOps and are working within Microsoft stacks; any centralised solution needed to leverage what we've already got.
 
 ### The end package and where it was stored had to be private to the company.
 
-We've done a significant amount of development on our custom solutions, and keeping our IP private is the top priority.
+We've done a significant amount of development on our custom solutions, and keeping our IP out of the public domain is of top priority.
 
 ### The chosen solution _should_ use our existing resources and not unnecessarily cost more money.
 
 We're a relatively new company and it's logical to keep costs as low as possible. In addition, we have the new equivalent of Visual Studio Online Enterprise subscriptions and MSDN benefits; it makes sense to leverage Azure DevOps, our existing Azure subscriptions as well as our existing Office 365 licences as much as possible.
 
+## What was already tried.
+
+My first forays into finding a solution for this problem revolved around using the SharePoint Framework, and building it as a Library. On the surface this appeared to be as simple as creating a new SPFx project and updating the manifest _componentType_ to Library (instead of _WebPart_ or _Extension_).
+
+I used the very good tutorial [Building shared code in SharePoint Framework - revisited](https://blog.mastykarz.nl/building-shared-code-sharepoint-framework-revisited/) by Waldek Mastykarz to get started, but as alluded to in my previous post, this approach isn't supported at the moment.
+
+>While the concept of SharePoint Framework libraries is powerful and encourages reusing common code, at this moment, it isn't supported beyond the local workbench. First of all, the current version of the SharePoint Framework Yeoman generator doesn't support packaging projects that define components. Even if you managed to create an .sppkg file for your library, you will get an error if you try to install it to the App Catalog in your SharePoint tenant, which is required for the library to be correctly loaded by your web parts.
+
+What we needed was a production solution, an unsupported solution wasn't going to cut it.
+
 
 ## The type of project chosen to meet those needs, and why.
 
+My next course of action was to investigate using a simpler structure. My research kept coming back to a very simple concept; use a TypeScript project.
 
+Further analysis on what was possible highlighted that it _should_ be trivial to package a TypeScript project as an npm package, and persist it centrally. I still hadn't realised I could use Azure DevOps.
+
+TypeScript was settled upon due to my comfort with the language, as well as the development environment. It's also what is used within our SPFx projects. It was a no-brainer.
 
 
 ## Scaffolding and configuration of the project.
