@@ -1,16 +1,44 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Career changes are fun, albeit pretty tough!
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+My name is Nate, and I am a junior-intermediate level SharePoint Developer. I'm kinda obsessed with software development and anything technology related. I live in Christchurch, New Zealand.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+My current focus is on the following:
 
-What else do you need?
+- SharePoint Framework (SPFx)
+- React
+- PowerShell
+- Automation
+- Scripted SharePoint tenant administration
+- Azure DevOps
 
 ### my history
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+I changed paths after plateauing in my previous data analysis career. Automation of Excel using VBA awoke a passion within me and I simply couldn't resist it.
+
+I left the previous career in June 2015 after spending three months studying part time in the evenings - full-time structured studies was what was needed to kick start my ambition.
+
+Fast-forward to October 2016 and I finally graduated with a National Diploma in Advanced Software Development, focusing on C# and Java, amonng other technologies.
+
+Re-wind to early 2016, a Farmer approached me whom required a solution to his irrigation scheduling issues in the looming shadow of a legislation change. The culmination of this scenario was a project lasting two years, whereby I built a bespoke ASP.NET Web Application to handle this particular business challenge.
+
+Things went very well with the product, and there were appearances at multiple successful trade shows. Unfortunately none of those turned into sales, much to my dismay. In a nutshell, the business fell flat and although I was left with the technology, sans a competent business partner the options dried up. Many legal bills bled me dry within the 2017 financial year, which necessitated me putting my aspirations aside to do some actual earning.
+
+While the business side of things didn't work out, what it did do was give me a lot of very quick, focused real-world experience. Of course it wasn't as good as working with a mentor, but it sufficed to jump start this career change.
+
+### what I do now
+
+I am currently working for a small professional services company building custom SharePoint WebParts and Extensions including navigation down to individual React component level. My focus has been on replicating default Microsoft ootb look-and-feel while adding extensive additional functionality.
+
+You want a News roll-up function? Microsoft already provides one of those. Oh, you want to be able to filter the existing News items on your SharePoint Communications Site? That's where I come in!
+
+On top of that I have a particular love for automation of repetitive tasks. I've been intimately involved with the automation of complete SharePoint tenant provisioning and customisation using PowerShell, specifically ootb SPO libraries and open source PnP.
+
+### what else is there?
+
+I absolutely love the outdoors, though opportunities are getting harder to come by as I get busier and busier - playing 4 years of catch up ya know? I love mountain biking, martial arts and rugby league, and travel as often as I can.
+
+I enjoy all facets of technology, and enjoy winding down after a long day with a couple of beers and a session in VR.
