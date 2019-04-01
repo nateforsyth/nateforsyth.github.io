@@ -14,7 +14,7 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: Dreams of .NET
+title: Dreams of .DEV
 
 # Short description of your site
 description: A journey in code!
@@ -99,7 +99,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "https://www.linkedin.com/in/nateforsyth/"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "https://dreamsof.dev"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Web Statistics Section --- #
 
@@ -124,7 +124,7 @@ url-pretty: "https://www.linkedin.com/in/nateforsyth/"  # eg. "deanattali.com/be
 # --- Comments --- #
 
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-# disqus: "https-nateforsyth-github-io"
+disqus: "https-nateforsyth-github-io"
 
 # To use Facebook Comments, fill in a Facebook App ID
 # fb_comment_id: ""
