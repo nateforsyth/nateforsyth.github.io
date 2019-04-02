@@ -23,6 +23,7 @@ description: A journey in code!
 
 # List of links in the navigation bar
 navbar-links:
+  Resume: "resume"
   About Me: "aboutme"
   Resources:
     - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
