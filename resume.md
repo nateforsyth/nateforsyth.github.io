@@ -10,6 +10,8 @@ After a complete change of career path in mid 2014, I’ve stumbled upon SharePo
 
 I wish to take a deep dive within large scale businesses into SharePoint and the .NET Framework while further refining my Web Application development and Microsoft Azure skills. I am also keenly interested in opportunities to jump into Android development, whether native or cross-platform.
 
+My SharePoint focus and daily goal is to adhere to UX guidelines, maintain default Microsoft styling, all while extending existing functionality; do you want a replacement News WebPart, with category and department filtering, custom Content Type mapped to Search Centre Managed Properties, all while looking like a "stock" component so that your users won't know the difference? **I'm your man.**
+
 I believe that my previous business experience & technical skill-set, and love of and aptitude in software development has set me up for a bright future within these fields; for these reasons I believe that I would be a prime candidate to be employed by your company.
 
 
