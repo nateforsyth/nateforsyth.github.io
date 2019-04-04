@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Nate Forsyth
-subtitle: My Resume
+subtitle: Resume
 ---
 
 ## Career Objective
