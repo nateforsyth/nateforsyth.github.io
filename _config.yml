@@ -26,10 +26,14 @@ navbar-links:
   Resume: "resume"
   About Me: "aboutme"
   Resources:
-    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
+    - SharePoint Framework (SPFx): "https://docs.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview"
+    - MS Office Fabric UI: "https://developer.microsoft.com/en-us/fabric#/styles/colors"
+    - SharePoint PnP PowerShell: "https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/add-pnpalert?view=sharepoint-ps"
+    - SharePoint Online PowerShell: "https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/?view=sharepoint-ps"
+    - Beautiful Jekyll (this theme): "http://deanattali.com/beautiful-jekyll/"
     - Learn markdown: "http://www.markdowntutorial.com/"
     - GitHub Pages: "https://pages.github.com/"
-  Author's home: "https://www.linkedin.com/in/nateforsyth/"
+  LinkedIn: "https://www.linkedin.com/in/nateforsyth/"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
