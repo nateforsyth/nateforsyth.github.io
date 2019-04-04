@@ -18,8 +18,6 @@ Please refer to the About Me page.
 
 ## Technical Summary
 
-<div class="row">
-    <div class="col-md-6">
 ### SharePoint
 
 - Configuration.
@@ -33,9 +31,8 @@ Please refer to the About Me page.
 - Information Architecture configuration including (but not limited to).
   - Site Columns.
   - Site Content Types.
-    </div>
-    <div class="col-md-6">
-###Powershell
+
+### Powershell
 
 - Automated SharePoint tenant provisioning using.
   - Microsoft SPO cmdlets.
@@ -46,8 +43,6 @@ Please refer to the About Me page.
   - Team Sites.
   - Communications Sites.
 - Site administration.
-    </div>
-</div>
 
 
 
