@@ -116,32 +116,32 @@ Please refer to the [About Me](https://dreamsof.dev/aboutme) page.
 - API and Azure Function end-point consumption
 
 
-### Microsoft Azure;
-- Application Insights.
-- Azure App Service with elastic scaling on demand.
+### Microsoft Azure
+- Application Insights
+- Azure App Service with elastic scaling on demand
 - Azure Blob Storage
-  - Configured with FTP.
-  - Daily backups.
-- Azure SQL Server configured with Geo Replication.
-- Azure Virtual Machines; FTP and remote development environment.
-- Azure Functions.
-- Azure Active Directory App Registrations.
-- Azure DevOps.
-  - Agile Methodology.
-  - Sprints, Teams, and Work Items.
-  - Source Control.
-  - Build Pipelines.
-  - npm Registry override.
-  - Artifacts.
-  - Artifact publishing to Blob Storage.
-  - Continuous Integration.
-- Azure WebJobs for overnight calculations and data acquisition from Azure VM FTP.
-- Continuous Delivery from Master branch of VSO repository.
-- Deployment Slots; Staging and Production.
-- Identity and Roles based authentication utilising OAuth2 and the Microsoft Identity API.
-- SendGrid email integration.
-- SSL Certificates.
-- Telemetry.
+  - Configured with FTP
+  - Daily backups
+- Azure SQL Server configured with Geo Replication
+- Azure Virtual Machines; FTP and remote development environment
+- Azure Functions
+- Azure Active Directory App Registrations
+- Azure DevOps
+  - Agile Methodology
+  - Sprints, Teams, and Work Items
+  - Source Control
+  - Build Pipelines
+  - npm Registry override
+  - Artifacts
+  - Artifact publishing to Blob Storage
+  - Continuous Integration
+- Azure WebJobs for overnight calculations and data acquisition from Azure VM FTP
+- Continuous Delivery from Master branch of VSO repository
+- Deployment Slots; Staging and Production
+- Identity and Roles based authentication utilising OAuth2 and the Microsoft Identity API
+- SendGrid email integration
+- SSL Certificates
+- Telemetry
 
 
 ## Employment Summary, Qualifications and Referees are available upon request.
