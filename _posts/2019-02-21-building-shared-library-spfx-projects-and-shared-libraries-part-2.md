@@ -93,6 +93,11 @@ Further analysis on what was possible highlighted that it _should_ be trivial to
 TypeScript was settled upon due to my comfort with the language, as well as the development environment. It's also what is used within our SPFx projects. It was a no-brainer.
 
 
-## This post has ended up much longer than I'd hoped, I'll continue in part 3. Until next time...
+This post has ended up much longer than I'd hoped, I'll continue in part 3, where we'll cover...
 
+- Scaffolding and configuration of the project.
+- Early issues that were encountered.
+- building the project.
+
+## Until next time...
 
