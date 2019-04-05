@@ -17,9 +17,9 @@ It's now time to continue...
 - What the actual requirements of the Shared Code project were.
 - What was already tried.
 - The type of project chosen to meet those needs, and why.
-- Scaffolding and configuration of the project.
-- Early issues that were encountered.
-- building the project.
+- ~~Scaffolding and configuration of the project.~~
+- ~~Early issues that were encountered.~~
+- ~~building the project.~~
 
 ## A litle more about what I do.
 
@@ -71,7 +71,17 @@ I used the very good tutorial [Building shared code in SharePoint Framework - re
 
 >While the concept of SharePoint Framework libraries is powerful and encourages reusing common code, at this moment, it isn't supported beyond the local workbench. First of all, the current version of the SharePoint Framework Yeoman generator doesn't support packaging projects that define components. Even if you managed to create an .sppkg file for your library, you will get an error if you try to install it to the App Catalog in your SharePoint tenant, which is required for the library to be correctly loaded by your web parts.
 
-What we needed was a production solution, an unsupported solution wasn't going to cut it.
+~~What we needed was a production solution, an unsupported solution wasn't going to cut it.~~
+
+Scratch that...
+
+Microsoft has recently announced that [SPFx 1.8 has been released to general availability](https://developer.microsoft.com/en-us/sharepoint/blogs/announcing-the-general-availability-of-sharepoint-framework-1-8/), and with it comes (preview) Library Components.
+
+> A common request for developers creating multiple SharePoint Framework applications is more flexibility for code re-use. In SharePoint Framework 1.8, you can use new preview support for library components (via the plusbeta option), which allow you to create libraries of functions that can be re-used across multiple solutions. With library functionality, create one SharePoint Framework solution with all your main reusable functions – and other components in other solutions can call and re-use them.
+
+Now while this looks great on the surface, digging deeper shows that it's still a local package that must be included with every SPFx component you bundle. Let's not even speculate about the issues you can face when using *preview* functionality within production code.
+
+Not for us then, so let's continue...
 
 
 ## The type of project chosen to meet those needs, and why.
@@ -83,18 +93,6 @@ Further analysis on what was possible highlighted that it _should_ be trivial to
 TypeScript was settled upon due to my comfort with the language, as well as the development environment. It's also what is used within our SPFx projects. It was a no-brainer.
 
 
-## Scaffolding and configuration of the project.
-
-
-
-
-## Early issues that were encountered.
-
-
-
-
-## building the project.
-
-
+## This post has ended up much longer than I'd hoped, I'll continue in part 3. Until next time...
 
 
