@@ -20,6 +20,8 @@ It's now time to continue...
 - ~~Scaffolding and configuration of the project.~~
 - ~~Early issues that were encountered.~~
 - ~~building the project.~~
+- ~~bundling the project.~~
+- ~~using the project.~~
 
 ## A litle more about what I do.
 
