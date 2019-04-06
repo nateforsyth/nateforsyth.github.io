@@ -9,6 +9,11 @@ tags: [spfx, sharepoint, sharedlibraries, spfxextensions, spfxwebparts, typescri
 
 When we left off [last time](https://nateforsyth.github.io/2019-02-15-spfx-projects-and-shared-libraries-part-1/), I'd highlighted an issue I had faced whereby there was no supported way to build a shared code package _within_ the SharePoint Framework (SPFx). I closed with a very brief allusion to the way that I structured a solution to that problem.
 
+Here are links to all of the posts on this topic:
+- [SPFx projects and Shared Libraries - numero uno](https://dreamsof.dev/2019-02-15-spfx-projects-and-shared-libraries-part-1/)
+- Building a shared Library - SPFx projects and Shared Libraries - part deux
+- [Building a shared Library - SPFx projects and Shared Libraries - iii](https://dreamsof.dev/2019-02-21-building-shared-library-spfx-projects-and-shared-libraries-part-3/)
+
 It's now time to continue...
 
 ## What this post will cover.
