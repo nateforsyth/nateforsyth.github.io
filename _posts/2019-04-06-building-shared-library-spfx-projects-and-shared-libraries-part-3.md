@@ -16,6 +16,11 @@ It's now that time, but first, there are assumptions being made here.
 
 If you're not using those, fear not, simply modify the instructions to suit your Source Control system and choice of packaging environment, e.g. npm.
 
+Here are links to all of the posts on this topic:
+- [SPFx projects and Shared Libraries - numero uno](https://dreamsof.dev/2019-02-15-spfx-projects-and-shared-libraries-part-1/)
+- [Building a shared Library - SPFx projects and Shared Libraries - part deux](https://dreamsof.dev/2019-02-21-building-shared-library-spfx-projects-and-shared-libraries-part-2/)
+- Building a shared Library - SPFx projects and Shared Libraries - iii
+
 
 ## What this post will cover.
 
