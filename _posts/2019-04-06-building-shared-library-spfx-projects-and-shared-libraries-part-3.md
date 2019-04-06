@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Building a shared Library - SPFx projects and Shared Libraries - iii
-date: 2019-02-21 +13:00
+date: 2019-04-06 +13:00
 published: true
 category: Dev
 tags: [spfx, sharepoint, sharedlibraries, spfxextensions, spfxwebparts, typescript, npm]
