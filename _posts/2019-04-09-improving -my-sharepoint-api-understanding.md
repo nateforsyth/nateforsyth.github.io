@@ -2,7 +2,7 @@
 layout: post
 title: Upgrading SPFx projects to version 1.8
 date: 2019-04-09 +13:00
-published: false
+published: true
 category: Dev
 tags: [spfx, sharepoint, typescript, apis, termstore, improvement]
 ---
@@ -19,13 +19,15 @@ That necessitated queries for the selected terms to decorate the items with the 
 
 ![SPFx News WebPart improved with filtering controls](/img/spfx-news-improvements.jpg)
 
-We are currently doing 5x API requests (a  "Get" - which all take time obviously).
+As alluded to previously, my focus is near-stock implementations with added functionality. In this particular example, the WebPart looks like the default, with the addition of Filtering controls to aid in end-user digestion of content int heir interest area.
 
-1) Site Pages query (to retrieve the pages per defined filtering criteria).
-2) Term Store query to retrieve all first filter items.
-3) Term Store query to retrieve all second filter items.
+We are currently doing 5x API requests (all "Get").
+
+1) Site Pages query (to retrieve the pages per defined criteria).
+2) Term Store query to retrieve all first Filter terms.
+3) Term Store query to retrieve all second Filter terms.
 4) Profile service query to retrieve Page Author meta data.
-5) Search service query to retrieve number of page views (currently disabled).
+5) Search service query to retrieve number of page views.
 
 The process then applies the returned Terms to the respective drop down.
 
