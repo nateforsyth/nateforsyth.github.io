@@ -35,7 +35,7 @@ I am currently working for a small professional services company building custom
 
 You want a News roll-up function? Microsoft already provides one of those. Oh, you want to be able to filter the existing News items on your SharePoint Communications Site? That's where I come in!
 
-On top of that I have a particular love for automation of repetitive tasks. I've been intimately involved with the automation of complete SharePoint tenant provisioning and customisation using PowerShell, specifically ootb SPO libraries and open source PnP.
+On top of that I have a particular love for automation of repetitive tasks. I've been intimately involved with the automation of complete SharePoint tenant provisioning and customisation using PowerShell, specifically ootb SPO and open source PnP cmdlets.
 
 ### what else is there?
 
