@@ -19,7 +19,7 @@ My current focus is on the following:
 
 I changed paths after plateauing in my previous data analysis career. Automation of Excel using VBA awoke a passion within me and I simply couldn't resist it.
 
-I left the previous career in June 2015 after spending three months studying part time in the evenings - full-time structured studies was what was needed to kick start my ambition.
+I left the previous career in June 2014 after spending three months studying part time in the evenings - full-time structured studies was what was needed to kick start my ambition.
 
 Fast-forward to October 2016 and I finally graduated with a National Diploma in Advanced Software Development, focusing on C# and Java, amonng other technologies.
 
@@ -39,6 +39,6 @@ On top of that I have a particular love for automation of repetitive tasks. I've
 
 ### what else is there?
 
-I absolutely love the outdoors, though opportunities are getting harder to come by as I get busier and busier - playing 4 years of catch up ya know? I love mountain biking, martial arts and rugby league, and travel as often as I can.
+I absolutely love the outdoors, though opportunities are getting harder to come by as I get busier and busier - playing 4 years of catch up ya know? I love going mountain biking, and although I no longer practice them, actively follow the worlds of martial arts and rugby league, and travel as often as I can.
 
-I enjoy all facets of technology, and enjoy winding down after a long day with a couple of beers and a session in VR.
+I enjoy all facets of technology, and winding down after a long day with a couple of beers and a session in VR is what I call "a great way to end a challenging day".
