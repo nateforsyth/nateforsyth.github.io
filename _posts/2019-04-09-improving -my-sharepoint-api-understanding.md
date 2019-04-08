@@ -106,3 +106,5 @@ This is consumed by using something similar to the following (the CAML is filter
 Check your console; this approach returns data you'd expect for the selected Term/s:
 - GUID
 - Label (this is the important one, and indeed a bug)
+
+Job done.
