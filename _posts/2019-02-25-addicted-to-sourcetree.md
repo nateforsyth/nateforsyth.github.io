@@ -4,7 +4,7 @@ title: Addicted to SourceTree - is that bad?
 date: 2019-02-24 +13:00
 published: true
 category: Dev
-featured-img: /img/hero-mac-screenshot.png
+image: /img/hero-mac-screenshot.png
 comments: true
 tags: [mystory, sourcecontrol, git, sourcetreeapp, earlydays, storytime, careerdevelopment]
 ---
