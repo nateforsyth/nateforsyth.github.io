@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Upgrading SPFx projects to version 1.8
+title: Improving my understanding of the SharePoint APIs
 date: 2019-04-09 +13:00
 published: true
 category: Dev
