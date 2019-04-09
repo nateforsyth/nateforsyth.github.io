@@ -147,6 +147,6 @@ gulp clean
 gulp build
 ~~~
 
-I was then left with a clean build sans errors - I was able to import any components I wanted from MS Office Fabric UI (which consequently is why I had to do the update from SPFx 1.4.1 in the first place.
+I was then left with a clean build sans errors - I was able to import any components I wanted from MS Office Fabric UI (which consequently is why I had to do the update from SPFx 1.4.1 in the first place).
 
 Job done - hope this helps others.
