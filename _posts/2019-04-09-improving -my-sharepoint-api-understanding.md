@@ -8,12 +8,12 @@ tags: [spfx, sharepoint, typescript, apis, termstore, improvement]
 ---
 
 
-My previous understanding was that separate API requests to the term store were necessary in order to decorate what's returned from the Pages library. I was a noob back then, still am in some respects. But this post highlights that I am still learning and retaining.
+My previous understanding was that separate API requests to the term store were necessary in order to decorate what's returned from the Pages library. I was a noob back then, still am in some respects, but this post highlights that I am still learning and retaining.
 
 
 ### Background
 
-Page items (and list items) using Term Set data in their fields merely return the ID and GUID of the Term that's been assigned when using a Get request.
+Page items (and list items) using Term Set data in their fields merely return the ID and GUID of the Term that's been assigned when using a Get request. In fact, the Id is returned in the label field. More on that later.
 
 That necessitated queries for the selected terms to decorate the items with the actual human readable label - this data is used to populate the filtering drop down controls.
 
@@ -69,7 +69,7 @@ Using the many suggestions, here's my *modern* work-around using a Post request 
   }
 ~~~
 
-This is consumed by using something similar to the following (the CAML is filtering by date and sorting):
+This is consumed by using something similar to the following (the CAML is filtering by date and sorting by the same):
 
 ~~~ts
   private loadListItemsFromService(listName: string): void {
@@ -105,6 +105,8 @@ This is consumed by using something similar to the following (the CAML is filter
 
 Check your console; this approach returns data you'd expect for the selected Term/s:
 - GUID
-- Label (this is the important one, and indeed a bug)
+- Label (this is the important one, and indeed the element impacted by the bug)
 
-Job done.
+I hope this helps others to not get as frustrated as I did.
+
+Until next time.
