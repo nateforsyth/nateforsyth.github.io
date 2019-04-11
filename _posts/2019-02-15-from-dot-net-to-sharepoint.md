@@ -9,8 +9,6 @@ tags: [mystory, earlydays, storytime, careerdevelopment]
 ---
 
 
-### The very start
-
 I'm often asked how I got into this game. There's a lot to this story as the title of this post would suggest, and it begins almost 2 decades ago way back in 2000 when I tried my hand at going to university to study Computer Science. I don't think my brain was ready, was probably too stupid. It didn't gel. I dropped out.
 
 I tried again in early 2003, and even though I made it through the first semester, I unfortunately had to leave soon after due to financial pressures at the time.
