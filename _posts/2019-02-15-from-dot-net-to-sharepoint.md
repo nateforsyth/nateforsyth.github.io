@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blackjack to Surveillance to Excel to VBA to Java to .NET to SharePoint
+title: From Blackjack Dealer to SharePoint Developer - fanning the flames
 date: 2019-02-14 +13:00
 published: true
 image: /img/hello_world.jpeg
