@@ -3,7 +3,7 @@ layout: post
 title: From Blackjack Dealer to SharePoint Developer
 date: 2019-02-14 +13:00
 published: true
-image: /img/hello_world.jpeg
+image: /img/blackjack.jpeg
 category: Career
 tags: [mystory, earlydays, storytime, careerdevelopment]
 ---
