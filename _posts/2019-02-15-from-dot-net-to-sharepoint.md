@@ -1,6 +1,6 @@
 ---
 layout: post
-title: From Blackjack Dealer to SharePoint Developer - fanning the flames
+title: From Blackjack Dealer to SharePoint Developer
 date: 2019-02-14 +13:00
 published: true
 image: /img/hello_world.jpeg
@@ -11,15 +11,15 @@ tags: [mystory, earlydays, storytime, careerdevelopment]
 
 ### The very start
 
-I'm often asked how I got into this game. There's a lot more to this story than the title of this post would suggest, and it begins way back in 2000 when I tried my hand at going to university to study Computer Science. I don't think my brain was ready, was probably too stupid. It didn't gel and I dropped out.
+I'm often asked how I got into this game. There's a lot to this story as the title of this post would suggest, and it begins almost 2 decades ago way back in 2000 when I tried my hand at going to university to study Computer Science. I don't think my brain was ready, was probably too stupid. It didn't gel. I dropped out.
 
-I tried again in early 2003, and even though I made it throught he first semester, I unfortunately had to leave soon after due to financial pressures at the time.
+I tried again in early 2003, and even though I made it through the first semester, I unfortunately had to leave soon after due to financial pressures at the time.
 
 Later in 2003 I began working at the Christchurch Casino as a Blackjack Dealer. I needed money.
 
 I expressed my interest in the Surveillance side of the operation to the Security Manager at my induction. A few weeks later he approached me on the floor (I thought I'd done something wrong). Taking me aside he asked whether I was sincere in my interest in joining his Surveillance Department - I jumped at the opportunity.
 
-Fast forward a year or so, I was entrenched in my role and was loving it. I worked closely with DIA Inspectors and continually displayed excessive levels of pedantic attention to detail - a trait that was well appreciated.
+Fast forward a year or so, I was entrenched in my role and was loving it. I worked closely with DIA Inspectors and continually displayed excessive levels of pedantic attention to detail - a trait that was well appreciated - and a trait that serves me well now, I digress.
 
 Each month during a day-shift excess staff were rostered on for training activities. Sometimes this would revolve around learning to count cards, other times it'd be learning to cheat at Roulette, other times it'd be purely theoretical.
 
