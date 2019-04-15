@@ -30,7 +30,7 @@ The brief was well on topic - we'd been inundated for weeks by syndicated play g
 
 I started by choosing a bank of machines, and exporting the register data, which was significant, and I needed a way to manipulate it easily. Batter up Excel!
 
-After pouring over the documentation I managed to cobble together some initial findings, including the possibility where a group of players playing maximum credits and maximum lines at a certain point could theoretically guarantee a profit. A break-even point if you will.
+After poring over the documentation I managed to cobble together some initial findings, including the possibility where a group of players playing maximum credits and maximum lines at a certain point could theoretically guarantee a profit. A break-even point if you will.
 
 I handed over my work, naturally passing the training exercise with flying colours due to how thorough I had been. What I didn't expect was for my work to illicit a bigger question.
 
