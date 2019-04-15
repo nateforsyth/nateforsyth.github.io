@@ -54,7 +54,7 @@ These findings triggered a not-insignificant period of focused monitoring and re
 
 DIA was notified of the findings as were the heads of gaming department.
 
-It was deemed that nothing needed to be done as, from a business perspective, the people chasing the jackpots would statistically lose all of the money they won and then some on-site.
+From a business perspective, the people chasing the jackpots would statistically lose all of the money they won and then some on-site. For that reason a monitoring process was put in place to curb the activity when it got out of hand, as opposed to putting the hammer down on the activity.
 
 
 #### Fanning the flames
@@ -71,14 +71,16 @@ She didn't know what she had been seeing, however the Shift Manager recognised t
 
 Sans more detail, suffice to say we'd been able to detect money laundering, and the guy was arrested as such within a month.
 
+There are other aspects of syndicated casino groups that these new processes allowed us to track and monitor more effectively; there's a  social impact whereby they would coerce young students into effectively working well below the minimum wage, oftentimes merely for packates of cigarettes or the like. These activities are delicate by nature and often heavily tied into foreign cultures, superstitions and fears. We were able to highlight these aspects to DIA whom were able to raise charges against certain members with proof to back it up.
+
 This was all achieved with Excel and VBA - flames were indeed fanned.
 
 
 #### A period of not a hell of a lot
 
-I left the Casino after almost 5 years to go to Wellington, where I got a job with a company that was writing software for Ford and Mazda dealerships around the country. I was a Project Manager ont he deployment and roll-out of a new module of their product. I used my Excel skills to keep them fresh, but nowhere near the level of complexity I had been enjoying previously. My skills didn't atrophy, but I did get bored... really bored.
+I left the Casino after almost 5 years to go to Wellington, where I got a job with a company that was writing software for Ford and Mazda dealerships around the country. I was a Project Manager on the deployment and roll-out of a new module of their product. I used my Excel skills to keep them fresh, but nowhere near the level of complexity I had been enjoying previously. My skills didn't atrophy, but I did get bored... really bored.
 
-I returned to Christchurch in early 2010 and began working at the Kathmandu head office doing, you guessed it - data analysis. The processes within that business were archaic at best - manual data entry of their entire product catalogue as well as humongous numbers of manually entered sales lists, that also had to be entered into multiple systems including POS.
+I returned to Christchurch in early 2010 and began working at the [Kathmandu](https://www.kathmandu.co.nz/) head office doing, you guessed it - data analysis. The processes within that business were archaic at best - manual data entry of their entire product catalogue as well as humongous numbers of manually entered sales lists, that also had to be entered into multiple systems including POS.
 
 
 #### The embers were still glowing
@@ -89,26 +91,26 @@ Reporting, sales lists, product imports/exports, CSV file prep for integrations 
 
 I made myself indispensible.
 
-And then the earthquakes hit.
+And then [the earthquakes hit](https://my.christchurchcitylibraries.com/christchurch-and-canterbury-earthquakes/).
 
 I persisted for around 6 months, but family had been hurt in the second large quake. I was forced to abandon my city, and again found myself in Wellington.
 
-I began work at Transpower in Wellington in late 2011 as a Data Analyst on the Half Hour team. The mandate was to basically aggregate and validate all commercial half hour energy volume data. This was a well paid job. And it was again completely manual. I couldn't have any of that.
+I began work at Transpower in Wellington in late 2011 as a Data Analyst on the Half Hour team. The mandate was to basically aggregate and validate all commercial half hour energy volume data.
 
 Each month the Data Analyst responsible for submission of every energy retailers numbers must have them all submitted to the Reconciliation Manager by 4pm on business day 13. This often means that there is horrendous amounts of overtime a few days prior as retailers would provide their data exceptionally late. I was run down within 2 months, and near over it.
 
-But I had an Ace up my sleeve.
+This was a well paid job. And it was again completely manual. And I was bored. I couldn't have any of that. I had an Ace up my sleeve.
 
 I waited until I understood my role and what was required before I broached the subject of automation. I was good at my job, but frustrated and articulated that I'd likely leave if I didn't have a chance to make the process better. After a quick mock-up and presentation I was given the green light to again use Excel and VBA to automate as much as possible.
 
 
 #### Stoking the fire
 
-Things were going swimmingly, and I was on top of my game. My tools had been adopted by the company and my role managed an entire year of zero overtime. The company was happy.
+Things were going swimmingly, and I was on top of my game. My tools had been adopted by the company and my role managed an financial year of zero overtime and zero errors for my function (errors have a significant financial impact on energy retailers). I was relatively stress free and the company was happy.
 
-I had time on my hands so the company got me involved in User Acceptance Testing of a new product that a local dev shop had built for us using Ruby. I thoroughly enjoyed myself and got deeper and more involved in the project (not the source code mind you). I must have impressed the owner of the company because he offered me a job as a developer - I laughed it off as a joke, I hadn't been developing nor had I even seen tehir source code.
+I had time on my hands so the company got me involved in User Acceptance Testing of a new product that a local dev shop had built for us using Ruby. I thoroughly enjoyed myself and got deeper and more involved in the project (not the source code mind you). I must have impressed the owner of the company because he offered me a job as a developer - I laughed it off as a joke, I hadn't been developing nor had I even seen their source code.
 
-What that conversation did do though was really get me thinking about my career. At the time I was near a plateau in Data Analysis - yes the money was good, but it wasn't going to get much better any time soon.
+What that conversation did do though was really get me thinking about my career trajectory. At the time I was near a plateau in Data Analysis - yes the money was good, but it wasn't going to get much better any time soon - and I was still pretty bored.
 
 
 #### A raging inferno
@@ -123,9 +125,9 @@ I lasted the 3 months and was offered a renewal, which I negotiated to be part t
 
 I started at a local private training institution in June 2014 working towards a National Diploma in Advanced Software Development Level 6. The bug had bitten, and there was no putting out this fire.
 
-You can read a little more about that time of my life [here](https://dreamsof.dev/aboutme/).
+You can [read a little more about that time of my life here](https://dreamsof.dev/aboutme/).
 
-Many projects, much learning and many months later I graduated with my diploma in late 2016. A huge achievement many years in in the making for someone who had no other tertiary qualifications.
+Many projects, much learning and tens of months later I graduated with my diploma in late 2016. A huge achievement many years in in the making for someone who had no other tertiary qualifications.
 
 As mentioned within my [about page](https://dreamsof.dev/aboutme/), I got myself involved with a farming project that was doomed to not succeed as a business. What it did give me was a huge amount of experience, albeit rough.
 
@@ -136,15 +138,16 @@ Fast forward to early 2018 and I was in desperate need of money. I had to look f
 
 I had [skills in .NET](https://dreamsof.dev/resume) and had built something I was pretty proud of. It wasn't perfect, it wasn't enterprise grade. But what it was was exrensible, secure, and working perfectly.
 
-Sooo, I was a .NET Developer. What was my first project? Huh? Sharepoint?
+Sooo, I was a .NET Developer. What was my first project? You waht now? Sharepoint?
 
 My first project was a trial by fire custom Classic SharePoint (Office 365) deployment for Trojan Holdings Ltd based in Queenstown, including custom layouts and WebParts. I'd never seen SharePoint before. Better roll my sleeves up then huh?
 
-I had 6 weeks to learn sufficiently SharePoint Administration to provision one Site and 9 sub-sites for the client's companies/divisions. I had to build 4x WebParts (News Carousel, News Archive, Wayfinding, Introducing) and style the sites ready for the client to begin their migration.
+I had 6 weeks to sufficiently learn SharePoint Administration to provision one Site and 9 sub-sites for the client's companies/divisions. I had to build 4x WebParts (News Carousel, News Archive, Wayfinding, Introducing) and style the sites ready for the client to begin their migration.
 
 I nailed the deadline with 2 days to spare. It was stressful, and it was difficult, but I persisted and I got it done.
 
 I learned a huge amount.
+
 
 #### The end of the story
 
@@ -152,7 +155,9 @@ Not likely.
 
 I am now 13 months into the same role and am neck deep in the development of a productised [SharePoint Accelerator](https://solarworkplace.co.nz/) including near stock look and feel custom WebParts and Extensions using the SharePoint Framework (SPFx), Information Architecture, SharePoint Administration and Configuration, and automated tenant provisioning including IA.
 
-To say that getting into SharePoint was unexpected is an understatement, and I'd be lying if I said I didn't still pine for .NET, but the challenge is real, as are the skills (specifically front end web-dev with React).
+I now work directly with half a dozen large NZ companies delivering near stock Intranet experiences with just enough customisation to make everything better (imho).
+
+To say that getting into SharePoint was unexpected is an understatement, and I'd be lying if I said I didn't still pine for .NET, but the challenge is real, as are the transferrable skills (specifically front end web-dev with React).
 
 I can confidently say that I am now a SharePoint Developer first and foremost.
 
