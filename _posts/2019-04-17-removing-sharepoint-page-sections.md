@@ -98,4 +98,10 @@ Controls      : {}
 DefaultColumn : OfficeDevPnP.Core.Pages.CanvasColumn
 ~~~
 
+8. Don't forget to disconnect from PnP when you're done.
+
+~~~powershell
+Disconnect-PnPOnline
+~~~
+
 #### Job done
