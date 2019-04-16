@@ -15,17 +15,20 @@ A scenario came up at work today which I actually had an answer for, and I thoug
 
 Start up your favourite terminal; I prefer PowerShell using PnP cmdlets where applicable.
 
+
 #### Connect to the site where the page is located.
 
 ~~~powershell
 Connect-PnPOnline -Url https://[tenantName].sharepoint.com/sites/intranet
 ~~~
 
+
 #### Next up, retrieve the page.
 
 ~~~powershell
 $pg = Get-PnPClientSidePage -Identity _sectionTest
 ~~~
+
 
 #### Now we're going to view the sections on the page
 
@@ -59,6 +62,7 @@ DefaultColumn : OfficeDevPnP.Core.Pages.CanvasColumn
 
 Page sections are based upon a zero indexed array, ignore the "Order" property in the results; this will send you in the wrong direction.
 
+
 #### Remove the desired page section.
 
 ~~~powershell
@@ -67,12 +71,14 @@ $pg.Sections.RemoveAt(0)
 
 I don't know whether it's a bug, but if you don't publish the page at this point the changes will not persist. I liken this to where you need to invoke ExecuteQuery in CSOM.
 
+
 #### Publish the page and retrieve a fresh instance of the page.
 
 ~~~powershell
 Set-PnPClientSidePage -Identity $pg -Publish
 $pg = Get-PnPClientSidePage -Identity _sectionTest
 ~~~
+
 
 #### View the page sections again, noting the results where the page section @ position 0 was removed.
 
@@ -97,10 +103,12 @@ Controls      : {}
 DefaultColumn : OfficeDevPnP.Core.Pages.CanvasColumn
 ~~~
 
+
 #### Don't forget to disconnect from PnP when you're done.
 
 ~~~powershell
 Disconnect-PnPOnline
 ~~~
+
 
 Job done, hope this helps someone.
