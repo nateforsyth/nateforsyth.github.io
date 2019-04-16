@@ -18,7 +18,7 @@ Start up your favourite terminal; I prefer PowerShell using PnP cmdlets where ap
 1. Connect to the site where the page is located.
 
 ~~~powershell
-Connect-PnPOnline -Url https://brighterdays.sharepoint.com/sites/intranet
+Connect-PnPOnline -Url https://[tenantName].sharepoint.com/sites/intranet
 ~~~
 
 2. Next up, retrieve the page.
