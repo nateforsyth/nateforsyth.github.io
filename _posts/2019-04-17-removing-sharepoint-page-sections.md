@@ -15,19 +15,19 @@ A scenario came up at work today which I actually had an answer for, and I thoug
 
 Start up your favourite terminal; I prefer PowerShell using PnP cmdlets where applicable.
 
-1. Connect to the site where the page is located.
+#### Connect to the site where the page is located.
 
 ~~~powershell
 Connect-PnPOnline -Url https://[tenantName].sharepoint.com/sites/intranet
 ~~~
 
-2. Next up, retrieve the page.
+#### Next up, retrieve the page.
 
 ~~~powershell
 $pg = Get-PnPClientSidePage -Identity _sectionTest
 ~~~
 
-3. Now we're going to view the sections on the page
+#### Now we're going to view the sections on the page
 
 ~~~powershell
 $pg.Sections
@@ -59,7 +59,7 @@ DefaultColumn : OfficeDevPnP.Core.Pages.CanvasColumn
 
 Page sections are based upon a zero indexed array, ignore the "Order" property in the results; this will send you in the wrong direction.
 
-4. Remove the desired page section.
+#### Remove the desired page section.
 
 ~~~powershell
 $pg.Sections.RemoveAt(0)
@@ -67,15 +67,14 @@ $pg.Sections.RemoveAt(0)
 
 I don't know whether it's a bug, but if you don't publish the page at this point the changes will not persist. I liken this to where you need to invoke ExecuteQuery in CSOM.
 
-5. Publish the page
-6. Retrieve a fresh instance of the page.
+#### Publish the page and retrieve a fresh instance of the page.
 
 ~~~powershell
 Set-PnPClientSidePage -Identity $pg -Publish
 $pg = Get-PnPClientSidePage -Identity _sectionTest
 ~~~
 
-7. View the page sections again, noting the results where the page section @ position 0 was removed.
+#### View the page sections again, noting the results where the page section @ position 0 was removed.
 
 ~~~powershell
 $pg.Sections
@@ -98,10 +97,10 @@ Controls      : {}
 DefaultColumn : OfficeDevPnP.Core.Pages.CanvasColumn
 ~~~
 
-8. Don't forget to disconnect from PnP when you're done.
+#### Don't forget to disconnect from PnP when you're done.
 
 ~~~powershell
 Disconnect-PnPOnline
 ~~~
 
-#### Job done
+Job done, hope this helps someone.
