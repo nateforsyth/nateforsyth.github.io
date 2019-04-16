@@ -29,8 +29,9 @@ Connect-PnPOnline -Url https://[tenantName].sharepoint.com/sites/intranet
 $pg = Get-PnPClientSidePage -Identity _sectionTest
 ~~~
 
+You're now connected.
 
-#### Now we're going to view the sections on the page
+#### View the sections on the page
 
 ~~~powershell
 $pg.Sections
@@ -60,7 +61,7 @@ Controls      : {}
 DefaultColumn : OfficeDevPnP.Core.Pages.CanvasColumn
 ~~~
 
-Page sections are based upon a zero indexed array, ignore the "Order" property in the results; this will send you in the wrong direction.
+Page sections are based upon a zero indexed array, ignore the "Order" property in the results; there are 3 here, between index 0 and 2.
 
 
 #### Remove the desired page section.
@@ -79,8 +80,9 @@ Set-PnPClientSidePage -Identity $pg -Publish
 $pg = Get-PnPClientSidePage -Identity _sectionTest
 ~~~
 
+You now have a fresh instance of the page to interrogate.
 
-#### View the page sections again, noting the results where the page section @ position 0 was removed.
+#### View the page sections again.
 
 ~~~powershell
 $pg.Sections
@@ -103,6 +105,9 @@ Controls      : {}
 DefaultColumn : OfficeDevPnP.Core.Pages.CanvasColumn
 ~~~
 
+Note the results where the page section at position 0 was removed leaving only two.
+
+Refresh your page in your browser and confirm.
 
 #### Don't forget to disconnect from PnP when you're done.
 
