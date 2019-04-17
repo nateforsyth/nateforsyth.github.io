@@ -22,6 +22,8 @@ Start up your favourite terminal; I prefer PowerShell using PnP cmdlets where ap
 Connect-PnPOnline -Url https://[tenantName].sharepoint.com/sites/intranet
 ~~~
 
+You're now connected.
+
 
 #### Next up, retrieve the page.
 
@@ -29,7 +31,8 @@ Connect-PnPOnline -Url https://[tenantName].sharepoint.com/sites/intranet
 $pg = Get-PnPClientSidePage -Identity _sectionTest
 ~~~
 
-You're now connected.
+Got the page? Now time for the sections.
+
 
 #### View the sections on the page
 
