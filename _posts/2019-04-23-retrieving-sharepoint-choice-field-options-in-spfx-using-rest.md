@@ -7,7 +7,7 @@ category: Dev
 tags: [typescript, sharepoint, spfx, webparts, choice field options, rest]
 ---
 
-I came across a scenario recently whereby I needed to retrieve all choice field options from a specific field before a specific SPFx WebPart had loaded onto the page. The reason for this was that I had to pre-populate the Property Pane configuration with the choices to allow for the end-user to select a specific option for List filtering purposes.
+I came across a scenario recently whereby I needed to retrieve all choice field options from a field before a specific SPFx WebPart had loaded onto the page. The reason for this was that I had to pre-populate the Property Pane configuration with the choices to allow for the end-user to select an option for API List query filtering purposes.
 
 I came across a Stack Overflow request for SharePoint 2013 with [a specific answer](https://sharepoint.stackexchange.com/a/228022/82938) that indeed still works, however I had no intention of either copy/pasting the solution, [nor using jQuery](https://dreamsof.dev/2019-04-21-weaning-myself-off-of-jquery.md/), so I set about using the same end-point with the far more modern [es6-promise](https://www.npmjs.com/package/es6-promise) functionality.
 
@@ -72,16 +72,22 @@ Job done right? No, of course not, we need to be able to use this data, so we ne
 I'm going to make some assumptions so that I don't need to step you through scaffolding a WebPart before we can get started.
 
 - you already have a WebPart project that you are going to retrofit this functionality into.
- - if not, hit up [this basic WebPart creation tutorial](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part).
+  - if not, hit up [this basic WebPart creation tutorial](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part).
 - you know how to retrieve your absolute site collection URL from the WebPart Context.
- - if not, have a read of [this Stack Overflow post](https://sharepoint.stackexchange.com/questions/211810/how-to-retrieve-pagecontext-in-spfx).
+  - if not, have a read of [this Stack Overflow post](https://sharepoint.stackexchange.com/questions/211810/how-to-retrieve-pagecontext-in-spfx).
 - you know how to run your WebPart on the Workbench.
- - if not, refer to [the preview section of the tutorial](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part#preview-the-web-part).
+  - if not, refer to [the preview section of the tutorial](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part#preview-the-web-part).
 
 
 ### Retrieve all EntitySet records
 
-Add the following method.
+If you haven't already got one, now's the time to add an *import* statement for **SPHttpClient** and **HttpClientResponse**, as follows:
+
+~~~ts
+import { SPHttpClient, HttpClientResponse } from "@microsoft/sp-http";
+~~~
+
+Then, add the following method.
 
 ~~~ts
 private retrieveEntitySetRecords(siteColUrl: string): void {
@@ -106,7 +112,7 @@ private retrieveEntitySetRecords(siteColUrl: string): void {
 
 Righty, now it's time to actually retrieve the EntitySet records like we did previously using the browser.
 
-Update the WebParts' render method like so.
+Update the WebParts' render method like so (this will invoke the method in the background, allowing the rest of the WebPart to continue to load/function until the data we require is available).
 
 ~~~ts
 public render(): void {
