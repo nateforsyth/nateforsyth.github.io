@@ -30,7 +30,7 @@ https://[tenantName].sharepoint.com/sites/[siteName]/_vti_bin/listdata.svc
 This gives us a result similar to this:
 
 ~~~xml
-<service xmlns:atom="http://www.w3.org/2005/Atom" xmlns:app="http://www.w3.org/2007/app" xmlns="http://www.w3.org/2007/app" xml:base="https://brighterdaystest.sharepoint.com/sites/organisation/_vti_bin/listdata.svc/">
+<service xmlns:atom="http://www.w3.org/2005/Atom" xmlns:app="http://www.w3.org/2007/app" xmlns="http://www.w3.org/2007/app" xml:base="https://[tenantName].sharepoint.com/sites/[siteName]/_vti_bin/listdata.svc/">
   <workspace>
     <atom:title>Default</atom:title>
       /* other collections elided for brevity */
