@@ -91,7 +91,7 @@ social-network-links:
 #  youtube: yourname
 #  spotify: yourname
 #  telephone: +14159998888
-#  steam: deanat78
+#  steam: spectre
 #  twitch: yourname
 #  yelp: yourname
 
@@ -109,7 +109,7 @@ url-pretty: "https://dreamsof.dev"  # eg. "deanattali.com/beautiful-jekyll"
 # --- Web Statistics Section --- #
 
 # Fill in your Google Analytics gtag.js ID to track your website using gtag
-#gtag: ""
+gtag: "UA-138873602-1"
 
 # Fill in your Google Analytics ID to track your website using GA
 #google_analytics: ""
