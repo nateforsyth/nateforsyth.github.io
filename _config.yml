@@ -31,6 +31,7 @@ navbar-links:
     - SharePoint PnP PowerShell: "https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/add-pnpalert?view=sharepoint-ps"
     - SharePoint Online PowerShell: "https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/?view=sharepoint-ps"
     - Beautiful Jekyll (this theme): "http://deanattali.com/beautiful-jekyll/"
+    - Jekyll SEO: "https://blog.webjeda.com/optimize-jekyll-seo/"
     - Learn markdown: "http://www.markdowntutorial.com/"
     - GitHub Pages: "https://pages.github.com/"
   LinkedIn: "https://www.linkedin.com/in/nateforsyth/"
