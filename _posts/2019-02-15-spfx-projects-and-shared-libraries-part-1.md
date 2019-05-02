@@ -4,7 +4,7 @@ title: SPFx projects and Shared Libraries - numero uno
 date: 2019-02-15 +13:00
 published: true
 category: Dev
-tags: [spfx, sharepoint, sharedlibraries, spfxextensions, spfxwebparts, typescript, npm]
+tags: [spfx, sharepoint, shared libraries, spfx extensions, spfx webparts, typescript, npm]
 ---
 
 The SharePoint Framework is **a complicated beast**, and there are a multitude of concepts that [this relatively new developer](https://nateforsyth.github.io/2019-02-14-from-dot-net-to-sharepoint/) has been struggling to understand.
