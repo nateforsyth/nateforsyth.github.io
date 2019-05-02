@@ -9,6 +9,8 @@ tags: [C#, blazor, failure, never stop learning, visual studio 2019, .net core 3
 
 How many times have you installed the [Visual Studio 2019 preview](https://visualstudio.microsoft.com/vs/preview/) this week?
 
+I'm sure you can tell that that's a loaded question, we'll revisit it again at the end.
+
 I was initially following the VS2019 guide to [getting started with Blazor and .NET Core 3.0](https://docs.microsoft.com/en-us/aspnet/core/blazor/get-started?view=aspnetcore-3.0&tabs=visual-studio). Everything was going swimmingly.
 
 
@@ -93,5 +95,5 @@ These are the most similar issues to what I was encountering:
 - [[Blazor] Template is not working in both Visual Studio 2019 preview 3.0 and VS Code](https://github.com/aspnet/AspNetCore/issues/7952)
 - [blazor not start with vscode](https://github.com/Microsoft/vscode/issues/72701)
 
-And some similarities to:
+And sort of:
 - [The default Blazor template solution doesn't run](https://github.com/aspnet/AspNetCore/issues/8074)
