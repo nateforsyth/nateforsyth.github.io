@@ -4,7 +4,7 @@ title: Upgrading SPFx projects to version 1.8
 date: 2019-04-08 +13:00
 published: true
 category: Dev
-tags: [spfx, upgrade, sharepoint, spfx18, typescript, npm, dependencyhell]
+tags: [spfx, upgrade, sharepoint, spfx 1.8, typescript, npm, dependency hell]
 ---
 
 
