@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Learning Blazor - numero uno - the failure
+title: Learning Blazor - numero uno: we have a problem
 date: 2019-05-02 +13:00
 published: true
 category: Dev
