@@ -6,7 +6,7 @@ published: true
 category: Dev
 image: /img/hero-mac-screenshot.png
 comments: true
-tags: [mystory, sourcecontrol, git, sourcetreeapp, earlydays, storytime, careerdevelopment]
+tags: [my story, source control, git, sourcetree app, early days, story time, career development]
 ---
 
 I'll preface this with a story.
