@@ -4,7 +4,7 @@ title: Building a shared Library - SPFx projects and Shared Libraries - iii
 date: 2019-04-06 +13:00
 published: true
 category: Dev
-tags: [spfx, sharepoint, sharedlibraries, spfxextensions, spfxwebparts, typescript, npm]
+tags: [spfx, sharepoint, shared libraries, spfx extensions, spfx webparts, typescript, npm]
 ---
 
 When we left off [last time](https://nateforsyth.github.io/2019-02-21-building-shared-library-spfx-projects-and-shared-libraries-part-2/), I'd highlighted an issue I had faced whereby there was no supported way to build a shared code package _within_ the SharePoint Framework (SPFx). I rambled on about what had happened, why this approach was chosen, etc. I also realised that the post was getting too long, and decided to continue with a new post detailing the build and deployment process.
