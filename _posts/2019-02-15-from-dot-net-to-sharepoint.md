@@ -5,7 +5,7 @@ date: 2019-02-14 +13:00
 published: true
 image: /img/blackjack.jpg
 category: Career
-tags: [mystory, earlydays, storytime, careerdevelopment]
+tags: [my story, early days, story time, career development]
 ---
 
 
