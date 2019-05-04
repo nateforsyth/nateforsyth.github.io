@@ -13,6 +13,7 @@ Here are links to all of the posts on this topic:
 - [SPFx projects and Shared Libraries - numero uno](https://dreamsof.dev/2019-02-15-spfx-projects-and-shared-libraries-part-1/)
 - Building a shared Library - SPFx projects and Shared Libraries - part deux
 - [Building a shared Library - SPFx projects and Shared Libraries - iii](https://dreamsof.dev/2019-04-06-building-shared-library-spfx-projects-and-shared-libraries-part-3/)
+- [Building a shared Library - SPFx projects and Shared Libraries - May the 4th be with you ;)](https://dreamsof.dev/2019-05-04-building-shared-library-spfx-projects-and-shared-libraries-part-4/)
 
 It's now time to continue...
 
