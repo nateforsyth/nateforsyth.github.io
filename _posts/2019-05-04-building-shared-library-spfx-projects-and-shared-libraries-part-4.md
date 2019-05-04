@@ -74,9 +74,9 @@ Next, click the **+ New** button and select **New build pipeline**.
 
 Then select the following:
 - Select a source = Azure Repos Git
-- Team project = {projectName}
-- Repository = {repositoryName}
-- Default branck = {master} (recommended)
+- Team project = [projectName]
+- Repository = [repositoryName]
+- Default branck = [master] (recommended)
 
 Note; you can select any source you want, just be aware that if you do, this post will differ from what you see.
 
@@ -100,7 +100,7 @@ Click **Enable continuous integration**, and then **Batch changes while a build 
 
 Add a branch filter; *Type * = **Include**, *Branch specification* = **master**
 
-Add a path filter; *Type * = **Include**, *Path specification* = **/{yourProjectPathInYourRepo}**
+Add a path filter; *Type * = **Include**, *Path specification* = **/[yourProjectPathInYourRepo]**
 
 ![Azure DevOps Pipeline Build - enable continuous integration](/img/devops4.png)
 
@@ -160,7 +160,7 @@ First npm task:
 
 - Display name = **npm install**
 - Command = **install** (choose from the dropdown)
-- Working folder that contains package.json = **{yourProjectPathFolderRelativeToYourRepo}**
+- Working folder that contains package.json = **[yourProjectPathFolderRelativeToYourRepo]**
   - this is likely the same as you specified in the Continuous Integration config, **without the forward slash** (important).
   - you'll use this in the next two tasks as well.
 - You can leave all other options default.
@@ -169,7 +169,7 @@ Second npm task:
 
 - Display name = **npm build** (or similar, this is merely a name).
 - Command = **custom** (choose from the dropdown)
-- Working folder that contains package.json = **{yourProjectPathFolderRelativeToYourRepo}**
+- Working folder that contains package.json = **[yourProjectPathFolderRelativeToYourRepo]**
 - Command and arguments = **run build**
   - this is equivalent to the gulp CLI *run build* command.
 - You can leave all other options default.
@@ -178,7 +178,7 @@ Third npm task:
 
 - Display name = **npm publish** (or similar, this is merely a name).
 - Command = **publish** (choose from the dropdown)
-- Working folder that contains package.json = **{yourProjectPathFolderRelativeToYourRepo}**
+- Working folder that contains package.json = **[yourProjectPathFolderRelativeToYourRepo]**
 - Click the **Destination registry and authentication** drop down to expose the related options.
   - Remember setting up the Artifact Feed previously? You need the name of that now ;)
   - Under *Registry location*, select **Registry | select here**
