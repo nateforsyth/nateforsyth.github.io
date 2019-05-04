@@ -20,15 +20,16 @@ Here are links to all of the posts on this topic:
 - [SPFx projects and Shared Libraries - numero uno](https://dreamsof.dev/2019-02-15-spfx-projects-and-shared-libraries-part-1/)
 - [Building a shared Library - SPFx projects and Shared Libraries - part deux](https://dreamsof.dev/2019-02-21-building-shared-library-spfx-projects-and-shared-libraries-part-2/)
 - Building a shared Library - SPFx projects and Shared Libraries - iii
+- [Building a shared Library - SPFx projects and Shared Libraries - May the 4th be with you ;)](https://dreamsof.dev/2019-05-04-building-shared-library-spfx-projects-and-shared-libraries-part-4/)
 
 
 ## What this post will cover.
 
 - Scaffolding and configuration of the project.
 - Early issues that were encountered.
-~~- building the project.~~
-~~- bundling the project.~~
-~~- using the project.~~
+- ~~building the project.~~
+- ~~bundling the project.~~
+- ~~using the project.~~
 
 
 ## Scaffolding and configuration of the project.
