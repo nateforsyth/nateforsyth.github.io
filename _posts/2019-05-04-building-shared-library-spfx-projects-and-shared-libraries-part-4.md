@@ -46,7 +46,7 @@ Let's get started.
 Navigate to your Azure DevOps Artifacts interface for your specific project, click **+ New feed**.
 
 - Give your feed a relevant name.
-  - I like to follow general npm naming guidelines such as [tld].[companyName].[projectName] but the choice is yours.
+  - I like to follow general npm naming guidelines such as [tld]-[companyName]-[projectName] but the choice is yours.
 - Under *Visibility*, select **People in [companyName]**
 - Under *Packages from public sources*, select **Use packages from public sources through this feed**
   - This is important as it's how we will use this as a complete npm Registry replacement in our consuming project/s.
