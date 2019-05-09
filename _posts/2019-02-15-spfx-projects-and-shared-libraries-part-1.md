@@ -11,6 +11,14 @@ The SharePoint Framework is **a complicated beast**, and there are a multitude o
 
 I'm getting there though!
 
+Here are links to all of the posts in this series:
+- SPFx projects and Shared Libraries - numero uno
+- [Building a shared Library - SPFx projects and Shared Libraries - part deux](https://dreamsof.dev/2019-02-21-building-shared-library-spfx-projects-and-shared-libraries-part-2/)
+- [Building a shared Library - SPFx projects and Shared Libraries - iii](https://dreamsof.dev/2019-04-06-building-shared-library-spfx-projects-and-shared-libraries-part-3/)
+- [Building a shared Library - SPFx projects and Shared Libraries - May the 4th be with you ;)](https://dreamsof.dev/2019-05-04-building-shared-library-spfx-projects-and-shared-libraries-part-4/)
+- [Building a shared Library - SPFx projects and Shared Libraries - 5th and final, I promise...](https://dreamsof.dev/2019-04-06-building-shared-library-spfx-projects-and-shared-libraries-part-5/)
+
+
 ## Just create a library and reference it in all your projects yo!
 
 .NET developers will all be familiar with the simplicity of writing a .dll file within C#, and simply referencing that assembly within any required project (gross generalisations notwithstanding).
@@ -57,9 +65,3 @@ With this decoupling comes much better code re-use and complete [separation of c
 This was a long process and there are many steps that, I'm sure you can tell, have not even been mentioned in this post. Check back for new posts where I will go into detail about how this was implemented, configured within Azure DevOps CI to build and publish the project package, and consumed within our SPFx projects...
 
 ...when I get around to writing them that is...
-
-Here are links to all of the posts on this topic:
-- SPFx projects and Shared Libraries - numero uno
-- [Building a shared Library - SPFx projects and Shared Libraries - part deux](https://dreamsof.dev/2019-02-21-building-shared-library-spfx-projects-and-shared-libraries-part-2/)
-- [Building a shared Library - SPFx projects and Shared Libraries - iii](https://dreamsof.dev/2019-04-06-building-shared-library-spfx-projects-and-shared-libraries-part-3/)
-- [Building a shared Library - SPFx projects and Shared Libraries - May the 4th be with you ;)](https://dreamsof.dev/2019-05-04-building-shared-library-spfx-projects-and-shared-libraries-part-4/)
