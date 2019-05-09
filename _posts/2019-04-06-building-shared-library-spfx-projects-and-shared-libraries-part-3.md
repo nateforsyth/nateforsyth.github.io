@@ -223,8 +223,8 @@ Open up your Utilities.ts file, and enter the following code (this is an admitte
 
 ~~~ts
 export class StringHelper {
-    public truncateStringToDefinedLength(stringToTruncate: string, desiredLength: number): string {
-    return stringToTruncate.length === desiredLength ? stringToTruncate : stringToTruncate.length + 2 > desiredLength ? `${stringToTruncate.substr(0, desiredLength)}...` : stringToTruncate;
+  public truncateStringToDefinedLength(stringToTruncate: string, desiredLength: number): string {
+    return stringToTruncate.length > desiredLength ? `${stringToTruncate.substr(0, desiredLength)}` : stringToTruncate;
   }
 }
 ~~~
@@ -252,30 +252,12 @@ import { expect } from "chai";
 
 const stringHelper = new StringHelper();
 
-describe("Equal length string truncation function", () => {
-    const lengthToTruncate = 12;
+describe("String truncation function", () => {
+    const lengthToTruncate = 3;
     const stringToTruncate = "Nate Forsyth";
     const willTruncate = stringToTruncate.length > lengthToTruncate;
-    it("should equal 12", () => {
-        expect(stringHelper.truncateStringToDefinedLength(stringToTruncate, lengthToTruncate)).to.length(willTruncate ? lengthToTruncate + 3 : stringToTruncate.length);
-    });
-});
-
-describe("Long string truncation function", () => {
-    const lengthToTruncate = 4;
-    const stringToTruncate = "Nate Forsyth";
-    const willTruncate = stringToTruncate.length > lengthToTruncate;
-    it("should equal 7", () => {
-        expect(stringHelper.truncateStringToDefinedLength(stringToTruncate, lengthToTruncate)).to.length(willTruncate ? lengthToTruncate + 3 : stringToTruncate.length);
-    });
-});
-
-describe("Short string truncation function", () => {
-    const lengthToTruncate = 25;
-    const stringToTruncate = "Nate Forsyth";
-    const willTruncate = stringToTruncate.length > lengthToTruncate;
-    it("should equal 3", () => {
-        expect(stringHelper.truncateStringToDefinedLength(stringToTruncate, lengthToTruncate)).to.length(willTruncate ? lengthToTruncate + 3 : stringToTruncate.length);
+    it(`should be equal to or less than ${lengthToTruncate}`, () => {
+        expect(stringHelper.truncateStringToDefinedLength(stringToTruncate, lengthToTruncate)).to.length(willTruncate ? lengthToTruncate : stringToTruncate.length);
     });
 });
 ~~~
@@ -302,16 +284,10 @@ Here are the expected results
 # results
 
   Equal length string truncation function
-    √ should equal 12
-
-  Long string truncation function
-    √ should equal 7
-
-  Short string truncation function
-    √ should equal 3
+    √ should be equal to or less than 5
 
 
-  3 passing (10ms)
+  1 passing (10ms)
 ~~~
 
 
