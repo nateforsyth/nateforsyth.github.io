@@ -158,4 +158,4 @@ Please feel free to point out any errors or omissions you may have noticed :)
 
 #### Final Notes
 
-- Every project you're consuming your package within requires a **.npmrc file**, but you only need to follow the auth helper process once per machine you.
+- Every project you're consuming your package within requires a **.npmrc file**, but you only need to follow the auth helper process once per dev box/machine.
