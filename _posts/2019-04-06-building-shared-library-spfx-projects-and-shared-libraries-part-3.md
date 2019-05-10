@@ -30,9 +30,6 @@ Here are links to all of the posts in this series:
 
 - Scaffolding and configuration of the project.
 - Early issues that were encountered.
-- ~~building the project.~~
-- ~~bundling the project.~~
-- ~~using the project.~~
 
 
 ## Scaffolding and configuration of the project.
