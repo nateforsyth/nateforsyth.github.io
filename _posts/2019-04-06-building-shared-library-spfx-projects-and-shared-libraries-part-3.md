@@ -7,9 +7,11 @@ category: Dev
 tags: [spfx, sharepoint, shared libraries, spfx extensions, spfx webparts, typescript, npm]
 ---
 
-When we left off [last time](https://nateforsyth.github.io/2019-02-21-building-shared-library-spfx-projects-and-shared-libraries-part-2/), I'd highlighted an issue I had faced whereby there was no supported way to build a shared code package _within_ the SharePoint Framework (SPFx). I rambled on about what had happened, why this approach was chosen, etc. I also realised that the post was getting too long, and decided to continue with a new post detailing the build and deployment process.
+When we left off [last time](https://nateforsyth.github.io/2019-02-21-building-shared-library-spfx-projects-and-shared-libraries-part-2/), I'd highlighted an issue I had faced whereby there was no supported way to build a shared code package _within_ the SharePoint Framework (SPFx) **at that time**. I rambled on about what had happened, why this approach was chosen, etc. I also realised that the post was getting too long, and decided to continue with a new post detailing the build and deployment process.
 
-It's now that time, but first, there are assumptions being made here.
+This has somewhat been mitigated now with the release of SPFx 1.8 and the introduction of [Library components](https://social.technet.microsoft.com/wiki/contents/articles/52666.sharepoint-framework-1-8-library-component-type-beta.aspx) within the framework, albeit in preview and limited to a single component. That's not good enough for our production requirements, so we're continuing.
+
+But first, there are assumptions being made here.
 
 - First, you have an Azure DevOps environment that you are using for Source Control.
 - Second, you are going to use the Azure DevOps environment as your build platform.
