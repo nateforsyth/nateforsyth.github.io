@@ -29,6 +29,8 @@ I began scratching the surface, and boy was I surprised...
 
 ## Shared Libraries aren't supported within the SharePoint Framework - wait, what???
 
+> This next section is slightly out of date now. [SPFx 1.8 introduced Library components](https://social.technet.microsoft.com/wiki/contents/articles/52666.sharepoint-framework-1-8-library-component-type-beta.aspx) which is great, but there are still glaring issues; the functionality is in preview as at May 10th 2019, and you can only have a single component - let's continue then shall we?
+
 Once you've spent a few months within the [SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview) you'll no doubt become familiar with what I have; **there's no _supported_ way to share your code between multiple projects** (yet).
 
 You'll have:  
@@ -45,6 +47,7 @@ There are many people much smarter than I am, that much is obvious. Some have ev
   >The feature should be coming shortly. No public ETA has been shared but it shouldn't take much longer.
   
 I've used up a huge amount of my product development time this month on this topic, and have learned a lot from the multitude of articles I've read through, including the ones previously linked.
+
 
 ## The holy grail?
 
@@ -63,5 +66,3 @@ Absolutely! Though I am not sure that this approach will work for everyones' use
 With this decoupling comes much better code re-use and complete [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) from the consuming projects. This separation has been at the behest of ease of debugging though - I'm still trying to figure out how best to handle this outside of Unit Testing.
 
 This was a long process and there are many steps that, I'm sure you can tell, have not even been mentioned in this post. Check back for new posts where I will go into detail about how this was implemented, configured within Azure DevOps CI to build and publish the project package, and consumed within our SPFx projects...
-
-...when I get around to writing them that is...
