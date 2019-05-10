@@ -27,21 +27,20 @@ As previously mentioned, our environment was set and I was to go about using som
 - initial pipeline configuration.
 - project build configuration.
 - invoking the Pipeline build for the first time.
-- ~~using the bundled project.~~
 
 
 ### Assumptions (re-iterated) and notes before we start
 
 - You are using Azure DevOps for your source control.
 - You are willing to use Azure DevOps as an npm Registry replacement.
-- I have purposefully obfuscated company specific details in all screenshots.
 - You are comfortable using [gulp](https://www.npmjs.com/package/gulp) and the associated [gulp cli](https://www.npmjs.com/package/gulp-cli)
   - You should be if you've been following Microsoft tutorials ;)
-  
-
-### Create an Azure DevOps Artifact feed
+- I have purposefully obfuscated company specific details in all screenshots.
 
 Let's get started.
+
+
+### Create an Azure DevOps Artifact feed
 
 Navigate to your Azure DevOps Artifacts interface for your specific project, click **+ New feed**.
 
@@ -60,6 +59,7 @@ To finish up this part, simply click the **Connect to feed** button as indicated
 Make notes of the name of the feed and configuration details here so you don't need to come back later :)
 
 ![Azure DevOps - Artifacts feed - Connect to feed](/img/devops0b.png)
+
 
 ### Initial pipeline configuration
 
