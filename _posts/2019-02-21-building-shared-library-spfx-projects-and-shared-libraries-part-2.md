@@ -24,13 +24,8 @@ It's now time to continue...
 - What the actual requirements of the Shared Code project were.
 - What was already tried.
 - The type of project chosen to meet those needs, and why.
-- ~~Scaffolding and configuration of the project.~~
-- ~~Early issues that were encountered.~~
-- ~~building the project.~~
-- ~~bundling the project.~~
-- ~~using the project.~~
 
-## A litle more about what I do.
+## A little more about what I do.
 
 I have spent the last 9-10 months working on a productised wrapper of sorts, which is, in the simplest terms possible, intended to simplify the process of provisioning modern SharePoint experiences including the manipulation of the Term Store, Fields, Content Types, Lists, Libraries, etc. PowerShell PnP scripts are used to automate nearly every part of the process.
 
