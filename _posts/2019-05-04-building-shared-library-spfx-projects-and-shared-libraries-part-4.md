@@ -4,17 +4,17 @@ title: CI Pipeline and npm package - SPFx projects and Shared Libraries - May th
 date: 2019-05-04 +13:00
 published: true
 category: Dev
-tags: [spfx, sharepoint, shared libraries, spfx extensions, spfx webparts, typescript, npm, azure devops, devops, continuous integration]
+tags: [spfx, sharepoint, shared libraries, spfx extensions, spfx webparts, typescript, npm, azure, devops, continuous integration]
 ---
 
 I cannot believe that it's been a month since I last posted about this topic. It's time to finish it off before I forget how I have gone about building, bundling and using this shared code project.
 
 Here are links to all of the posts in this series:
 - [SPFx projects and Shared Libraries - numero uno](https://dreamsof.dev/2019-02-15-spfx-projects-and-shared-libraries-part-1/)
-- [Building a shared Library - SPFx projects and Shared Libraries - part deux](https://dreamsof.dev/2019-02-21-building-shared-library-spfx-projects-and-shared-libraries-part-2/)
-- [Building a shared Library - SPFx projects and Shared Libraries - iii](https://dreamsof.dev/2019-04-06-building-shared-library-spfx-projects-and-shared-libraries-part-3/)
-- Building a shared Library - SPFx projects and Shared Libraries - May the 4th be with you ;)
-- [Building a shared Library - SPFx projects and Shared Libraries - 5th and final, I promise...](https://dreamsof.dev/2019-04-06-building-shared-library-spfx-projects-and-shared-libraries-part-5/)
+- [Why? - SPFx projects and Shared Libraries - part deux](https://dreamsof.dev/2019-02-21-building-shared-library-spfx-projects-and-shared-libraries-part-2/)
+- [The build - SPFx projects and Shared Libraries - iii](https://dreamsof.dev/2019-04-06-building-shared-library-spfx-projects-and-shared-libraries-part-3/)
+- CI Pipeline and npm package - SPFx projects and Shared Libraries - May the 4th be with you ;)
+- [Consuming the package - SPFx projects and Shared Libraries - 5th and final, I promise...](https://dreamsof.dev/2019-04-06-building-shared-library-spfx-projects-and-shared-libraries-part-5/)
 
 As previously mentioned, our environment was set and I was to go about using some specific pieces of technology to achieve our goals.
 
