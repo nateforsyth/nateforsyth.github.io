@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building a shared Library - SPFx projects and Shared Libraries - 5th and final, I promise...
+title: Consuming the shared Library package - SPFx projects and Shared Libraries - 5th and final, I promise...
 date: 2019-05-09 +13:00
 published: true
 category: Dev
