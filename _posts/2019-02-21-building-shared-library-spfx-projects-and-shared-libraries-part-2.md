@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building a shared Library - SPFx projects and Shared Libraries - part deux
+title: Why? - SPFx projects and Shared Libraries - part deux
 date: 2019-02-21 +13:00
 published: true
 category: Dev
