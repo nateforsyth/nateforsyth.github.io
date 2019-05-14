@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building a shared Library - SPFx projects and Shared Libraries - May the 4th be with you ;)
+title: CI Pipeline and npm package - SPFx projects and Shared Libraries - May the 4th be with you ;)
 date: 2019-05-04 +13:00
 published: true
 category: Dev
