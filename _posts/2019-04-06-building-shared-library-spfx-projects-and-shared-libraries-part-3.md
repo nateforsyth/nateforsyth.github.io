@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building a shared Library - SPFx projects and Shared Libraries - iii
+title: The build - SPFx projects and Shared Libraries - iii
 date: 2019-04-06 +13:00
 published: true
 category: Dev
@@ -20,10 +20,10 @@ If you're not using those, fear not, simply modify the instructions to suit your
 
 Here are links to all of the posts in this series:
 - [SPFx projects and Shared Libraries - numero uno](https://dreamsof.dev/2019-02-15-spfx-projects-and-shared-libraries-part-1/)
-- [Building a shared Library - SPFx projects and Shared Libraries - part deux](https://dreamsof.dev/2019-02-21-building-shared-library-spfx-projects-and-shared-libraries-part-2/)
-- Building a shared Library - SPFx projects and Shared Libraries - iii
-- [Building a shared Library - SPFx projects and Shared Libraries - May the 4th be with you ;)](https://dreamsof.dev/2019-05-04-building-shared-library-spfx-projects-and-shared-libraries-part-4/)
-- [Building a shared Library - SPFx projects and Shared Libraries - 5th and final, I promise...](https://dreamsof.dev/2019-04-06-building-shared-library-spfx-projects-and-shared-libraries-part-5/)
+- [Why? - SPFx projects and Shared Libraries - part deux](https://dreamsof.dev/2019-02-21-building-shared-library-spfx-projects-and-shared-libraries-part-2/)
+- The build - SPFx projects and Shared Libraries - iii
+- [CI Pipeline and npm package - SPFx projects and Shared Libraries - May the 4th be with you ;)](https://dreamsof.dev/2019-05-04-building-shared-library-spfx-projects-and-shared-libraries-part-4/)
+- [Consuming the package - SPFx projects and Shared Libraries - 5th and final, I promise...](https://dreamsof.dev/2019-04-06-building-shared-library-spfx-projects-and-shared-libraries-part-5/)
 
 
 ## What this post will cover.
