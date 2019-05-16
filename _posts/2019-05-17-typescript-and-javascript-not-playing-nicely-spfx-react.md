@@ -1,10 +1,10 @@
 ---
 layout: post
-title: TypeScript and JavaScript - not playing nicely together in React
+title: TypeScript and JavaScript - not playing nicely together in SPFx React
 date: 2019-05-17 +13:00
 published: true
 category: Dev
-tags: [javascript, typescript, jquery, react]
+tags: [javascript, typescript, jquery, spfx, sharepoint framework, sharepoint, react]
 ---
 
 SharePoint Search is in a state of flux. Microsoft have been updating the DOM of modern SharePoint regularly over the last 6 months.
@@ -27,7 +27,9 @@ We have a working solution to manipulate the DOM elements, it hasn't changed fro
 
 The issue comes about due to our requirement to use a vanilla JS file to isolate Search based DOM elements due to restrictions we have with specific versions of all frameworks for specific clients.
 
-**I've encountered an issue whereby I am struggling to invoke functionality from within a JS file.**
+## I've encountered an issue whereby I am struggling to invoke functionality from within a JS file
+
+This example forms a part of an [SPFx](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview) [Extension](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions) project embedded into SharePoint as an [Application Customiser](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/using-page-placeholder-with-extensions). SharePoint [PnP PowerShell](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/?view=sharepoint-ps) is used to programmatically [add the customisation](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/add-pnpcustomaction?view=sharepoint-ps).
 
 ### Highlighting the problem
 
