@@ -137,7 +137,7 @@ export class SearchOverride extends React.Component<ISearchOverrideProps, ISearc
   }
   public render(): React.ReactElement<ISearchOverrideProps> {
 
-    console.log(`SearchOverride.render invoked...`); // this outputs to the console
+    console.log(`SearchOverride.render invoked...`); // this outputs to the console as expected
 
     searchOverrideJs.findElements(); // running this does nothing and I cannot figure out why
     
@@ -150,6 +150,7 @@ export class SearchOverride extends React.Component<ISearchOverrideProps, ISearc
         - this outputs the button elements as expected
         - they cannot be iterated over due to version restrictions in place
         - this is due to HtmlCollectionOf<HtmlButtonElement> not having the expected properties available
+        - this is fixed in later versions
      */
     console.log(searchBoxBtnEls[0]);
 
