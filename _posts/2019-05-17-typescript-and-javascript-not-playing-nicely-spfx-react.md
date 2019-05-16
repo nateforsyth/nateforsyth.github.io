@@ -31,6 +31,8 @@ The issue comes about due to our requirement to use a vanilla JS file to isolate
 
 This example forms a part of an [SPFx](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview) [Extension](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions) project embedded into SharePoint as an [Application Customiser](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/using-page-placeholder-with-extensions). SharePoint [PnP PowerShell](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/?view=sharepoint-ps) is used to programmatically [add the customisation](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/add-pnpcustomaction?view=sharepoint-ps).
 
+This functionality has been added to a React component (child) that currently only renders an empty div element to keep the state separated from the parent.
+
 ### Highlighting the problem
 
 **Here's some very basic functionality to highlight the problem:**
@@ -78,6 +80,7 @@ declare module "searchOverrideJs" {
 
 **Here's my tsconfig file:**
 
+~~~json
 // tsconfig.json
 {
   "compilerOptions": {
@@ -106,6 +109,7 @@ declare module "searchOverrideJs" {
     ]
   }
 }
+~~~
 
 **Here's the .tsx file that I am attempting to consume the .js file within:**
 
@@ -154,7 +158,7 @@ export class SearchOverride extends React.Component<ISearchOverrideProps, ISearc
 
 ### Chrome Dev Tools
 
-The Network tab shows the SearchOverrideJs.js file has indeed been loaded.
+The Network tab shows the SearchOverrideJs.js file has indeed been loaded, showing me that the component is operating as expected.
 
 **Invoking this within the Chrome Console:**
 
@@ -165,6 +169,8 @@ SearchOverrideJs.findElements()
 VM14888 SearchOverrideJs.js:3 SearchOverrideJs.findElements invoked
 ~~~
 
-Getting myself in a flap here because of something so seemingly benign.
+I'm getting myself into a flap because of something so seemingly benign.
 
 How can I invoke my .JS file within TypeScript?
+
+Appreciate any and all help :)
