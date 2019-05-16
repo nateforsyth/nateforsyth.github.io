@@ -7,7 +7,7 @@ category: Dev
 tags: [javascript, typescript, jquery, spfx, sharepoint framework, sharepoint, react]
 ---
 
-SharePoint Search is in a state of flux. Microsoft have been updating the DOM of modern SharePoint regularly over the last 6 months.
+**For some background**: SharePoint Search is in a state of flux. Microsoft have been updating the DOM of modern SharePoint regularly over the last 6 months.
 
 We have (had) a solution whereby we intercept the user's actions with the Search box on modern SharePiint Sites, note the arrow in the image below:
 
@@ -19,21 +19,23 @@ This is only a problem for "First release" clients. Here's what they're seeing:
 
 ![SharePoint Modern Search - the updated UX](/img/SearchAndTypeScript02.png)
 
-Here's what they have done to the DOM elements:
+Here's what they have done to the DOM elements (note the class names - these change every time they update making pattern matching a nightmare):
 
 ![SharePoint Modern Search - the updated DOM](/img/SearchAndTypeScript05.png)
 
 We have a working solution to manipulate the DOM elements, it hasn't changed from our previous implementation.
 
-The issue comes about due to our requirement to use a vanilla JS file to isolate Search based DOM elements due to restrictions we have with specific versions of all frameworks for specific clients.
+This example forms a part of an [SPFx](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview) [Extension](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions) project embedded into SharePoint as an [Application Customiser](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/using-page-placeholder-with-extensions). SharePoint [PnP PowerShell](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/?view=sharepoint-ps) is used to programmatically [add the customisation](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/add-pnpcustomaction?view=sharepoint-ps).
 
 ## I've encountered an issue whereby I am struggling to invoke functionality from within a JS file
 
-This example forms a part of an [SPFx](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview) [Extension](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions) project embedded into SharePoint as an [Application Customiser](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/using-page-placeholder-with-extensions). SharePoint [PnP PowerShell](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/?view=sharepoint-ps) is used to programmatically [add the customisation](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/add-pnpcustomaction?view=sharepoint-ps).
+This particular issue comes about due to our requirement to use a vanilla JS file to isolate Search based DOM elements due to restrictions we have with specific versions of all frameworks for specific clients.
 
-This functionality has been added to a React component (child) that currently only renders an empty div element to keep the state separated from the parent.
+Functionality has been added to a React component (child) that currently only renders an empty div element. It keeps the state separated from the parent.
 
-### Highlighting the problem
+### Failing to invoke JavaScript from within TypeScript
+
+Enough background.
 
 **Here's some very basic functionality to highlight the problem:**
 
