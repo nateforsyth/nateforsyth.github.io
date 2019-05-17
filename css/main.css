@@ -108,6 +108,8 @@ img {
 /* --- Navbar --- */
 
 .navbar-custom {
+  padding-left: 15px !important; /* overridden 17/05/2019 */
+  padding-right: 15px !important; /* overridden 17/05/2019 */
   background-color: {{ site.navbar-col }};
   border-bottom: 1px solid #EAEAEA;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
