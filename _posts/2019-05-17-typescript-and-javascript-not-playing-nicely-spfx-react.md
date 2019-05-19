@@ -2,7 +2,7 @@
 layout: post
 title: TypeScript and JavaScript - not playing nicely together in SPFx React
 date: 2019-05-17 +13:00
-published: true
+published: false
 category: Dev
 tags: [javascript, typescript, jquery, spfx, sharepoint framework, sharepoint, react]
 ---
