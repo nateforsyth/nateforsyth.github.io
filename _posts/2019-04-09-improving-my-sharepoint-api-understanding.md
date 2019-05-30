@@ -45,7 +45,7 @@ A Google search highlights many such support requests over the last 5 years. Bug
 
 ### The work-around
 
-My issue was slightly different though, it was simply that I couldn't force the REST API to decorate the selected item Field Terms witht heir Label, only the Id (there's the similarity).
+My issue was slightly different though, it was simply that I couldn't force the REST API to decorate the selected item Field Terms with their Label, only the Id (there's the similarity).
 
 Using the many suggestions, here's my *modern* work-around using a Post request off of an instance of **sp-pnp-js/Web** within TypeScript, and additionally using a provided CamlQuery object.
 
