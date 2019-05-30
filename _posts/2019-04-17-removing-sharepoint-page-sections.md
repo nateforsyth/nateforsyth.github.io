@@ -22,7 +22,7 @@ Start up your favourite terminal; I prefer PowerShell using PnP cmdlets where ap
 Connect-PnPOnline -Url https://[tenantName].sharepoint.com/sites/intranet
 ~~~
 
-You're now connected.
+Enter your credentials. You're now connected.
 
 
 #### Next up, retrieve the page.
