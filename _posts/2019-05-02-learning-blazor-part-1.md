@@ -43,10 +43,12 @@ Something had obviously gone awry, I'd assumed only with Visual Studio, so I set
 
 I created another Blazor client-side extension. It built as I expected, so I hit F5...
 
-> The type or namespace name '{elided}' could not be found (are you missing a using directive or an assembly reference?)
-> The type or namespace name '{elided}' could not be found (are you missing a using directive or an assembly reference?)
-> The type or namespace name '{elided}' could not be found (are you missing a using directive or an assembly reference?)
-> etc etc etc
+~~~text
+The type or namespace name '{elided}' could not be found (are you missing a using directive or an assembly reference?)
+The type or namespace name '{elided}' could not be found (are you missing a using directive or an assembly reference?)
+The type or namespace name '{elided}' could not be found (are you missing a using directive or an assembly reference?)
+etc etc etc
+~~~
 
 I updated my VS2019 installation, tried again - same problem.
 
@@ -77,7 +79,7 @@ I did the following:
 
 You'll note that the preceding order of operations is only slightly different to what was written within the guide, and although I don't necessarily believe it'll solve your problems, installing everything in that logical order has worked for me.
 
-I've been able to return to the project the last two nights and work on it without encountering any furhter issues - [ymmv](https://dictionary.cambridge.org/dictionary/english/ymmv) of course.
+I've been able to return to the project the last two nights and work on it without encountering any further issues - [ymmv](https://dictionary.cambridge.org/dictionary/english/ymmv) of course.
 
 
 ### So what happened here?
