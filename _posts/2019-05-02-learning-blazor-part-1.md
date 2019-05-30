@@ -73,7 +73,7 @@ I did the following:
 - installed the [Blazor extension](https://go.microsoft.com/fwlink/?linkid=870389) from the market place.
   - I ran Visual Studio, scaffolded a new Blazor client side app, build, F5... all worked.
   - I then added a basic POCO and updated the code a little, clean, build, F5... working again.
-- I then set about adding connectivity to my Deployd end-points, restsrt... huzzah!
+- I then set about adding connectivity to my Deployd end-points, restart... huzzah!
 
 **GREAT SUCCESS!**
 
