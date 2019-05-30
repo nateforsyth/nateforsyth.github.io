@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Removing SharePoint Page Sections using PnP
+title: Removing SharePoint Page Sections using PnP PowerShell
 date: 2019-04-17 +13:00
 published: true
 category: Provisioning
