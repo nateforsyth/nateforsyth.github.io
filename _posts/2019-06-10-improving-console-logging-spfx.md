@@ -29,7 +29,7 @@ What I want to demonstrate though is how useful it can be for trawling through S
 
 ### Initial sanity checking
 
-First up, let's ensure you have YeoMan installed as well as the SharePoint generator; type this at the PowerShell command prompt:
+I assume that this isn't your first rodeo into the SharePoint Framework, therefore you should already have YeoMan installed as part of that. Let's ensure you have the YeoMan SharePoint generator installed; type this at the PowerShell command prompt:
 
 ~~~powershell
 yo
