@@ -2,7 +2,7 @@
 layout: post
 title: SPFx React - improving console logging
 date: 2019-06-10 +13:00
-published: false
+published: true
 category: Dev
 tags: [typescript, spfx, sharepoint framework, sharepoint, react, console logging]
 ---
