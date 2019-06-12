@@ -197,6 +197,8 @@ Save, then refresh the browser page that has the Workbench open, and note the re
 // remainder elided for brevity
 ~~~
 
+Job done.
+
 We can now go about building a suitable data structure by iterating over **jsonResponse["d"]["results"]** and processing however we see fit by refactoring the **retrieveAllChoicesFromListField** method, something similar to the following simple console output:
 
 ~~~ts
@@ -208,4 +210,4 @@ We can now go about building a suitable data structure by iterating over **jsonR
 }
 ~~~
 
-Job done, hope this helps someone.
+Hope this helps someone.
