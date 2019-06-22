@@ -42,3 +42,9 @@ On top of that I have a particular love for automation of repetitive tasks. I've
 I absolutely love the outdoors, though opportunities are getting harder to come by as I get busier and busier - playing 4 years of catch up ya know? I love going mountain biking, and although I no longer practice them, actively follow the worlds of martial arts and rugby league, and travel as often as I can.
 
 I enjoy all facets of technology, and winding down after a long day with a couple of beers and a session in VR is what I call "a great way to end a challenging day".
+
+### my personal dev machine
+
+It's probably abundantly clear by now that I love technology, and as per usual I am continually iterating upon my dev and entertainment machine. Here's the results of a recent passmark run, details are available by following the link below.
+
+<a href="https://www.passmark.com/baselines/V9/display.php?id=123178408925"><img src="https://www.passmark.com/baselines/V9/images/123178408925.png" alt="PassMark Rating" border="0" /></a>
