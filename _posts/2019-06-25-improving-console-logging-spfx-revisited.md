@@ -14,7 +14,7 @@ I was again working on the project today that spawned that post, and didn't like
 
 ### So, what are we going to talk about today?
 
-[The approach I illustrated](https://dreamsof.dev/2019-06-10-improving-console-logging-spfx/) is fine for a Web Part project because we can easily tie it to the property pane, but I've realised that it isn't very dev-friendly from the context of simplifying the triage of an Extension problem.
+[The approach I illustrated](https://dreamsof.dev/2019-06-10-improving-console-logging-spfx/) is fine for a Web Part project because we can easily tie it to the property pane, but I've realised that it isn't very dev or end-user friendly from the context of simplifying the triage of an Extension problem.
 
 Why's that you ask?
 - The methodology I've used relies upon being able to update the manifest of the Extension so that we can see debug output.
