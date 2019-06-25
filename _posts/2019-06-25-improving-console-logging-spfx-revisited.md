@@ -19,12 +19,15 @@ I was again working on the project today that spawned that post, and didn't like
 Why's that you ask?
 - The methodology I've used relies upon being able to update the manifest of the Extension so that we can see debug output.
 - This doesn't bode well for quick triage due to having to load up the project and `gulp serve`, while using an updated manifest in the query string.
+- What I want to achieve is to **not** have to do any local debugging until we have triaged a few things first.
 - This is also not useful if you needed to ask the client to get you some quick triage information if they're having issues.
+
+Afterall, we want to improve our service to our clients right? They don't care about your technical information, that their explanation makes no sense or that you need to run debugging locally to find an obscure issue - it's much easier for them if you can simply say "press F12, paste in this URL, press enter... now tell me what the orange text says".
 
 
 ### Not good enough then... what are we going to do about it?
 
-The idea here is that we will use the presence of a token within `document.location.href` in conjunction with support for the presence of a boolean within the Extension properties. That combination will flag whether we're tracing or not, and handle the console styling as we were before.
+The idea here is that we will use the presence of a token within `document.location.href` in conjunction with our pre-existing support for the presence of a boolean within the Extension properties. That combination will flag whether we're tracing or not, and handle the console styling as we were before.
 
 Below is the [ImprovedConsoleLoggingApplicationCustomizer class from the previous post](https://dreamsof.dev/2019-06-10-improving-console-logging-spfx/), as well as our minor changes (as indicated by `NEW` and `UPDATED` comments). You'll see by the end that this really improves that all important initial triage process.
 
@@ -34,8 +37,14 @@ Below is the [ImprovedConsoleLoggingApplicationCustomizer class from the previou
 export default class ImprovedConsoleLoggingApplicationCustomizer
   extends BaseApplicationCustomizer<IImprovedConsoleLoggingApplicationCustomizerProperties> {
 
-  // start NEW
-  private doTrace: boolean = this.properties.doTrace || (document.location.href.indexOf(`?trace`) > -1 || document.location.href.indexOf(`&trace`) > -1);
+  /* 
+    start NEW
+    
+      We will support the presence of the following:
+      - this.properties.doTrace boolean from the manifest.
+      - trace token in the URL of the page (you can call it whatever you want).
+   */   
+  private doTrace: boolean = this.properties.doTrace || (document.location.href.indexOf(`?trace`) > -1 || document.location.href.indexOf(`&trace`) > -1);  
   // end NEW
 
   @override
