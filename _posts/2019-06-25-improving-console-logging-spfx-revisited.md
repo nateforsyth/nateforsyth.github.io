@@ -26,7 +26,7 @@ Why's that you ask?
 
 The idea here is that we will use the presence of a token within `document.location.href` in conjunction with support for the presence of a boolean within the Extension properties. That combination will flag whether we're tracing or not, and handle the console styling as we were before.
 
-Below is the [ImprovedConsoleLoggingApplicationCustomizer class from the previous post](https://dreamsof.dev/2019-06-10-improving-console-logging-spfx/), as well as our minor changes. You'll see by the end that this really improves that all important initial triage process.
+Below is the [ImprovedConsoleLoggingApplicationCustomizer class from the previous post](https://dreamsof.dev/2019-06-10-improving-console-logging-spfx/), as well as our minor changes (as indicated by `NEW` and `UPDATED` comments). You'll see by the end that this really improves that all important initial triage process.
 
 ~~~ts
 // ImprovedConsoleLoggingApplicationCustomizer.ts
@@ -34,7 +34,9 @@ Below is the [ImprovedConsoleLoggingApplicationCustomizer class from the previou
 export default class ImprovedConsoleLoggingApplicationCustomizer
   extends BaseApplicationCustomizer<IImprovedConsoleLoggingApplicationCustomizerProperties> {
 
-  private doTrace: boolean = this.properties.doTrace || (document.location.href.indexOf(`?traceImprovedConsoleLoggingApplicationCustomizer`) > -1 || document.location.href.indexOf(`&traceImprovedConsoleLoggingApplicationCustomizer`) > -1); // NEW
+  // start NEW
+  private doTrace: boolean = this.properties.doTrace || (document.location.href.indexOf(`?trace`) > -1 || document.location.href.indexOf(`&trace`) > -1);
+  // end NEW
 
   @override
   public onInit(): Promise<void> {
@@ -66,13 +68,17 @@ export default class ImprovedConsoleLoggingApplicationCustomizer
 }
 ~~~
 
-Now all we need to do to trace an Extension on a client environment is add either `?traceImprovedConsoleLoggingApplicationCustomizer` or `&traceImprovedConsoleLoggingApplicationCustomizer` to the end of the URL in the address bar. At that point the console logging will look as it did before.
+Now all we need to do to trace an Extension on a client environment is add either `?trace` or `&trace` to the end of the URL in the address bar (note the presence of `?` and `&` - you'll be using ampersand when you've already got a query string, and the question mark when you don't). At that point the console logging will look as it did before.
 
 This means that we can ask a customer to do that for us and simply send us an extract or screenshot of the logging.
 
-Here's what it looks like on one of our live test tenants.
+Here's what it looks like on one of our live test tenants, **note the page URL**.
 
 ![Styling Console Logging extension - styled logging simplified](/img/StylingConsoleLogging10.png)
+
+I've begun to implement this across our entire SPFx Extensions solution. I'm using differing `trace` tokens so that I can toggle each Extension into trace mode quickly and in isolation to each other by making them more verbose.
+
+Toggling two different Extensions into trace mode together is now trivial, e.g. `?traceImprovedConsoleLoggingApplicationCustomizer&traceMenuStylingOverrideApplicationCustomizer`.
 
 Clean. Efficient. Extensible... just the way I like it!
 
