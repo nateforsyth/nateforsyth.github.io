@@ -29,7 +29,7 @@ Afterall, we want to improve our service to our clients right? They don't care a
 
 The idea here is that we will use the presence of a token within `document.location.href` in conjunction with our pre-existing support for the presence of a boolean within the Extension properties. That combination will flag whether we're tracing or not, and handle the console styling as we were before.
 
-Below is the [ImprovedConsoleLoggingApplicationCustomizer class from the previous post](https://dreamsof.dev/2019-06-10-improving-console-logging-spfx/), as well as our minor changes (as indicated by `NEW` and `UPDATED` comments). You'll see by the end that this really improves that all important initial triage process.
+Below is the [ImprovedConsoleLoggingApplicationCustomizer class from the previous post](https://dreamsof.dev/2019-06-10-improving-console-logging-spfx/), as well as our minor changes (as indicated by the `NEW` and `UPDATED` comments). You'll see by the end that this really improves that all important initial triage process.
 
 ~~~ts
 // ImprovedConsoleLoggingApplicationCustomizer.ts
@@ -77,7 +77,7 @@ export default class ImprovedConsoleLoggingApplicationCustomizer
 }
 ~~~
 
-Now all we need to do to trace an Extension on a client environment is add either `?trace` or `&trace` to the end of the URL in the address bar (note the presence of `?` and `&` - you'll be using ampersand when you've already got a query string, and the question mark when you don't). At that point the console logging will look as it did before.
+Now all we need to do to trace an Extension on a client environment is add either `?trace` or `&trace` to the end of the URL in the address bar (note the presence of `?` and `&` - you'll be using ampersand when you've already got a query string, and the question mark when you don't - but I assume you know this). At that point the console logging will styles as it was before.
 
 This means that we can ask a customer to do that for us and simply send us an extract or screenshot of the logging.
 
@@ -85,10 +85,10 @@ Here's what it looks like on one of our live test tenants, **note the page URL**
 
 ![Styling Console Logging extension - styled logging simplified](/img/StylingConsoleLogging10.png)
 
-I've begun to implement this across our entire SPFx Extensions solution. I'm using differing `trace` tokens so that I can toggle each Extension into trace mode quickly and in isolation to each other by making them more verbose.
+I've begun to implement this across the entirety of our SPFx Extensions projects/solutions. I'm using differing `trace` tokens so that I can toggle each Extension into trace mode quickly and in isolation to each other by making them more verbose. I am also applying different colours to each so that they can be picked out when they're not isolated.
 
-Toggling two different Extensions into trace mode together is now trivial, e.g. `?traceImprovedConsoleLoggingApplicationCustomizer&traceMenuStylingOverrideApplicationCustomizer`.
+Toggling two different Extensions into trace mode together is now trivial, e.g. URL: `https://[tenantName].sharepoint.com/sites/[siteName]?traceImprovedConsoleLoggingApplicationCustomizer&traceMenuStylingOverrideApplicationCustomizer`.
 
 Clean. Efficient. Extensible... just the way I like it!
 
-Until next time. Let me know your thoughts.
+Let me know your thoughts. Until next time.
