@@ -37,6 +37,8 @@ You want a News roll-up function? Microsoft already provides one of those. Oh, y
 
 On top of that I have a particular love for automation of repetitive tasks. I've been intimately involved with the automation of complete SharePoint tenant provisioning and customisation using PowerShell, specifically ootb SPO and open source PnP cmdlets.
 
+Finally, that automation goes a lot further when coupled with Azure Logic Apps and Azure Functions to wrap API functionality with solid UX and workflows - all of which I am experienced in.
+
 ### what else is there?
 
 I absolutely love the outdoors, though opportunities are getting harder to come by as I get busier and busier - playing 4 years of catch up ya know? I love going mountain biking, and although I no longer practice them, actively follow the worlds of martial arts and rugby league, and travel as often as I can.
