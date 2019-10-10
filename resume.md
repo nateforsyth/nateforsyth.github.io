@@ -39,6 +39,7 @@ Significant projects have been successfully delivered for well-known New Zealand
 - Bootstrap 3 and 4
 - Microsoft Office Fabric UI
 - React
+- Sharepoint Framework (SPFx)
 - Website development
 
 
