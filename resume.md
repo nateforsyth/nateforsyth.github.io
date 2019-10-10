@@ -13,7 +13,13 @@ My ambition and objective is to fully flesh out my technical skills. I believe t
 
 ## Strengths
 
-I write code clearly and concisely, listen attentively and speak effectively. I have a keen ability to identify problems as well as key requirements, which allow me to provide accurate estimations, and in turn design and deliver well built software, workflows, processes and solutions. I am accoutable, confident in my skills and take responsibility for my actions. I work well with others and confidently motivate and coach others to meet group and team goals while also enjoying ourselves.
+I write code clearly and concisely, listen attentively and speak effectively.
+
+I have a keen ability to identify problems as well as key requirements, which allow me to provide accurate estimations, and in turn design and deliver well built software, workflows, processes and solutions.
+
+I am accoutable, confident in my skills and take responsibility for my actions.
+
+I work well with others and confidently motivate and coach others to meet group and team goals while also enjoying ourselves.
 
 
 ## A brief history
