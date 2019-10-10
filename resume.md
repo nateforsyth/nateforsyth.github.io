@@ -8,14 +8,21 @@ subtitle: Resume
 
 I'm a formally trained Intermediate .NET and Java Developer. With a recent focus on Azure, .NET and SharePoint development, my greatest skills revolve around the Microsoft eco-system including all things Azure. I seek to further refine my Web Application/API development and front-end Web dev skills. I am also keenly interested in Android development, whether native or cross-platform.
 
-My ambition and objective is to fully flesh out my technical skills. I believe that, coupled with my previous business experience and love of & aptitude in software development has set me up for a bright future within these fields.
+My ambition and objective is to fully flesh out my technical skills. I believe that my previous business experience and love of & aptitude in software development has set me up for a bright future within these fields.
+
+
+## Strengths
+
+I write code clearly and concisely, listen attentively and speak effectively. I have a keen ability to identify problems as well as key requirements, which allow me to provide accurate estimations, and in turn design and deliver well built software, workflows, processes and solutions. I am accoutable, confident in my skills and take responsibility for my actions. I work well with others and confidently motivate and coach others to meet group and team goals while also enjoying ourselves.
 
 
 ## A brief history
 
 I left my previous Data Analysis and Process Improvement career in 2014 to study development full-time. Since graduation in 2016 I've run my own business (which ultimately failed) and have entered the professional work-force with a SharePoint consultancy in Christchurch.
 
-I've worked in both the private and public sectors for companies such as Christchurch Casinos, Kathmandu and Transpower.
+I've worked in both the private and public sectors, both for large New Zealand companies such as Christchurch Casinos, Kathmandu and Transpower as well as small team environments.
+
+Significant projects have been successfully delivered for well-known New Zealand companies such as AsureQuality, Ballantynes, Fulton Hogan, Jade Software, MainPower, Ravensdown, Scenic Hotel Group and Trojan Holdings.
 
 
 ## Technical Summary
