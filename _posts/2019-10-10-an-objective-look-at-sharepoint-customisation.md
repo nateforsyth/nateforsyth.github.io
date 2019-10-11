@@ -20,13 +20,13 @@ My daily bread and butter consists of the SharePoint Framework (SPFx), PowerShel
 
 I'll touch on that last point in a bit, first check out my [resume](https://dreamsof.dev/resume/) and scroll down half way for an indication of where my SharePoint specific/relevant skills lie.
 
-I've noticed within the last ~6 months or so that Microsoft are making customisations harder and harder to persist. I'm not talking about simplistic Web Part and Extension projects, I'm talking about addresses specific flaws within Microsofts' current offering. One specific example is a hard coded intercept that redirects from the Modern Search Box in the Tenant Bar within Office 365 to Classic Search.
+I've noticed within the last ~6 months or so that Microsoft are making customisations harder and harder to persist. I'm not talking about simplistic Web Part and Extension projects, I'm talking about what we term to be addressing specific flaws within Microsofts' current offering. One specific example is a hard coded intercept that redirects from the Modern Search Box in the Tenant Bar within Office 365 to the Classic Search Centre.
 
 Classic Search is still the preferred solution for large Enterprise clients because it enables you to surface item meta data as refiners for a very rich search experience.
 
 Sure, Modern Search is getting better, but it's got a hell of a long way to go before it can be considered a true replacement for the Classic Search Centre.
 
-Sure, we used an SPFx Extension component to intercept and override all of the gubbins behind the scenes that allow for the Modern Experience to be ignored, allowing a true redirect to the Classic Experience for Search.
+We used an SPFx Extension component to intercept and override all of the gubbins behind the scenes that allow for the Modern Experience to be ignored, allowing a true redirect to the Classic Experience for Search.
 
 
 ### Why is a Search Override a big deal?
@@ -52,7 +52,7 @@ You'd be right in thinking "yo dude, just target the IDs and classes within the 
 
 ![SharePoint DOM for Tenant Search Box](/img/ObjectiveSpo04.png)
 
-These change every time that Microsoft updates SharePoint; that's every 1-2 weeks. Guess what happens when we've already sold a solution such as this to an Enterprise client and they're actively using it... that's right, **technical debt**.
+These change every time that Microsoft updates SharePoint; that's every 1-2 weeks. Guess what happens when we've already sold a solution such as this to an Enterprise client and they're actively using it... that's right, **technical debt** and **convoluted support**.
 
 
 ### Get to the point already!
@@ -74,21 +74,27 @@ The upper echelons are pushing for simplified provisioning of out of the box sol
 
 It's an honourable endeavour, one that is allowing our clients to efficiently and effectively utilise what they've already paid for (their Office 365 subscriptions) to work smarter, not harder.
 
+The push to out-of-the-box solutions is happening, and we as a company are embracing it.
+
 
 ### Where does that leave this SharePoint Developer?
 
 That's the part I am not too sure about.
 
-Luckily automated provisioning was an opportunity to dive into Azure Functions and Logic Apps, allowing me to dive deeply into the C# and .NET eco-systems again. That's been about 4 months of solid dev work, but even that project is winding down.
+Luckily automated provisioning was an opportunity to delve into Azure Functions and Logic Apps, allowing me to dive deeply into the C# and .NET eco-systems again. That's been about 4 months of solid dev work, but even that project is winding down - we're in deployment mode now. It's a product, and it's practically finished.
 
-Within a few weeks my days will consist of preparation of CSV files for consumption within our well built scripts and tools. PowerShell is invoked and monitored, and if I am lucky there will be an exception or connectivity issue to troubleshoot. Sure, there is consultation with clients, but **I am not a consultant, I don't want to be > job title = Developer**. There is a measure of boredom and a general feeling of 'what the hell am I doing this for?' within this type of work. I am loathe to say this but, I feel it's below me. Any SharePoint Administrator with even a little PowerShell knowledge could do what I will be stuck doing.
+Within a few weeks my days will consist of preparation of CSV files for consumption within our well built scripts and tools. PowerShell is invoked and monitored, and if I am lucky there will be an exception or connectivity issue to troubleshoot.
+
+Sure, there is consultation with clients, but **I am not a consultant**, I don't want to be => **job title = Developer**. There is a measure of boredom and a general feeling of 'what the hell am I doing this for?' within this type of work. I am loathe to say this but, I feel it's below me. Any SharePoint Administrator with even a little PowerShell knowledge could do what I will be stuck doing.
 
 
 ### A silver lining
 
-I've learned a lot from this last 19 months of SharePoint Development, and I have had the privilege of working with two gentlemen who are at the top of their game globally. I've also been able to refine all of the soft skills needed to thrive in the industry. Time hasn't been wasted. I've even begun to [teach myself C++](https://dreamsof.dev/2019-09-27-learning-the-cpp-basics-1/).
+I've learned a lot from this last 19 months of SharePoint Development, and I have had the privilege of working with two gentlemen who are at the top of their game globally. I've also been able to refine all of the soft skills needed to thrive in the industry. Time hasn't been wasted.
 
 One thing is abundantly clear. The demand within this small part of the world for custom SharePoint Development is dwindling. It's time to think about the career.
+
+On that note, I've begun to [teach myself C++](https://dreamsof.dev/2019-09-27-learning-the-cpp-basics-1/), it's nice to be a noob again, perhaps that's where my future lies - I love learning.
 
 
 Thanks for reading.
