@@ -54,6 +54,8 @@ You'd be right in thinking "yo dude, just target the IDs and classes within the 
 
 These change every time that Microsoft updates SharePoint; that's every 1-2 weeks. Guess what happens when we've already sold a solution such as this to an Enterprise client and they're actively using it... that's right, **technical debt** and **convoluted support**.
 
+I also need to throw it out there that I didn't design this solution. I inherited it, and regardless of my feelings about DOM manipulation and how hard I petition for approval to develop a proper solution, it falls on deaf ears. It's very much a "who is going to pay for *that* to get done?" scenario. One which I always lose.
+
 
 ### Get to the point already!
 
