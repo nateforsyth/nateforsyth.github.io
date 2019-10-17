@@ -324,3 +324,6 @@ Of course4, Mocha and Chai still had the same issue, but that was mitigated by i
 ## phew, this has been another long post.
 
 I'll save the build, bundling and usage for another post. Check back later :)
+
+
+Want to read more? Clicky -> [CI Pipeline and npm package - SPFx projects and Shared Libraries - May the 4th be with you ;)](https://dreamsof.dev/2019-05-04-building-shared-library-spfx-projects-and-shared-libraries-part-4/)
