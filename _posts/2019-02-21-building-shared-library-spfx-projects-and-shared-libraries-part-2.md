@@ -105,3 +105,6 @@ This post has ended up much longer than I'd hoped, I'll continue in part 3, wher
 
 ## Until next time...
 
+
+Want to read more? Clicky -> [The build - SPFx projects and Shared Libraries - iii](https://dreamsof.dev/2019-04-06-building-shared-library-spfx-projects-and-shared-libraries-part-3/)
+
