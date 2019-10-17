@@ -237,3 +237,6 @@ Ensure that the published version is what you'd expect from your projects' packa
 I was going cover usage of this package in a consuming project, but this post is already very long and I want to go and drink some beers so you'll need to wait until the next post for that :)
 
 Have a good one!
+
+
+Want to read more? Clicky -> [Consuming the package - SPFx projects and Shared Libraries - 5th and final, I promise...](https://dreamsof.dev/2019-04-06-building-shared-library-spfx-projects-and-shared-libraries-part-5/)
