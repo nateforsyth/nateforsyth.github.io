@@ -44,6 +44,8 @@ Sooo... you have a development environment set up and are ready to get started.
 
 ### Create your Library project
 
+This project is simple, it's intended to highlight the shell of a Utilities library, specifically including functionality to truncate a string. That specific functionality is irrelevant to the concepts being highlighted though.
+
 First, navigate to your favourite code repo folder, open a terminal (I prefer PowerShell).
 
 Next, check that you have the latest versions of [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/get-npm).
@@ -72,7 +74,7 @@ npm install -d typescript
 npm install -d tslint
 ~~~
 
-You'll probably also want to install other dependencies  from npm (or yarn) at this point, including some SharePoint specific functionality you'll no doubt need. That's outside of the scope of this post though - the import process is no different than importing adding them to an SPFx project.
+You'll probably also want to install other dependencies  from npm (or yarn) at this point, including some SharePoint specific functionality you'll no doubt need. That's outside of the scope of this post though - the import process is no different than adding them to an SPFx project.
 
 If you haven't already done so, it's time to install your favourite unit testing framework. I chose [Mocha](https://www.npmjs.com/package/mocha) and [Chai](https://www.npmjs.com/package/chai), mainly due to them being included out of the box within SPFx projects scaffolded by the [Yeoman SharePoint Generator](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator).
 
