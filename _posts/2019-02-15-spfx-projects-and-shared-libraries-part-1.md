@@ -66,3 +66,6 @@ Absolutely! Though I am not sure that this approach will work for everyones' use
 With this decoupling comes much better code re-use and complete [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) from the consuming projects. This separation has been at the behest of ease of debugging though - I'm still trying to figure out how best to handle this outside of Unit Testing.
 
 This was a long process and there are many steps that, I'm sure you can tell, have not even been mentioned in this post. Check back for new posts where I will go into detail about how this was implemented, configured within Azure DevOps CI to build and publish the project package, and consumed within our SPFx projects...
+
+
+Want to read more? Clicky -> [Why? - SPFx projects and Shared Libraries - part deux](https://dreamsof.dev/2019-02-21-building-shared-library-spfx-projects-and-shared-libraries-part-2/)
