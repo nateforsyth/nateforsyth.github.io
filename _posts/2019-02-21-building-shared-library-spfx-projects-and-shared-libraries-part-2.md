@@ -29,7 +29,7 @@ It's now time to continue...
 
 I have spent the last 9-10 months working on a productised wrapper of sorts, which is, in the simplest terms possible, intended to simplify the process of provisioning modern SharePoint experiences including the manipulation of the Term Store, Fields, Content Types, Lists, Libraries, etc. PowerShell PnP scripts are used to automate nearly every part of the process.
 
-A lot of work has gone into creating a unified menu structure that can span across multiple site collections on a tenant, as well as multiple custom Web Parts intended to extend upon the OOTB Microsoft offerings revolving around providing a better UX, as well as introduct completely new functionality to improve end user workflows and processes.
+A lot of work has gone into creating a unified menu structure that can span across multiple site collections on a tenant, as well as multiple custom Web Parts intended to extend upon the OOTB Microsoft offerings revolving around providing a better UX, as well as introduce completely new functionality to improve end user workflows and processes.
 
 The SharePoint Framework (SPFx) was chosen for the majority of the custom UI work we've implemented, and even though it is now quite a mature offering, it's provided its' fair share of challenges for this [still relatively new developer](https://nateforsyth.github.io/2019-02-14-from-dot-net-to-sharepoint/).
 
