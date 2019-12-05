@@ -26,9 +26,9 @@ I work well with others and confidently motivate and coach others to meet group 
 
 I left my previous Data Analysis and Process Improvement career in 2014 to study development full-time. Since graduation in 2016 I've run my own business (which ultimately failed) and have entered the professional work-force with a SharePoint consultancy in Christchurch.
 
-I've worked in both the private and public sectors, both for large New Zealand companies such as Christchurch Casinos, Kathmandu and Transpower as well as small team environments.
+I've worked in both the private and public sectors, for large New Zealand companies such as Christchurch Casinos, Kathmandu and Transpower as well as small team environments.
 
-Significant projects have been successfully delivered for well-known New Zealand companies such as AsureQuality, Ballantynes, Fulton Hogan, Jade Software, MainPower, Ravensdown, Scenic Hotel Group and Trojan Holdings.
+Projects have been successfully delivered for well-known companies including AsureQuality, Ballantynes, Fulton Hogan, Jade Software, MainPower, Ravensdown, Scenic Hotel Group, Trojan Holdings and Zespri.
 
 
 ## Technical Summary
