@@ -43,7 +43,7 @@ I'm talking about the difference between this:
 
 And this:
 
-![SharePoint Classic Search Refiners](/img/ObjectiveSpo03.png)
+![SharePoint Classic Search Refiners](/img/ObjectiveSpo03b.png)
 
 
 ### Simple right? Well no, it's not actually
