@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SharePoint: creating many Pages using pre-configured Page Templates
+title: Creating many Pages using pre-configured Page Templates within SharePoint
 date: 2020-01-06 +13:00
 published: true
 category: Development
