@@ -22,7 +22,7 @@ Next, prepare a CSV file with the following columns at a minimum, here's some te
 |TestPageTwo|Test Page Two|TRUE|TRUE|Templates/TemplateOne.aspx|
 |TestPageThree|Test Page Three|TRUE|FALSE|Templates/TemplateTwo.aspx|
 
-Using this dat0a, I will create two pages using my pre-configured TemplateOne.aspx template (one without Comments, the other with, both published) and another unpublished page with Comments enabled using the TemplateTwo.aspx template.
+Using this data, I will create two pages using my pre-configured TemplateOne.aspx template (one without Comments, the other with, both published) and another unpublished page with Comments enabled using the TemplateTwo.aspx template.
 
 
 ### Creating the Pages
@@ -34,13 +34,13 @@ Now, we are going to run through the steps required to create multiple pages by 
 
 Using [PnP PowerShell](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/add-pnpalert?view=sharepoint-ps), connect to your test site collection.
 
-```ps
+```powershell
 $siteUrl = "https://[tenantName].sharepoint.com/sites/[siteName]";
 Connect-PnPOnline -Url $siteUrl; # you'll be prompted for your credentials
 
 # test that you are connected
 $ctx = Get-PnPContext;
-Write-Host $ctx; # this will display the context information of the connected site
+$ctx; # this will display the context information of the connected site
 ```
 
 Here are the results.
@@ -53,7 +53,7 @@ Web                          : Microsoft.SharePoint.Client.Web
 Site                         : Microsoft.SharePoint.Client.Site
 RequestResources             : Microsoft.SharePoint.Client.RequestResources
 FormDigestHandlingEnabled    : True
-ServerVersion                : 16.0.19520.12063
+ServerVersion                : [elided]
 Url                          : https://[tenameName].sharepoint.com/sites/[siteName]
 ApplicationName              : SharePoint PnP PowerShell Library
 ClientTag                    : PnPCore:1906:
@@ -71,7 +71,7 @@ StaticObjects                : {[Microsoft$SharePoint$SPContext$Current, Microso
 ServerSchemaVersion          : 15.0.0.0
 ServerLibraryVersion         : 16.0.19520.12063
 RequestSchemaVersion         : 15.0.0.0
-TraceCorrelationId           : 75a1289f-40fa-0000-36d2-feae1a0af9e0
+TraceCorrelationId           : [elided]
 ```
 
 
@@ -79,7 +79,7 @@ TraceCorrelationId           : 75a1289f-40fa-0000-36d2-feae1a0af9e0
 
 Righty, so we're now connected to our site, let's get to importing the CSV file.
 
-```ps
+```powershell
 $csvFilePath = "[pathToYourCsvFile]";
 $csvFileDelimiter = ","; # comma delimited
 
@@ -119,7 +119,7 @@ Run the above script.
 
 #### The end result
 
-All going to plan, I have 3x new Pages within my test Site Collection that have been created based upon pre-defined Page Templates.
+All going to plan, we have 3x new Pages within the test Site Collection that have been created based upon the Page Templates defined within the CSV file that was imported.
 
 Job's a goodun.
 
