@@ -88,10 +88,39 @@ $csvFileDataSet = Import-Csv $csvFilePath -Delimiter $csvFileDelimiter;
 # iterate over each row of the CSV file
 For-Each ($row in $csvFileDataSet) {
   try {
+    $pageFileName = ("{0}.aspx" -f $row.PageName);
     
+    $pageTemplate = Get-PnPClientSidePage -Identity $row.PageCustomTemplate;
+    $pageTemplate.Save($pageFileName);
+    
+    $commandToInvoke = ("Set-PnPClientSidePage -Identity {0} -Title {1}" -f $row.PageName, $row.PageTitle);
+    
+    if($row.PageCommentsEnabled){
+      $commandToInvoke = ("{0} -CommentsEnabled" -f $commandToInvoke);
+    } else {
+      $commandToInvoke = ("{0} -CommentsEnabled:$false" -f $commandToInvoke);
+    }
+    
+    if($row.PagePublish){
+      $commandToInvoke = ("{0} -Publish" -f $commandToInvoke);
+    } else {
+      $commandToInvoke = ("{0} -Publish:$false" -f $commandToInvoke);
+    }
+    
+    Invoke-Expression -Command $commandToInvoke;
   } catch {
     Write-Host ("Error encountered while adding Page: {0} to Site: {1} using Template {2}" -f $row.PageName, $siteUrl, $row.PageCustomTemplate) -ForegroundColor Red;
-  }
-  
+  }  
 }
 ```
+
+Run the above script.
+
+
+#### The end result
+
+All going to plan, I have 3x new Pages within my test Site Collection that have been created based upon pre-defined Page Templates.
+
+Job's a goodun.
+
+Happy new year!
