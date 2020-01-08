@@ -26,7 +26,7 @@ Classic Search is still the preferred solution for large Enterprise clients beca
 
 Sure, Modern Search is getting better, but it's got a hell of a long way to go before it can be considered a true replacement for the Classic Search Centre.
 
-We used an SPFx Extension component to intercept and override all of the gubbins behind the scenes that allow for the Modern Experience to be ignored, allowing a true redirect to the Classic Experience for Search.
+We use an SPFx Extension component to intercept and override all of the gubbins behind the scenes that allow for the Modern Experience to be ignored, allowing a true redirect to the Classic Experience for Search.
 
 
 ### Why is a Search Override a big deal?
@@ -48,13 +48,15 @@ And this:
 
 ### Simple right? Well no, it's not actually
 
+With the caveat that I *inherited* the project I am about to discuss; I am aware that it shouldn't be done this way - more below.
+
 You'd be right in thinking "yo dude, just target the IDs and classes within the DOM", that's exactly what we do, and have done for quite a long time. But within the last 6-9 months Microsoft has begun obfuscating the DOM with automatically generated class names, which have become a right pain in the arse to maintain. Here's an example.
 
 ![SharePoint DOM for Tenant Search Box](/img/ObjectiveSpo04.png)
 
 These change every time that Microsoft updates SharePoint; that's every 1-2 weeks. Guess what happens when we've already sold a solution such as this to an Enterprise client and they're actively using it... that's right, **technical debt** and **convoluted support**.
 
-I also need to throw it out there that I didn't design this solution. I inherited it, and regardless of my feelings about DOM manipulation and how hard I petition for approval to develop a proper solution, it falls on deaf ears. It's very much a "who is going to pay for *that* to get done?" scenario. One which I always lose.
+I also need to throw it out there that I didn't design this solution. I inherited it, and regardless of my feelings about DOM manipulation and how hard I petition for approval to develop a proper solution, it's very much a "who is going to pay for *that* to get done?" scenario. One which I always lose.
 
 
 ### Get to the point already!
