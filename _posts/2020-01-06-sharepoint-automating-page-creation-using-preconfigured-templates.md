@@ -16,11 +16,11 @@ First up, ensure that you have a site collection for testing, and that it includ
 
 Next, prepare a CSV file with the following columns at a minimum, here's some test data as well:
 
-|PageName|PageTitle|PageCommentsEnabled|PagePublish|PageCustomTemplate|
+|PageName|PageTitle|PageCommentsEnabled|PagePublish|LayoutType|PageCustomTemplate|
 |---|---|---|---|---|
-|TestPageOne|Test Page One|FALSE|TRUE|Templates/TemplateOne.aspx|
-|TestPageTwo|Test Page Two|TRUE|TRUE|Templates/TemplateOne.aspx|
-|TestPageThree|Test Page Three|TRUE|FALSE|Templates/TemplateTwo.aspx|
+|TestPageOne|Test Page One|FALSE|TRUE||Templates/TemplateOne.aspx|
+|TestPageTwo|Test Page Two|TRUE|TRUE||Templates/TemplateOne.aspx|
+|TestPageThree|Test Page Three|TRUE|FALSE||Templates/TemplateTwo.aspx|
 
 Using this data, I will create two pages using my pre-configured TemplateOne.aspx template (one without Comments, the other with, both published) and another unpublished page with Comments enabled using the TemplateTwo.aspx template.
 
@@ -79,7 +79,15 @@ TraceCorrelationId           : [elided]
 
 Righty, so we're now connected to our site, let's get to importing the CSV file.
 
+
+
 ```powershell
+# 15/01/2019 notes:
+#
+# I've had to update this block of code because the initial implementation of passing a validated string to `Invoke-Expression` doesn't play nicely with PowerShell Switch commands. The more you know huh?
+#
+# The updated implementation uses a standard if/else structure and, though more verbose, works as intended.
+
 $csvFilePath = "[pathToYourCsvFile]";
 $csvFileDelimiter = ","; # comma delimited
 
@@ -90,24 +98,28 @@ For-Each ($row in $csvFileDataSet) {
   try {
     $pageFileName = ("{0}.aspx" -f $row.PageName);
     
+    # retrieve the template
     $pageTemplate = Get-PnPClientSidePage -Identity $row.PageCustomTemplate;
+    
+    # save the template as a new page; note - this command ignores -CommentsEnabled settings from the template - this is a bug
     $pageTemplate.Save($pageFileName);
+
+    # retrieve the new page, this is used to specify the page you're invoking Set-PnPClientSidePage on below
+    $newPage = Get-PnPClientSidePage -Identity $pageFileName;
     
-    $commandToInvoke = ("Set-PnPClientSidePage -Identity {0} -Title {1}" -f $row.PageName, $row.PageTitle);
-    
-    if($row.PageCommentsEnabled){
-      $commandToInvoke = ("{0} -CommentsEnabled" -f $commandToInvoke);
-    } else {
-      $commandToInvoke = ("{0} -CommentsEnabled:$false" -f $commandToInvoke);
+    if($row.PageCommentsEnabled){ # page comments are enabled
+      if($row.PagePublish){ # page comments are enabled, page is published
+        Set-PnPClientSidePage -Identity $newPage -Title $row.PageTitle -CommentsEnabled -Publish;
+      } else { # page comments are enabled, page isn't published        
+        Set-PnPClientSidePage -Identity $newPage -Title $row.PageTitle -CommentsEnabled -Publish:$false;
+      }
+    } else { # page comments are disabled
+      if($row.PagePublish){ # page comments are disabled, page is published
+        Set-PnPClientSidePage -Identity $newPage -Title $row.PageTitle -CommentsEnabled:$false -Publish;
+      } else { # page comments are disabled, page isn't published
+        Set-PnPClientSidePage -Identity $newPage -Title $row.PageTitle -CommentsEnabled:$false -Publish:$false;
+      }
     }
-    
-    if($row.PagePublish){
-      $commandToInvoke = ("{0} -Publish" -f $commandToInvoke);
-    } else {
-      $commandToInvoke = ("{0} -Publish:$false" -f $commandToInvoke);
-    }
-    
-    Invoke-Expression -Command $commandToInvoke;
   } catch {
     Write-Host ("Error encountered while adding Page: {0} to Site: {1} using Template {2}" -f $row.PageName, $siteUrl, $row.PageCustomTemplate) -ForegroundColor Red;
   }  
