@@ -2,7 +2,7 @@
 layout: post
 title: Scaffolding new vanilla React app with TypeScript
 date: 2020-01-15 +13:00
-published: false
+published: true
 category: Development
 tags: [react, typescript, vscode, chrome]
 ---
@@ -67,6 +67,13 @@ export default App;
 
 Save the App.tsx file; the app in your browser should automatically refresh the DOM showing the changes. You can go to the Dev Tools in Chrome by hitting F12 and monitor the components as they update - only the changed component will update - this is the core of React!
 
+Stop the server from running.
+
+```powershell
+[Ctrl + C]
+y [Enter]
+```
+
 
 #### Install TSLint
 
@@ -74,12 +81,12 @@ We're not done yet! Let's improve our workflow a little by installing and config
 
 VSCode -> install Extension -> **TSLint (deprecated)**
 
-The reason that we use the deprecated version is because it's 5 star rated, where the new version is 3 star rated (and buggy AF).
+The reason that we use the deprecated version is because it's rated 5 stars, where the new version is rated only 3 stars (and buggy AF).
 
 ```powershell
 # add dev dependencies; TSLint, TSLint React, TypeScript TSLint Plugin
 yarn add --dev tslint tslint-react typescript-tslint-plugin
-``
+```
 
 
 #### Select the TypeScript version.
@@ -119,7 +126,7 @@ You can use my example as a starting point.
       "no-use-before-declare": true,
       "semicolon": true,
       "trailing-comma": false,
-      "typedef": false,
+      "typedef": [true, "variable-declaration"],
       "typedef-whitespace": false,
       //"valid-typeof": true,
       "variable-name": false,
@@ -134,7 +141,17 @@ You can use my example as a starting point.
 }
 ```
 
-Work your way through the scaffolded *.ts and *.tsx files and resolve the rules issues you see.
+Work your way through the scaffolded `*.ts` and `*.tsx` files and resolve the rules issues you see. Here is an example:
+
+Here you'll see the default App.tsx component, which uses single quotation marks for import strings (among others).
+
+![React component showing quotation mark linting error](/img/LearnReact01.png)
+
+Pressing [Ctrl + .] (period) will provide the following options; note that you can select to only fix a single instance, or even disable linting for the very next line. We would fix all per the screenshot in this instance.
+
+![React component linting error fix options](/img/LearnReact02.png)
+
+You're now ready to continue.
 
 
 ### Adding more functionality
@@ -240,9 +257,25 @@ const App: React.FC = () => {
           Woot, new React project w/ TypeScript!
         </a>
         {myTestElement}
-        {myAnotherTestElement}
       </header>
     </div>
   );
 };
+```
+
+Run the app again:
+
+```powershell
+yarn start
+```
+
+You should see something similar to the following.
+
+```ts
+if (imageAbove === "same as what you're seeing") {
+  return "Job's a goodun!";
+}
+else {
+  return "leave me a comment here and I'll help you out!";
+}
 ```
