@@ -36,7 +36,7 @@ The app is now running in your browser (or at least it should be).
 
 Navigate to, and update the `<a />` tag within the App.tsx file as follows:
 
-```ts
+```tsx
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -177,7 +177,7 @@ Within that new folder, add the following files:
 
 Now update those files as follows:
 
-```ts
+```tsx
 // ./src/Components/TestElement/TestElement.tsx
 
 import React, { ReactNode } from "react";
@@ -275,6 +275,8 @@ You should see something similar to the following.
 
 
 ### Finishing up
+
+We're done here, the App is ready for us to add functionality and flesh it out - as mentioned previously, I plan to use this app to highlight other functionality.
 
 ```ts
 if (imageAbove === "same as what you're seeing") {
