@@ -269,7 +269,7 @@ Run the app again:
 yarn start
 ```
 
-You should see something similar to the following.
+You should see something similar to the following (red text being the very boring component we just added).
 
 ![Scaffolded React app including a Component with Properties and State mechanism](/img/LearnReact03.png)
 
