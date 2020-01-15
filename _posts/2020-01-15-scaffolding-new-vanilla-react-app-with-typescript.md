@@ -271,6 +271,11 @@ yarn start
 
 You should see something similar to the following.
 
+![Scaffolded React app including a Component with Properties and State mechanism](/img/LearnReact03.png)
+
+
+### Finishing up
+
 ```ts
 if (imageAbove === "same as what you're seeing") {
   return "Job's a goodun!";
