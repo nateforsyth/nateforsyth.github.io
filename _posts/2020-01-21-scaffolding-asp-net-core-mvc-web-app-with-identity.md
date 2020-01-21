@@ -79,7 +79,7 @@ Don't worry too much for now, as mentioned earlier, this is a very shallow dip o
 
 ### Run the app and register a new user
 
-If you know ASP.NET with Entity Framework already you'll observe that I am doing next is out of order, however the intention is to show what the *ASP.NET Dev virgin* will see when they scaffold the project and simply hit run.
+If you know ASP.NET with Entity Framework already you'll observe that what I am doing next is out of order, however the intention is to show what the *ASP.NET Dev virgin* will see when they scaffold the project and simply hit run.
 
 Do that now; press [F5].
 
@@ -96,7 +96,7 @@ Womp womp! Remember me saying I was doing this out of order? Yeah, I knew this w
 
 ### Run the database migration
 
-What's happened here is that the database doesn't yet exist. You'd typically run the migration and (potentially) seed the database with initial values before even bothering to try to run it, but no matter, whilst running we're actually given a very easy way to run the migration.
+What's happened here is that the database instance doesn't yet exist. You'd typically run the migration and (potentially) seed the database with initial values before even bothering to try to run it, but no matter, whilst running the actual app we're actually provided with a very easy way to invoke the migration.
 
 The error messages we receive are very clear on what has occurred here. Simply click the **Apply Migrations** button.
 
@@ -113,6 +113,8 @@ Return to Visual Studio and open up the Output window. It won't mean much yet, b
 ### Register a new user, part deux
 
 Return to the running app in your browser and Register a user (again). Pay attention to your password. This is what you'll receive upon successful registration, click **Click here to confirm your account**.
+
+![ASP NET Core Web App Registered User](/img/8 ASP.NET Core Web App Registered User.png)
 
 **Why must we do this?**
 
@@ -131,8 +133,6 @@ Don't trust me yet? View the Startup.cs file in the root of the project, look fo
 }
 ```
 
-![ASP NET Core Web App Registered User](/img/8 ASP.NET Core Web App Registered User.png)
-
 
 ### Log into the Web App
 
@@ -148,9 +148,9 @@ Click on the greeting, you're taken to the account management portal - this is s
 
 ### Are you sure this has actually persisted to a database?
 
-I know, I know... this seems way too easy, and you're right. You're probably asking "sure, but has it actually saved my credentials to a database somewhere?"
+I know, I know... this seems way too easy, and you're right. You're probably thinking to yourself "sure, but has it actually saved my credentials to a database somewhere?"
 
-It has, let's confirm though shall we?
+It has, let's confirm to be sure though shall we?
 
 Return to Visual Studio -> View -> **SQL Server Object Browser**
 
