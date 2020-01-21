@@ -7,7 +7,7 @@ category: Development
 tags: [asp.net core, mvc, web application, identity, C#, entry level tutorial, sql database]
 ---
 
-I came across a cross-post on Reddit today where the OP reposted [a very outdated tutorial to create an ASP.NET login page](https://www.reddit.com/r/csharp/comments/er9n1s/how_to_create_aspnet_login_page_using_c/) revolving around old versions of ASP.NET (think *.aspx* pages, yuck!). I thought it would be a good opportunity to write a blog post detailing how easy it actually is to scaffold a new ASP.NET Core MVC App that includes Identity.
+I came across a cross-post on Reddit today where the OP reposted [a very outdated tutorial to create an ASP.NET login page](https://www.reddit.com/r/csharp/comments/er9n1s/how_to_create_aspnet_login_page_using_c/) revolving around old versions of ASP.NET (think *.aspx* pages, yuck!). I thought it would be a good opportunity to write a blog post highlighting a modern approach by detailing how easy it actually is to scaffold a new ASP.NET Core MVC App that includes Identity.
 
 I submitted a reply whereby I greatly simplified the process on the surface:
 
