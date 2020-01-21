@@ -42,12 +42,12 @@ Then select:
 
 ASP.NET Core Web Application -> **Next**
 
-![New ASP.NET Core Web App project](/img/1 New ASP.NET Core Web App project.png)
+![New ASP NET Core Web App project](/img/1 New ASP.NET Core Web App project.png)
 
 
 Next, name your project and select the folder to store the files in (simple stuff so far, it doesn't get much more complicated).
 
-![New ASP.NET Core Web App project config](/img/2 New ASP.NET Core Web App project config.png)
+![New ASP NET Core Web App project config](/img/2 New ASP.NET Core Web App project config.png)
 
 
 Now we will configure the app, there are a few steps here:
@@ -59,7 +59,7 @@ Now we will configure the app, there are a few steps here:
 5. Click **OK**
 6. Click **Create**
 
-![New ASP.NET Core Web App identity](/img/3 New ASP.NET Core Web App identity.png)
+![New ASP NET Core Web App identity](/img/3 New ASP.NET Core Web App identity.png)
 
 
 ### Database schema
@@ -74,7 +74,7 @@ If this is your first rodeo, [I suggest you do some more reading on Entity Frame
 
 Don't worry too much for now, as mentioned earlier, this is a very shallow dip of the toes merely intended to highlight ease of creating an identity enabled web app - I digress.
 
-![Scaffolded ASP.NET Core Web App](/img/4 Scaffolded ASP.NET Core Web App.png)
+![Scaffolded ASP NET Core Web App](/img/4 Scaffolded ASP.NET Core Web App.png)
 
 
 ### Run the app and register a new user
@@ -89,7 +89,7 @@ Your browser will open with your shiny new, albeit very sparse web application; 
 2. Populate credentials as you normally would.
 3. Then click the **Register* button.
 
-![Run ASP.NET Core Web App Register User](/img/5 Run ASP.NET Core Web App Register User.png)
+![Run ASP NET Core Web App Register User](/img/5 Run ASP.NET Core Web App Register User.png)
 
 Womp womp! Remember me saying I was doing this out of order? Yeah, I knew this would happen.
 
@@ -102,12 +102,12 @@ The error messages we receive are very clear on what has occurred here. Simply c
 
 Alternatively, you could run either of the indicated console commands - but that's not necessary in this case.
 
-![ASP.NET Core Web App Migrations Not Run](/img/6 ASP.NET Core Web App Migrations Not Run.png)
+![ASP NET Core Web App Migrations Not Run](/img/6 ASP.NET Core Web App Migrations Not Run.png)
 
 
 Return to Visual Studio and open up the Output window. It won't mean much yet, but you can monitor the progress of the database migration to your local machine. It'll tell you when it's complete.
 
-![ASP.NET Core Web App Migrations](/img/7 ASP.NET Core Web App Migrations.png)
+![ASP NET Core Web App Migrations](/img/7 ASP.NET Core Web App Migrations.png)
 
 
 ### Register a new user, part deux
@@ -131,19 +131,19 @@ Don't trust me yet? View the Startup.cs file in the root of the project, look fo
 }
 ```
 
-![ASP.NET Core Web App Registered User](/img/8 ASP.NET Core Web App Registered User.png)
+![ASP NET Core Web App Registered User](/img/8 ASP.NET Core Web App Registered User.png)
 
 
 ### Log into the Web App
 
 You're now ready to log in. Click the **Log in** link, enter your credentials and you're greeted by... err... a greeting!
 
-![ASP.NET Core Web App User Logged In](/img/9 ASP.NET Core Web App User Logged In.png)
+![ASP NET Core Web App User Logged In](/img/9 ASP.NET Core Web App User Logged In.png)
 
 
 Click on the greeting, you're taken to the account management portal - this is still all out of the box ASP.NET Core! Cool huh?
 
-![ASP.NET Core Web App Manage Account](/img/10 ASP.NET Core Web App Manage Account.png)
+![ASP NET Core Web App Manage Account](/img/10 ASP.NET Core Web App Manage Account.png)
 
 
 ### Are you sure this has actually persisted to a database?
@@ -154,7 +154,7 @@ It has, let's confirm though shall we?
 
 Return to Visual Studio -> View -> **SQL Server Object Browser**
 
-![ASP.NET Core Web App View SQL](/img/11 ASP.NET Core Web App View SQL.png)
+![ASP NET Core Web App View SQL](/img/11 ASP.NET Core Web App View SQL.png)
 
 
 The **SQL Server Object Browser** will open up as one of your tabs on the left of the Visual Studio IDE.
@@ -167,7 +167,7 @@ Expand Tables, wait for it to populate, then right click **dbo.AspNetUsers** and
 
 You'll be greeted by a single record that matches your newly registered user.
 
-![ASP.NET Core Web App Table Data](/img/12 ASP.NET Core Web App Table Data.png)
+![ASP NET Core Web App Table Data](/img/12 ASP.NET Core Web App Table Data.png)
 
 
 ### In closing
