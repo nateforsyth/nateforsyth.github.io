@@ -4,7 +4,7 @@ title: Scaffolding new vanilla React app with TypeScript
 date: 2020-01-15 +13:00
 published: true
 category: Development
-tags: [react, typescript, vscode, chrome]
+tags: [react, typescript, vscode, entry level tutorial, chrome]
 ---
 
 Righto, I want to get deeper into vanilla React development (outside of the scope of SharePoint). This will enable me to utilise all of my React skills for future endeavours. I will be scaffolding a new React app using TypeScript because I put great value on Type safety when working within JavaScript - this is a preference I don't want to shy away from due to my background as a C# dev.
