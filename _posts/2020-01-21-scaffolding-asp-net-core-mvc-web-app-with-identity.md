@@ -4,7 +4,7 @@ title: Scaffolding an ASP.NET Core MVC Web App with Identity
 date: 2020-01-21 +13:00
 published: true
 category: Development
-tags: [asp.net core, mvc, web application, identity, C#, sql database]
+tags: [asp.net core, mvc, web application, identity, C#, entry level tutorial, sql database]
 ---
 
 I came across a cross-post on Reddit today where the OP reposted [a very outdated tutorial to create an ASP.NET login page](https://www.reddit.com/r/csharp/comments/er9n1s/how_to_create_aspnet_login_page_using_c/) revolving around old versions of ASP.NET (think *.aspx* pages, yuck!). I thought it would be a good idea to write a quick blog post detailing how easy it actually is to scaffold a new ASP.NET Core MVC App that includes Identity.
