@@ -174,7 +174,7 @@ You'll be greeted by a single record that matches your newly registered user.
 
 What have we achieved today?
 
-As a new user, you've created a new ASP.NET Core MVC Web Application, enabled Individual User Accounts on it, migrated a Code First Database instance, registered a user persisting the record to the new database and been able to log that user on.
+As a noob ASP.NET dev, you've created a new ASP.NET Core MVC Web Application, enabled Individual User Accounts on it, migrated a Code First Database instance using Entiry Framework Core, registered a user persisting the record to the new database and been able to log that user on.
 
 If you're new to this, congratulations, that's quite an achievement considering how simple it was.
 
