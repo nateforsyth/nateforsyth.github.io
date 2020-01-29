@@ -152,6 +152,9 @@ staticman:
 
 # --- Misc --- #
 
+# Google Adsense
+google_ad_client: "ca-pub-5606256614241780"
+
 # Facebook App ID
 # fb_app_id: ""
 
