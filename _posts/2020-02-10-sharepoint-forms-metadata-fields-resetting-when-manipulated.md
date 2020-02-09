@@ -10,7 +10,7 @@ tags: [microsoft, sharepoint, term store, managed metadata, bug, modern, metadat
 
 It started two weeks ago. We were about to deploy a significant framework piece to a client environment that included, among many other components, an out of the box SharePoint List with custom Content Type. The Content Type includes multiple Managed Metadata Fields, all of which have default values selected at the Field level. Pretty basic stuff.
 
-Except it wasn't as simple as expected was it. Upon testing, 2 days before go-live, we observed that pre-selected meta data values would disappear when you make an entry in any other field.
+Except it wasn't as simple as expected was it. Upon conducting final testing, 2 days before go-live, we observed that pre-selected meta data values would disappear when you make an entry in any other field.
 
 
 #### This issue is still current as of 10th February 2020
