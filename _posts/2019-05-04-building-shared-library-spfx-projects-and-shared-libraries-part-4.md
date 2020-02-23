@@ -14,7 +14,7 @@ Here are links to all of the posts in this series:
 - [Why? - SPFx projects and Shared Libraries - part deux](https://dreamsof.dev/2019-02-21-building-shared-library-spfx-projects-and-shared-libraries-part-2/)
 - [The build - SPFx projects and Shared Libraries - iii](https://dreamsof.dev/2019-04-06-building-shared-library-spfx-projects-and-shared-libraries-part-3/)
 - CI Pipeline and npm package - SPFx projects and Shared Libraries - May the 4th be with you ;)
-- [Consuming the package - SPFx projects and Shared Libraries - 5th and final, I promise...](https://dreamsof.dev/2019-04-06-building-shared-library-spfx-projects-and-shared-libraries-part-5/)
+- [Consuming the package - SPFx projects and Shared Libraries - 5th and final, I promise...](https://dreamsof.dev/2019-05-09-building-shared-library-spfx-projects-and-shared-libraries-part-5/)
 
 As previously mentioned, our environment was set and I was to go about using some specific pieces of technology to achieve our goals.
 
