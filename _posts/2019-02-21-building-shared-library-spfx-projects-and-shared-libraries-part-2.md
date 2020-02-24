@@ -20,7 +20,7 @@ It's now time to continue...
 
 ## What this post will cover.
 
-- A litle more about what I do.
+- A little more about what I do.
 - What the actual requirements of the Shared Code project were.
 - What was already tried.
 - The type of project chosen to meet those needs, and why.
