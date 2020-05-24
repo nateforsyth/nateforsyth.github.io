@@ -7,7 +7,7 @@ category: Dev
 tags: [typescript, spfx, sharepoint framework, sharepoint, react, console logging]
 ---
 
-In my [previous post](https://dreamsof.dev/2019-06-10-improving-console-logging-spfx/) we discussed how we could go about styling browser dev tool console logging to assist with the initial triage of issues within our SPFx Extensions.
+In my [previous post](https://dreamsof.dev/2020-05-10-improving-console-logging-spfx/) we discussed how we could go about styling browser dev tool console logging to assist with the initial triage of issues within our SPFx Extensions.
 
 I was working on the project that spawned that post again today, and didn't like the way I'd handled the conditional nature of the styled console output.
 
