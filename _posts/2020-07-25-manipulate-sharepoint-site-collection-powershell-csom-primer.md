@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Connecting to SharePoint Site Collections with PowerShell and CSOM
+title: Primer: Manipulate SharePoint Site Collections with PowerShell and CSOM
 date: 2020-07-25 +13:00
 published: true
 category: Development
 tags: [sharepoint, powershell, spo powershell, pnp powershell, csom]
 ---
 
-There are a multitude of ways to connect to SharePoint, I will detail all of the ones I know in this post.
+There are a multitude of ways to manipulate SharePoint, I will take the opportunity to give you a primer in connecting to your tenant using SPO and PnP PowerShell, and extending the default functionality with CSOM.
 
 ### Prep work
 
