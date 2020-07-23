@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Connecting to SharePoint Site Collections with PowerShell and CSOM
-date: 2020-07-24 +13:00
+date: 2020-07-25 +13:00
 published: true
 category: Development
 tags: [sharepoint, powershell, spo powershell, pnp powershell, csom]
