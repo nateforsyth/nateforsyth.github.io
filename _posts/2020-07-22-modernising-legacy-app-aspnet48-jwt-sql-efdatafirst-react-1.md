@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Modernising a legacy application using ASP.NET 4.8, JWT, SQL Server, Entity Framework Data First and a React front-end, part 1
+title: Modernising a legacy application using ASP.NET 4.8, JWT, SQL Server, Entity Framework Data First and a React front-end - part 1
 date: 2020-07-22 +13:00
 published: true
 category: Development
@@ -16,18 +16,16 @@ One final point. This tutorial is going to be long so I will have to cut off eac
 
 ### Background and why this tutorial
 
-The product I've been working on recently would be best described as an MVP... an MVP that's been in production use for well over a decade and hasn't seen any significant investment in R&D or scaling in the same time period. There is a huge amount of technical debt, and the general consensus is that we're polishing a turd.
-
 I've noticed recently that there are hundreds of high quality ASP.NET Core based Web Api project tutorials on the web. There are far less up-to-date ASP.NET Framework tutorials and discussions. I've recently been working within legacy ASP.NET, and although framework versions have been updated, it could only be as far as 4.8 due to the legacy nature of the server environment they're hosted upon. This has necessitated a lot of research and development to be able to build a secure proof of concept to justify further investment into the product.
 
-Finally, this tutorial series is meant to give a birds eye view into what the day-to-day may look like for a developer working around a legacy code base who has been given remit to prototype a proof of concept where nothing is off the table. We haven't yet presented my work therefore we're unsure this will go any further.
+Finally, this tutorial series is meant to give a birds eye view into what the day-to-day may look like for a developer working around a legacy code base who has been given remit to prototype a proof of concept where nothing is off the table.
 
 
 ### Caveats
 
 I will be touching on some very important security related aspects within this tutorial series, but I am intentionally not fleshing them all out because this is meant to highlight rapid development of a prototype for a proof of concept intended to drive discussions revolving around further time investment. Please keep that in mind if you're following along.
 
-All code within this tutorial series is conceptual, follows best practice as much as I can, and is written for tutorial purposes outside of the workplace.
+All code within this tutorial series is conceptual, follows best practice as much as I can, and is written for tutorial purposes outside of any workplace. Any of this information can be found by trawling many other sources, I am merely bringing it all together to highlight some very specific use cases.
 
 
 ### Assumptions
@@ -36,7 +34,7 @@ I'm going to make a few assumptions about your skill level:
 
 - you have installed [SQL Server 2019](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) and are [familiar with SQL in general](http://w3schools.sinsixx.com/web/web_sql.asp.htm).
 - you have installed [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15).
-- you have an existing database with a basic structure we can use to build upon; you need to have a User table which includes a UserID and Password at a minimum. My passwords are hashed using BCrypt. I do provide a SQL snippet below to create new database tables.
+- you have an existing database with a basic structure we can use to build upon; you need to have a User table which includes a UserID and Password at a minimum. I do provide a SQL snippet below to create new database tables.
 - you are familiar with [C#](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/intro-to-csharp/).
 - you are familiar with [ASP.NET Framework](https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/intro) and can scaffold a project (4.8).
 - you have used [Entity Framework](https://www.entityframeworktutorial.net/what-is-entityframework.aspx), and understand the fundamental differences between **Code First** and [**Data First**](https://docs.microsoft.com/en-us/ef/ef6/modeling/designer/workflows/database-first) (we'll be using the latter to integrate with a pre-existing database/application).
@@ -52,18 +50,10 @@ Scaffold a new ASP.NET 4.8 Web API project within Visual Studio.
 
 Install the following dependencies using the package manager console:
 
-- BCrypt.NET.0.1.0 ().
 - System.IdentityModel.Tokens.Jwt.5.5.0
 - Microsoft.Owin.Security.Jwt.4.1.0
 - Microsoft.AspNet.WebApi.Owin.5.2.7
 - Microsoft.Owin.Host.SystemWeb.4.1.0
-
-#### A note on BCrypt
-
-I am using a specific version of [BCrypt](https://github.com/BcryptNet/bcrypt.net) because it was used in the legacy application to encrypt stored credentials, and we need to ensure that we can decrypt them in a consistent manner. Points to note:
-
-1 - Apply salt to new passwords when persisting them to the db for the first time.
-2 - Check a hashed password with; **BCrypt.Net.BCrypt.Verify(plainTextPw, hashedPw)**
 
 
 #### Run the project and test the out of the box endpoint with Postman
@@ -108,6 +98,8 @@ public class ValuesController : ApiController
 ```
 
 Note how we have a comment dictating the naming convention for the endpoint; api/values. We'll further refine this later on.
+
+You can go ahead and delete **ValuesController** now, we don't need it anymore.
 
 Gotten this far? Great, let's continue to build out the back end.
 
@@ -358,12 +350,12 @@ public class DataLayerHelper : ApiController
     #region Constructors
     protected readonly [yourDatabaseName]Context context _context;
 
-    public ControllerHelper() // parameterless constructor
+    public DataLayerHelper() // parameterless constructor
     {
         _context = new [yourDatabaseName]Context context();
     }
 
-    public ControllerHelper([yourDatabaseName]Context context context)
+    public DataLayerHelper([yourDatabaseName]Context context context)
     {
         _context = context;
     }
