@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Primer - Manipulate SharePoint Site Collections with PowerShell and CSOM
+title: Manipulate SharePoint Site Collections part 1, PowerShell and CSOM
 date: 2020-07-25 +13:00
 published: true
 category: Development
