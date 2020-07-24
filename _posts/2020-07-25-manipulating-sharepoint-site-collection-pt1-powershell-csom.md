@@ -4,7 +4,7 @@ title: Primer - Manipulate SharePoint Site Collections part 1, PowerShell and CS
 date: 2020-07-25 +13:00
 published: true
 category: Development
-tags: [sharepoint, powershell, spo powershell, pnp powershell, csom, primer, entry level]
+tags: [sharepoint, powershell, spo, pnp, powershell, csom, primer, entry level]
 ---
 
 There are a multitude of ways to manipulate SharePoint, I will take the opportunity to give you a primer in connecting to your tenant using SPO and PnP PowerShell, and extending the default functionality with CSOM.
