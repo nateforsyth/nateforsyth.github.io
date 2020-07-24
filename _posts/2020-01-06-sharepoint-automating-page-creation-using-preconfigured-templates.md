@@ -4,7 +4,7 @@ title: Creating many Pages using pre-configured Page Templates within SharePoint
 date: 2020-01-06 +13:00
 published: true
 category: Development
-tags: [sharepoint, PowerShell, automation]
+tags: [sharepoint, powershell, automation]
 ---
 
 First day back at work after a relaxing xmas break. I hope you've all had a good break yourselves. I want to touch on how to best utilise [Custom Page Templates in Modern SharePoint](https://support.office.com/en-us/article/page-templates-in-sharepoint-online-faa92408-0c84-4e3d-8460-3c28065e7873), and how to use a CSV file to automate the provisioning of many such pages within a Modern Site Collection.
