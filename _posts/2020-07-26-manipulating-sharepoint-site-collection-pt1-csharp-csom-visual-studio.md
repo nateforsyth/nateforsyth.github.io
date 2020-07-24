@@ -4,7 +4,7 @@ title: Primer - Manipulate SharePoint Site Collections part deux, C# and CSOM
 date: 2020-07-26 +13:00
 published: true
 category: Development
-tags: [sharepoint, visual studio, c#, csom]
+tags: [sharepoint, visual studio, C#, csom]
 ---
 
 My [previous post](https://dreamsof.dev/2020-07-25-connect-to-sharepoint-site-collection/) detailed how to use PowerShell to connect to your SharePoint tenant using SPO and PnP PowerShell and manipulate it with CSOM. In this post we will do something very similar using C# and CSOM from within a Console App using the .NET Framework.
