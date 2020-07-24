@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Primer - Manipulate SharePoint Site Collections part deux, C# and CSOM
-date: 2020-07-25 +13:00
+date: 2020-07-26 +13:00
 published: true
 category: Development
 tags: [sharepoint, visual studio, c#, csom]
