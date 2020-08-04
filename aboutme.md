@@ -4,7 +4,7 @@ title: About me
 subtitle: Career changes are fun, albeit pretty tough!
 ---
 
-My name is Nate, and I am a junior-intermediate level SharePoint Developer. I'm kinda obsessed with software development and anything technology related. I live in Christchurch, New Zealand.
+My name is Nate, and I am an intermediate to senior level SharePoint Developer and Technical Consultant. I'm kinda obsessed with software development and anything technology related. I live in Christchurch, New Zealand.
 
 My current focus is on the following:
 
@@ -14,6 +14,7 @@ My current focus is on the following:
 - Automation
 - Scripted SharePoint tenant administration
 - Azure DevOps
+- ASP.NET Web App and API Development
 
 ### my history
 
@@ -31,13 +32,15 @@ While the business side of things didn't work out, what it did do was give me a 
 
 ### what I do now
 
-I am currently working for a small professional services company building custom SharePoint WebParts and Extensions including navigation down to individual React component level. My focus has been on replicating default Microsoft ootb look-and-feel while adding extensive additional functionality.
+I've been working for a small professional services company building custom SharePoint WebParts and Extensions including navigation down to individual React component level. My focus has been on replicating default Microsoft ootb look-and-feel while adding extensive additional functionality.
 
 You want a News roll-up function? Microsoft already provides one of those. Oh, you want to be able to filter the existing News items on your SharePoint Communications Site? That's where I come in!
 
 On top of that I have a particular love for automation of repetitive tasks. I've been intimately involved with the automation of complete SharePoint tenant provisioning and customisation using PowerShell, specifically ootb SPO and open source PnP cmdlets.
 
 Finally, that automation goes a lot further when coupled with Azure Logic Apps and Azure Functions to wrap API functionality with solid UX and workflows - all of which I am experienced in.
+
+And now we're in 2020 in the middle of a viral pandemic and many workplace redundancies, of which I am not immune. Being let go is rough, but I've landed on my feet and landed a kick arse role with a bigger company with country wide reach. Excitement is an understatement!
 
 ### what else is there?
 
