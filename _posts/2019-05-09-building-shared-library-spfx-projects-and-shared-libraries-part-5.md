@@ -93,7 +93,7 @@ Open up your main .ts file for the WebPart, and add the following import:
 
 ~~~ts
 # note the path, it might be different for your project
-import { StringHelper } from "tld-domain-mycoolspfxutilitylibrary/lib/BDUtilities";
+import { StringHelper } from "tld-domain-mycoolspfxutilitylibrary/lib/CustomUtilities";
 ~~~
 
 Now, go to your render() method and do something similar to this:
