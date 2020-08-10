@@ -21,7 +21,7 @@ The first modules of study focused on fundamentals within .NET using C#, and nat
 
 ## The end of my old copy/paste code preservation tactics
 
-I learned what the terms [_push_](https://git-scm.com/docs/git-push), [_pull_](https://git-scm.com/docs/git-pull), [_fetch_](https://git-scm.com/docs/git-fetch) and [_merge_](https://git-scm.com/docs/git-merge) meant ([among many others](https://git-scm.com/docs/)) and set about using my old Microsoft Dream Spark benefits (now [Azure Imagine](https://azureforeducation.microsoft.com/en-us/Institutions) to spin up my first private source control repository for my projects using Visual Studio Online Team Services (now [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/)) - overkill for sure, but all well fit for purpose.
+I learned what the terms [_push_](https://git-scm.com/docs/git-push), [_pull_](https://git-scm.com/docs/git-pull), [_fetch_](https://git-scm.com/docs/git-fetch) and [_merge_](https://git-scm.com/docs/git-merge) meant ([among many others](https://git-scm.com/docs/)) and set about using my old Microsoft Dream Spark benefits (now [Azure Imagine](https://azureforeducation.microsoft.com/en-us/Institutions)) to spin up my first private source control repository for my projects using Visual Studio Online Team Services (now [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/)) - overkill for sure, but all well fit for purpose.
 
 Everything was going swimmingly barring the inevitable mistakes - mitigated by this new (to me) thing called Source Control, and I quickly fell in love with how my development throughput improved with the confidence of beginning to understand how much control I had over my code.
 
@@ -29,15 +29,15 @@ Then a tutor said "Great, but have you seen SourceTree?"
 
 ## Well have ya, punk?
 
-I'd never heard of [SourceTree](https://www.sourcetreeapp.com/) or [Atlassian](https://www.atlassian.com/company) before, but my world was about to change. I'm a visual and kinesthetic learner, and being able to visualise a concept assists me greatly in understanding a concept.
+I'd never heard of [SourceTree](https://www.sourcetreeapp.com/) or [Atlassian](https://www.atlassian.com/company) before, but my world was about to change. I'm a visual and kinesthetic learner, and being able to visualise a concept assists me greatly in understanding that particular concept.
 
 Seeing the structure of all of the branches, when and where they merged, the differences between them, and having the ability to switch between different versions of the code base on the fly was eye opening, and something I'd never experienced before.
 
 ## This is where my deeper understanding of Git began to manifest
 
-I began to look into the MinGW bash Terminal within SourceTree, as well as the [Atlassian documentation](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html) on the same topic to get an understanding of the underlying CLI and how everything fitted together.
+I began to look into the MinGW bash Terminal within SourceTree, as well as the [Atlassian documentation](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html) on the same topic to get an understanding of the underlying CLI and how everything fit together.
 
-I ensured that I could invoke any of the repository manipulation tasks that I was doing with the GUI within the CLI.
+I ensured that I could invoke any of the repository manipulation tasks that I was doing with the GUI, within the CLI.
 
 I even began to push the use of Git onto my class-mates.
 
