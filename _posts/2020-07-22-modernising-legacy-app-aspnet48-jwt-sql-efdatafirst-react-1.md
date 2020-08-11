@@ -4,7 +4,7 @@ title: Modernising a legacy application using ASP.NET 4.8, JWT, SQL Server, Enti
 date: 2020-07-22 +13:00
 published: true
 category: Development
-tags: [asp.net framework, mvc, web application, identity, RBAC, C#, sql database, entity framework, linq, legacy, intermediate, prototyping, rapid development, proof of concept, real world]
+tags: [asp.net framework, mvc, web application, identity, RBAC, C#, sql database, entity framework, linq, legacy, intermediate, prototyping, rapid development, proof of concept, real world, JWT]
 ---
 
 I intend for this tutorial series to highlight what I believe to be some very important aspects of dealing with legacy ASP.NET Web Applications, how to modernise them with a wrapper of sorts that can handle things like [JWT session/passport Authorisation](https://www.webskeleton.com/webdev/2019/10/22/JWT-Primer-and-Should-You-Use-It.html), securely exposing the existing database as a data layer while abstracting away all of the gubbins and heavy lifting into a business layer. The intention is for this wrapper to be able to encapsulate the entirety of a legacy product and provide immense security and usability benefits over the current implementation with minor refactoring to handle dependency injection (though I may not cover that).
@@ -30,7 +30,7 @@ All code within this tutorial series is conceptual, follows best practice as muc
 
 ### Assumptions
 
-I'm going to make a few assumptions about your skill level:
+I'm going to make a few assumptions about your available tooling, skill level and comfort zone:
 
 - you have installed [SQL Server 2019](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) and are [familiar with SQL in general](http://w3schools.sinsixx.com/web/web_sql.asp.htm).
 - you have installed [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15).
@@ -625,7 +625,7 @@ What have we achieved today?
 - begun to encapsulate the Data layer of our application to separate it from the other layers of the application.
 - tested the API end points using Postman and have successfully retrieved data from the database.
 - implemented a basic View Model used to provide data within the API request body to our Controller that we can further validate.
-- implemented code to handle where data not found or properties from within a request body are invalid, and provided a relevant HTTP return Status Code.
+- implemented code to handle where data is not found or properties from within a request body are invalid, and provided a relevant HTTP return Status Code.
 
 Whew! This has been a long one! But we've set the stage for all articles that are to follow.
 
