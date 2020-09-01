@@ -7,7 +7,7 @@ category: Dev
 tags: [spfx, sharepoint, shared libraries, spfx extensions, spfx webparts, typescript, npm]
 ---
 
-When we left off [last time](https://nateforsyth.github.io/2019-02-21-building-shared-library-spfx-projects-and-shared-libraries-part-2/), I'd highlighted an issue I had faced whereby there was no supported way to build a shared code package _within_ the SharePoint Framework (SPFx) **at that time**. I rambled on about what had happened, why this approach was chosen, etc. I also realised that the post was getting too long, and decided to continue with a new post detailing the build and deployment process.
+When we left off [last time](https://dreamsof.dev/2019-02-21-building-shared-library-spfx-projects-and-shared-libraries-part-2/), I'd highlighted an issue I had faced whereby there was no supported way to build a shared code package _within_ the SharePoint Framework (SPFx) **at that time**. I rambled on about what had happened, why this approach was chosen, etc. I also realised that the post was getting too long, and decided to continue with a new post detailing the build and deployment process.
 
 This has somewhat been mitigated now with the release of SPFx 1.8 and the introduction of [Library components](https://social.technet.microsoft.com/wiki/contents/articles/52666.sharepoint-framework-1-8-library-component-type-beta.aspx) within the framework, albeit in preview and limited to a single component. That's not good enough for our production requirements, so we're continuing.
 
@@ -236,7 +236,7 @@ Open up your index.ts file and add the following.
 #### ./src/index.ts
 
 ~~~ts
-import { StringHelper } from "./BDUtilities";
+import { StringHelper } from "./Utilities";
 export const StringHelperUtils = () => new StringHelper();
 ~~~
 
@@ -248,14 +248,14 @@ Now, open up your Currency.test.ts file, and add the following:
 #### Currency.test.ts
 
 ~~~ts
-import { StringHelper } from "./../../lib/BDUtilities";
+import { StringHelper } from "./../../lib/Utilities";
 import { expect } from "chai";
 
 const stringHelper = new StringHelper();
 
 describe("String truncation function", () => {
     const lengthToTruncate = 3;
-    const stringToTruncate = "Nate Forsyth";
+    const stringToTruncate = "Joe Bloggs";
     const willTruncate = stringToTruncate.length > lengthToTruncate;
     it(`should be equal to or less than ${lengthToTruncate}`, () => {
         expect(stringHelper.truncateStringToDefinedLength(stringToTruncate, lengthToTruncate)).to.length(willTruncate ? lengthToTruncate : stringToTruncate.length);
