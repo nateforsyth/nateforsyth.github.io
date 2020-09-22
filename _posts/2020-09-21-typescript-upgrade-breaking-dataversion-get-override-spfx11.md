@@ -52,6 +52,26 @@ And now the compiler error has been resolved.
 
 That was a nice easy fix for something I didn't want to have to deal with on a Monday morning but *it is what it is*.
 
-Hope that helps someone.
+So we've regained control of our environment and been able to implement our workload.
+
+
+### But, was this intentional?
+
+[It absolutely was; properties-overridding-accessors-and-vice-versa-is-an-error...](https://devblogs.microsoft.com/typescript/announcing-typescript-4-0-rc/#properties-overridding-accessors-and-vice-versa-is-an-error)
+
+But where does that leave us? Hard to know... On one hand, we can't just ignore it, but on the other the onus is on the SPFx/pnp teams to resolve this issue.
+
+How else can we handle this? I've reverted back to using the VS Code version of TypeScript (4.0.2 at the time of writing), and have simply decorated the dataVersion getter as follows:
+
+```ts
+// @ts-ignore
+protected get dataVersion(): Version {
+  return Version.parse('1.0');
+}
+```
+
+While this is also less than ideal, it's a better workaround for when you open projects written by others.
+
+Hope this helps someone.
 
 Until next time...
