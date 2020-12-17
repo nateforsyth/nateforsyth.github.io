@@ -7,9 +7,9 @@ category: Development
 tags: [sharepoint, spfx, react, typescript, rest, sp-pnp-js]
 ---
 
-I started a new job recently, and I've taken the opportunity to take another look at the APIs and apply some of the knowledge gained over the last 2-3 years, while building a new service layer. The intention for this post is to highlight what I believe to be the simplest and most extensible way to interface with the SharePoint back end services.
+I started a new job recently, and I've taken the opportunity to take another look at the APIs and apply some of the knowledge gained over the last 2-3 years while building a new service wrapper. The intention for this post is to highlight what I believe to be the simplest and most extensible way to interface with SharePoint back end services.
 
-I've also had to build another bespoke npm registry hosted on the new company Azure DevOps environment. This gave me an opportunity to take another look at the blog post series I authored back in 2019, which still hold up well; [SPFx and Shared libraries](https://dreamsof.dev/2019-02-15-spfx-projects-and-shared-libraries-part-1/).
+I've also had to build another bespoke npm registry hosted on the new company's Azure DevOps environment. This gave me an opportunity to take another look at the blog post series I authored back in 2019, which still holds up pretty well; [SPFx and Shared libraries](https://dreamsof.dev/2019-02-15-spfx-projects-and-shared-libraries-part-1/).
 
 
 # Using SP PNP JS to access the SharePoint APIs
@@ -26,6 +26,7 @@ We will go over a few different use cases that we can use sp-pnp-js to solve.
 - Adding a new SharePoint List item (POST).
 - Updating an existing SharePoint List item (MERGE/UPDATE).
 
+
 ## Initial dependencies and requirements
 
 Let's get started. We're obviously going to need an SPFx project to invoke this our REST queries from. If you don't already have one, [scaffold a new SPFx Extension projectt](https://dreamsof.dev/2020-01-09-scaffolding-new-spfx-extension-project/) to keep this as simple as possible.
@@ -36,57 +37,46 @@ There are only two `npm` dependencies that are required, let's go ahead and inst
 
 > npm install sp-pnp-js @microsoft/sp-http --save
 
+I'm also assuming you have a component already set up that you will do your testing within. I've called mine WebPartTester.
+
 We've got everything we need now, let's continue.
 
 
 ## Retrieval of SharePoint List Items
 
-First, add a new folder to the `src` folder of the project called `./src/Services/SharePoint/`.
+The first method we will take a look at is going to simply retrieve SharePoint List items.
 
-Next, add a new file called `SharePointInterfaces.ts`, and add content as follows:
+We're going to add a new property to the props interface for this component, ensuring we add an appropriate import statement.
 
 ```ts
-// SharePointInterfaces.ts
+// ./src/webParts/testWebPart/components/IWebPartTesterProps.ts
 
-import { Web, SharePointQueryableCollection, Item } from "sp-pnp-js";
-import { SPHttpClient, SPHttpClientResponse, ISPHttpClientConfiguration, ODataVersion, SPHttpClientConfiguration, HttpClientResponse, ISPHttpClientOptions } from "@microsoft/sp-http"; // not all dependencies are needed yet, they'll be used later
+import { SPHttpClient } from "@microsoft/sp-http";
 
-export interface ISharePointService {
-    web: Web;
+export interface IWebPartTesterProps {
+    description: string;
+
     httpClient: SPHttpClient;
-    siteCollectionUrl: string;
-        
-    getGenericListItemsFromSharePoint(url: string): Promise<any> | undefined;
 }
-
 ```
 
-
-Add another new file called `SharePointService.ts`:
+Now we'll add a new method; `getListItemsFromSharePointUrl`. Don't forget to update your `using` statements.
 
 ```ts
-// SharePointService.ts
+// ./src/webParts/testWebPart/components/WebPartTester.tsx
 
-import { Web, SharePointQueryableCollection, Item } from "sp-pnp-js";
-import { IILDSListItem, IILDSSharePointService } from "./Model/ILDSSharePointServiceInterfaces";
-import { SPHttpClient, SPHttpClientResponse, ISPHttpClientConfiguration, ODataVersion, SPHttpClientConfiguration, HttpClientResponse, ISPHttpClientOptions } from "@microsoft/sp-http";
+import { HttpClientResponse, SPHttpClient } from "@microsoft/sp-http";
 
-export class SharePointService implements ISharePointService {
-    private web?: Web;
-    private httpClient?: SPHttpClient;
-    private siteCollUrl?: string;
-
-    constructor(siteCollUrl?: string, httpClient?: SPHttpClient) {
-        if (siteCollUrl !== undefined && httpClient !== undefined) {
-            this.web = new Web(siteCollUrl);
-            this.siteCollUrl = siteCollUrl;
-            this.httpClient = httpClient;
-        }
+export default class WebPartTester extends React.Component<IWebPartTesterProps, {}> {
+    public render(): React.ReactElement<IWebPartTesterProps> {
+        // remainder elided
     }
-
-    public getGenericListItemsFromSharePoint(url: string): Promise<any> | undefined {
-        if (this.httpClient !== undefined) {
-            return this.httpClient.get(url, SPHttpClient.configurations.v1)
+    
+    // other methods elided for brevity
+    
+    private getListItemsFromSharePointUrl(url: string): Promise<any> | undefined {
+        if (this.props.httpClient !== undefined) {
+            return this.props.httpClient.get(url, SPHttpClient.configurations.v1)
                 .then((response: HttpClientResponse) => {
                     return response.json()
                         .then((responseJson: any) => {
@@ -103,12 +93,11 @@ export class SharePointService implements ISharePointService {
                     return err;
                 }) as Promise<any>;
         } else {
-            console.log(`getGenericListItemsFromSharePoint Warning 001\r\n\thttpClient is undefined`);
+            console.log(`httpClient is undefined`);
             return undefined;
         }
     }
- }
-
+}
 ```
 
 
