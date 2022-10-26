@@ -42,7 +42,7 @@ The only way I'm aware of to do this is using Reflection, some googling confirme
 /// <summary>
 /// Retrieve a Non-Public member value from a defined property title included within the provided object
 /// </summary>
-/// <param name="obj">Object to retrieve a value </param>
+/// <param name="obj">Object to retrieve a value from</param>
 /// <param name="propTitle">Title of the Non-Public member</param>
 /// <returns>Value of the defined property, of Type object</returns>
 public static object GetNonPublicPropertyValue(object obj, string propTitle)
