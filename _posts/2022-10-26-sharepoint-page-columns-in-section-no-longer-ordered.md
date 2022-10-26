@@ -2,7 +2,7 @@
 layout: post
 title: SharePoint Page columns in sections are no longer returned in order
 date: 2022-10-26 +13:00
-published: false
+published: true
 category: C#
 tags: [csom, sharepoint, reflection, regression, site page copying, cross tenant]
 ---
