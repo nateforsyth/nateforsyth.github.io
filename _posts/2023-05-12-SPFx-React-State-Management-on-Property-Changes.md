@@ -1,3 +1,4 @@
+---
 layout: post
 title: SPFx React State management on component property changes
 date: 2023-05-12 +13:00
