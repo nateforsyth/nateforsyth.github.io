@@ -7,12 +7,10 @@ category: Dev
 tags: [typescript, spfx, sharepoint framework, sharepoint, react, web part]
 ---
 
-Throughout recent blog posts, I've found myself continually referencing other peoples' content when it comes to scaffolding of new SPFx projects. I don't like to do that because they're not in my normal style. I also don't like to have to refer to other peoples' content when I *cough* have forgotten how to do so myself *cough*. Time to write my own.
+I've created a YouTube video for creation of a new Web Part focusing on SPFx v1.18 and using Node 18. I also detail how to configure spfx-fast-serve.
 
 
 ### Creating a new Web Part in 2023
-
-I've created a YouTube video for creation of a new Web Part focusing on SPFx v1.18 and using Node 18. I also detail how to configure spfx-fast-serve.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Z82aM1ZQ7XU?si=gCKZ9aO_B5KB_IOv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
