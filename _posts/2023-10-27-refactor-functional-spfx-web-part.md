@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SPFx React - scaffolding a new Web Part project in 2023!
+title: Functional React - refactor your Class components within a SharePoint Framework (SPFx) Web Part
 date: 2023-10-27 +13:00
 published: true
 category: Dev
