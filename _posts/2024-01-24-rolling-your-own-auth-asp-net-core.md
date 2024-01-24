@@ -2,7 +2,7 @@
 layout: post
 title: The start of PetrolIQ, ASP.NET Core with a React front-end - (kinda) part 2, Rolling your own Auth. Learnings, trials, tribulations and... wins?
 date: 2024-01-24 +13:00
-published: false
+published: true
 category: Dev
 tags: [petroliq, asp.net core, web api, httponly cookies, jwt, passport auth, learnings, mongodb]
 ---
@@ -11,7 +11,7 @@ A very long time ago, I started (and abandoned) a series about ASP.NET developme
 
 # Needs must
 
-Fast forward 3 1/2 years (wow), and I've lost my job. That time spent behind a corporate NDA means I don't have much to show for my time at the old company.
+Fast forward 3 1/2 years (wow), and I've lost my job due to the entire team being restructured. That time spent behind a corporate NDA means I don't have much to show for my time at the old company.
 
 I've had a passion project in my periphery for the better part of 7 years, with not a lot of time to work on it. This is PetrolIQ. There will be other posts about that, but not yet.
 
@@ -398,7 +398,7 @@ My first task was to create my initial schema for the MongoDB database.
 CORS was always going to be a consideration throughout the build process, so I ended up configuring CORS as follows.
 
 ~~~cs
-// ./Petroliq_API/Program.cs
+// ./Program.cs
 
 public class Program
 {
@@ -434,7 +434,7 @@ Due to my requirement for running this service on my own server, and having chos
 Here is the structure of the `secrets.json` file.
 
 ~~~json
-// ./Petroliq_API/secrets.json
+// ./secrets.json
 
 {
   "ConnectionString": "[elided]",
@@ -448,7 +448,7 @@ And here is the structure of the `appsettings.json` file; note that there is cro
 * secrets/AuthKey >> appsettings/Database/Auth:Key
 
 ~~~json
-// ./API/appsettings.json
+// ./appsettings.json
 
 {
   "Database": {
@@ -1310,6 +1310,80 @@ Which is controlled by way of the `Authorize` Attribute; e.g. Only an `appUser` 
 public async Task<IActionResult> Delete([FromBody] DeleteUserModel deleteUserModel) { // implementation elided }
 ~~~
 
+Next up are more helper methods. These provide role validation functionality for the User in the HttpContext, Access token generation, retrieval of Principal from expired Access tokens and Refresh token generation.
+
+~~~cs
+// ./Authorisation/AuthHelpers.cs
+
+public class AuthHelpers
+{
+    public static (bool validateAppUserOnly, string loggedInUserId) ValidateAppUserRole(HttpContext context)
+    {
+        bool appUserOnly = false;
+        string loggedInUserId = string.Empty;
+        var loggedInUserClaim = context.User.Claims.FirstOrDefault(c => c.Type == "Id");
+
+        if (loggedInUserClaim != null)
+        {
+            loggedInUserId = loggedInUserClaim.Value;
+        }
+
+        if (context.User.IsInRole("appUser") && !string.IsNullOrEmpty(loggedInUserId))
+        {
+            appUserOnly = true;
+        }
+
+        return (appUserOnly, loggedInUserId);
+    }
+
+    public static JwtSecurityToken GenerateAuthToken(List<Claim> userClaims, string jwtAuthKey, string jwtIssuer, string jwtAudience, int expiryOffsetMinutes)
+    {
+        var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtAuthKey));
+        var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+        var securityToken = new JwtSecurityToken(
+                issuer: jwtIssuer,
+                audience: jwtAudience,
+                expires: DateTime.Now.AddMinutes(expiryOffsetMinutes),
+                signingCredentials: credentials,
+                claims: userClaims
+            );
+
+        return securityToken;
+    }
+
+    public static ClaimsPrincipal? GetPrincipalFromExpiredToken(string token, string jwtAuthKey)
+    {
+        var tokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateAudience = false,
+            ValidateIssuer = false,
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtAuthKey)),
+            ValidateLifetime = false
+        };
+
+        var tokenHandler = new JwtSecurityTokenHandler();
+        var claimsPrincipal = tokenHandler.ValidateToken(token, tokenValidationParameters, out SecurityToken securityToken);
+        
+        if (securityToken is not JwtSecurityToken jwtSecurityToken || !jwtSecurityToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256, StringComparison.InvariantCultureIgnoreCase))
+        {
+            throw new SecurityTokenException("Invalid token");
+        }
+
+        return claimsPrincipal;
+    }
+
+    public static string GenerateRefreshToken()
+    {
+        var randomNumber = new byte[64];
+        using var rng = RandomNumberGenerator.Create();
+        rng.GetBytes(randomNumber);
+        return Convert.ToBase64String(randomNumber);
+    }
+}
+~~~
+
 #### UserController
 
 The `UserController` is a simple implementation providing the functionality that you'd expect, though note that the `RegisterNewUser` Action creates both the `User` and `UserSettings` objects in the database.
@@ -1666,3 +1740,150 @@ public class UserController(UserService userService, UserSettingsService userSet
     }
 }
 ~~~
+
+#### UserSettingsController
+
+The `UserSettingsController` is a simple implementation providing the functionality that you'd expect, though note that only retrieval and update functionality is available as creation and deletion functionality is provided by the `UserController`.
+
+~~~cs
+// ./Controllers/UserSettingsController.cs
+
+/// <summary>
+/// User Settings Controller
+/// </summary>
+[ApiController]
+[Route("api/[Controller]")]
+public class UserSettingsController(UserSettingsService userSettingsService) : Controller
+{
+    private readonly UserSettingsService _userSettingsService = userSettingsService;
+
+    /// <summary>
+    /// Get all Users Settings objects
+    /// </summary>
+    /// <returns>All User Settings objects</returns>
+    /// <response code="200">Returns all User Settings objects</response>
+    /// <response code="204">Returns no content if no objects can be found</response>
+    /// <response code="400">Nothing is returned if the objects are null</response>
+    /// <response code="401">Nothing is returned if the user is unauthorised</response>
+    [HttpGet]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [Authorize(Policy = "userAdmin")]
+    public async Task<List<UserSettings>> Get() => await _userSettingsService.GetAsync();
+
+    /// <summary>
+    /// Get Settings object for the specified User
+    /// </summary>
+    /// <param name="fetchUserSettingsModel"></param>
+    /// <returns>The Settings object for the specified User</returns>
+    /// <response code="200">Returns the User Settings object</response>
+    /// <response code="401">Nothing is returned if the user is unauthorised</response>
+    /// <response code="404">Nothing is returned if the object is null</response>
+    /// <response code="500">Nothing is returned if there is no User in the context (should be impossible)</response>
+    [HttpPost]
+    [Route("FetchById")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    [Authorize(Policy = "appUser")]
+    public async Task<ActionResult<UserSettings>> FetchById([FromBody] FetchUserSettingsModel fetchUserSettingsModel)
+    {
+        if (HttpContext.User == null)
+        {
+            return StatusCode(500, "No User in Context");
+        }
+
+        if (fetchUserSettingsModel == null || fetchUserSettingsModel.Id == null)
+        {
+            return BadRequest("FetchUserSettingsModel malformed or missing required data");
+        }
+
+        (bool retrieveAppUserOnly, string loggedInUserId) = AuthHelpers.ValidateAppUserRole(HttpContext);
+
+        var userSettings = await _userSettingsService.GetForUserAsync(fetchUserSettingsModel.Id, fetchUserSettingsModel.UseUserId);
+
+        if (userSettings is null)
+        {
+            return NotFound();
+        }
+        else if (retrieveAppUserOnly && !loggedInUserId.Equals(userSettings.UserId))
+        {
+            return Unauthorized("Your assigned role means that you cannot search for other Users' data");
+        }
+        else
+        {
+            return Ok(userSettings);
+        }
+    }
+
+    /// <summary>
+    /// Update an existing User Settings object for the specific User
+    /// </summary>
+    /// <param name="updatedUserSettingsModel"></param>
+    /// <returns>Updated User Settings object</returns>
+    /// <response code="200">Returns the updated User Settings object</response>
+    /// <response code="401">Nothing is returned if the user is unauthorised</response>
+    /// <response code="404">Returns 404 if a User Settings object couldn't be found for the User</response>
+    /// <response code="500">Nothing is returned if there is no User in the context (should be impossible)</response>
+    [HttpPut]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    [Authorize(Policy = "appUser")]
+    public async Task<IActionResult> Update([FromBody] UpdateUserSettingsModel updatedUserSettingsModel)
+    {
+        if (HttpContext.User == null)
+        {
+            return StatusCode(500, "No User in Context");
+        }
+
+        if (updatedUserSettingsModel == null || updatedUserSettingsModel.Id == null || updatedUserSettingsModel.UpdatedUserSettings == null)
+        {
+            return BadRequest("UpdateUserSettingsModel malformed or missing required data");
+        }
+
+        (bool retrieveAppUserOnly, string loggedInUserId) = AuthHelpers.ValidateAppUserRole(HttpContext);
+
+        var userSettings = await _userSettingsService.GetForUserAsync(updatedUserSettingsModel.Id, updatedUserSettingsModel.UseUserId);
+
+        if (userSettings is null)
+        {
+            return NotFound();
+        }
+        else if (retrieveAppUserOnly && !loggedInUserId.Equals(userSettings.UserId))
+        {
+            return Unauthorized("Your assigned role means that you cannot update other Users' data");
+        }
+        else
+        {
+            updatedUserSettingsModel.UpdatedUserSettings.Id = userSettings.Id;
+            updatedUserSettingsModel.UpdatedUserSettings.UserId = userSettings.UserId;
+
+            await _userSettingsService.UpdateForUserAsync(updatedUserSettingsModel.Id, updatedUserSettingsModel.UpdatedUserSettings);
+
+            return Ok(updatedUserSettingsModel.UpdatedUserSettings);
+        }
+    }
+}
+~~~
+
+# So where does that leave us?
+
+That's an overview of some of the configuration and how I've structured my Web API solution for my passion project. This wasn't meant to be a tutorial, however perhaps if you end up here and you're having problems, drop me a comment and I'll do my best to help.
+
+![PetrolIQ Swagger UI](https://github.com/nateforsyth/nateforsyth.github.io/assets/13162026/0222a5eb-36df-4cc0-a73b-644db15b74d4)
+
+
+# What's next?
+
+I've not touched on the structure of the React App that is utilising this back end, suffice to say, I've already implemented the following.
+
+![PetrolIQ front end app](https://github.com/nateforsyth/nateforsyth.github.io/assets/13162026/9a3bb679-3b59-476f-bca0-857495d81d18)
+
+There will be additional blog posts as this shapes up and I get close to implementing some *actually* useful functionality.
+
+Stay tuned.
