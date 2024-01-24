@@ -1886,4 +1886,4 @@ I've not touched on the structure of the React App that is utilising this back e
 
 There will be additional blog posts as this shapes up and I get close to implementing some *actually* useful functionality.
 
-Stay tuned.
+Thanks for reading, and stay tuned.
