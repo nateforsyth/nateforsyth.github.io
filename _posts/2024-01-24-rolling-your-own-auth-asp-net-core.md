@@ -1882,6 +1882,14 @@ That's an overview of some of the configuration and how I've structured my Web A
 
 I've not touched on the structure of the React App that is utilising this back end, suffice to say, I've already implemented the following.
 
+* User registration.
+* Access token refresh.
+* Password change.
+* Profile update.
+* Settings update.
+
+All nice and secure; sets the stage for the fun stuff to start.
+
 ![PetrolIQ front end app](https://github.com/nateforsyth/nateforsyth.github.io/assets/13162026/9a3bb679-3b59-476f-bca0-857495d81d18)
 
 There will be additional blog posts as this shapes up and I get close to implementing some *actually* useful functionality.
