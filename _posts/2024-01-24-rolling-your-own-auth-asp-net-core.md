@@ -100,12 +100,306 @@ I feel like I shouldn't be passing the UserId *and* Refresh token back in the sa
 
 I'm not treating this as a tutorial, therefore I will highlight key configuration details specifically for problems or considerations I encountered.
 
+## Generating the DB schema and seeding initial data
+
+My first task was to create my initial schema for the MongoDB database.
+
+### Users table
+
+~~~json
+// MongoDB > Users (some data elided for brevity)
+
+{
+  "count": 0,
+  "fields": [
+    {
+      "name": "_id",
+      "path": [
+        "_id"
+      ],
+      "count": 0,
+      "type": "ObjectId",
+      "probability": 1,
+      "hasDuplicates": false
+    },
+    {
+      "name": "AssignedRoles",
+      "path": [
+        "AssignedRoles"
+      ],
+      "count": 0,
+      "type": [
+        "Null",
+        "String"
+      ],
+      "probability": 1,
+      "hasDuplicates": false
+    },
+    {
+      "name": "Email",
+      "path": [
+        "Email"
+      ],
+      "count": 0,
+      "type": "String",
+      "probability": 1,
+      "hasDuplicates": false
+    },
+    {
+      "name": "FirstName",
+      "path": [
+        "FirstName"
+      ],
+      "count": 0,
+      "type": "String",
+      "probability": 1,
+      "hasDuplicates": false
+    },
+    {
+      "name": "LastName",
+      "path": [
+        "LastName"
+      ],
+      "count": 0,
+      "type": "String",
+      "probability": 1,
+      "hasDuplicates": false
+    },
+    {
+      "name": "Password",
+      "path": [
+        "Password"
+      ],
+      "count": 0,
+      "type": "String",
+      "probability": 1,
+      "hasDuplicates": false
+    },
+    {
+      "name": "RefreshToken",
+      "path": [
+        "RefreshToken"
+      ],
+      "count": 0,
+      "type": [
+        "Null",
+        "String"
+      ],
+      "probability": 1,
+      "hasDuplicates": false
+    },
+    {
+      "name": "RefreshTokenExpiryTime",
+      "path": [
+        "RefreshTokenExpiryTime"
+      ],
+      "count": 0,
+      "type": [
+        "Null",
+        "Date"
+      ],
+      "probability": 1,
+      "hasDuplicates": false      
+    },
+    {
+      "name": "UserName",
+      "path": [
+        "UserName"
+      ],
+      "count": 0,
+      "type": "String",
+      "probability": 1,
+      "hasDuplicates": false
+    }
+  ]
+}
+~~~
+
+### UserSettings table
+
+~~~json
+// MongoDB > UserSettings (some data elided for brevity)
+
+{
+  "count": 0,
+  "fields": [
+    {
+      "name": "_id",
+      "path": [
+        "_id"
+      ],
+      "count": 0,
+      "type": "ObjectId",
+      "probability": 1,
+      "hasDuplicates": false
+    },
+    {
+      "name": "AccruedDiscount",
+      "path": [
+        "AccruedDiscount"
+      ],
+      "count": 0,
+      "type": [
+        "Int32",
+        "Double"
+      ],
+      "probability": 1,
+      "hasDuplicates": false
+    },
+    {
+      "name": "AvgCapacityUnitPerDistanceUnit",
+      "path": [
+        "AvgCapacityUnitPerDistanceUnit"
+      ],
+      "count": 0,
+      "type": "Int32",
+      "probability": 1,
+      "hasDuplicates": false
+    },
+    {
+      "name": "BaseDiscount",
+      "path": [
+        "BaseDiscount"
+      ],
+      "count": 0,
+      "type": "Double",
+      "probability": 1,
+      "hasDuplicates": false
+    },
+    {
+      "name": "CapacityUnit",
+      "path": [
+        "CapacityUnit"
+      ],
+      "count": 0,
+      "type": "Int32",
+      "probability": 1,
+      "hasDuplicates": false
+    },
+    {
+      "name": "CountryName",
+      "path": [
+        "CountryName"
+      ],
+      "count": 0,
+      "type": "String",
+      "probability": 1,
+      "hasDuplicates": false
+    },
+    {
+      "name": "CurrencyUnit",
+      "path": [
+        "CurrencyUnit"
+      ],
+      "count": 0,
+      "type": "Int32",
+      "probability": 1,
+      "hasDuplicates": false
+    },
+    {
+      "name": "CurrentBatchId",
+      "path": [
+        "CurrentBatchId"
+      ],
+      "count": 0,
+      "type": "Int32",
+      "probability": 1,
+      "hasDuplicates": false
+    },
+    {
+      "name": "DistanceUnit",
+      "path": [
+        "DistanceUnit"
+      ],
+      "count": 0,
+      "type": "Int32",
+      "probability": 1,
+      "hasDuplicates": false
+    },
+    {
+      "name": "IdealDiscount",
+      "path": [
+        "IdealDiscount"
+      ],
+      "count": 0,
+      "type": "Int32",
+      "probability": 1,
+      "hasDuplicates": false
+    },
+    {
+      "name": "LastPricePerCapacityUnit",
+      "path": [
+        "LastPricePerCapacityUnit"
+      ],
+      "count": 0,
+      "type": "Double",
+      "probability": 1,
+      "hasDuplicates": false
+    },
+    {
+      "name": "MinimumSpendForDiscount",
+      "path": [
+        "MinimumSpendForDiscount"
+      ],
+      "count": 0,
+      "type": [
+        "Int32",
+        "Double"
+      ],
+      "probability": 1,
+      "hasDuplicates": false
+    },
+    {
+      "name": "NextFillId",
+      "path": [
+        "NextFillId"
+      ],
+      "count": 0,
+      "type": "Int32",
+      "probability": 1,
+      "hasDuplicates": false
+    },
+    {
+      "name": "RoundTo",
+      "path": [
+        "RoundTo"
+      ],
+      "count": 0,
+      "type": "Int32",
+      "probability": 1,
+      "hasDuplicates": false
+    },
+    {
+      "name": "RoundUnitCostTo",
+      "path": [
+        "RoundUnitCostTo"
+      ],
+      "count": 0,
+      "type": "Int32",
+      "probability": 1,
+      "hasDuplicates": false
+    },
+    {
+      "name": "UserId",
+      "path": [
+        "UserId"
+      ],
+      "count": 0,
+      "type": "String",
+      "probability": 1,
+      "hasDuplicates": false
+    }
+  ]
+}
+~~~
+
 ## CORS
 
 CORS was always going to be a consideration throughout the build process, so I ended up configuring CORS as follows.
 
 ~~~cs
 // ./Petroliq_API/Program.cs
+
 public class Program
 {
     public static void Main(string[] args)
@@ -133,14 +427,15 @@ public class Program
 }
 ~~~
 
-## Passport Auth
+## App settings
 
 Due to my requirement for running this service on my own server, and having chosen IIS to do so, there were some funky issues encountered when using `User Secrets`, namely that it ended up causing me to scratch my head a little too much while attempting to target environment variables across IIS Application Pools.
 
 Here is the structure of the `secrets.json` file.
 
 ~~~json
-./Petroliq_API/secrets.json
+// ./Petroliq_API/secrets.json
+
 {
   "ConnectionString": "[elided]",
   "AuthKey": "[elided]"
@@ -149,13 +444,14 @@ Here is the structure of the `secrets.json` file.
 
 And here is the structure of the `appsettings.json` file; note that there is crossover in these settings.
 
-* secrets/ConnectionString >> appsettings/PetroliqDatabase/ConnectionString
-* secrets/AuthKey >> appsettings/PetroliqDatabase/Auth:Key
+* secrets/ConnectionString >> appsettings/Database/ConnectionString
+* secrets/AuthKey >> appsettings/Database/Auth:Key
 
 ~~~json
-./Petroliq_API/appsettings.json
+// ./API/appsettings.json
+
 {
-  "PetroliqDatabase": {
+  "Database": {
     "ConnectionString": "REPLACE_ME_REFER_README",
     "DatabaseName": "Petroliq",
     "UserSettingsCollectionName": "UserSettings",
@@ -174,7 +470,7 @@ And here is the structure of the `appsettings.json` file; note that there is cro
       "Microsoft.AspNetCore": "Warning"
     }
   },
-  "Petroliq": {
+  "App": {
     "KM_MI_FACTOR": 1.60934,
     "MI_KM_FACTOR": 0.62,
     "LTR_GAL_FACTOR": 4.54609,
@@ -184,10 +480,19 @@ And here is the structure of the `appsettings.json` file; note that there is cro
 }
 ~~~
 
+## Base functionality
+
 As previously eluded to, I encountered problems that blocked me more than I'd liked, therefore I resigned myself to using both `secrets.json` (in development) and `appsettings.json` (in "production"). Note the preprocessor directive in the snippet below.
 
+After scaffolding the initial DB schema  for a `Users` and `UserSettings` table and configuring settings, I set about building out the Authorisation and Authentication.
+
+### Passport Auth, entry point config
+
+Here is the configuration of the entry point to the app.
+
 ~~~cs
-// ./Petroliq_API/Program.cs
+// ./Program.cs
+
 public class Program
 {
     public static void Main(string[] args)
@@ -265,6 +570,1099 @@ public class Program
         #endregion
 
         // remainder elided for brevity
+    }
+}
+~~~
+
+### Data
+
+Next up were the POCOs for a User.
+
+~~~cs
+// ./Model/User.cs
+
+/// <summary>
+/// User model
+/// </summary>
+public class User
+{
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string? Id { get; set; }
+    public string? FirstName { get; set; }
+    public string? LastName { get; set; } = string.Empty;
+    public string? UserName { get; set; }
+    public string? Email { get; set; }
+    public string? Password { get; set; }
+    public string? AssignedRoles { get; set; }
+
+    public string? RefreshToken { get; set; }
+    public DateTime? RefreshTokenExpiryTime { get; set; }
+
+    public static List<string> ValidateFieldUpdates(User original, User updated)
+    {
+        List<string> updatedFields = [];
+        // field validation elided for brevity
+        return updatedFields;
+    }
+}
+~~~
+
+And for their settings.
+
+~~~cs
+// ./Model/UserSettings.cs
+
+/// <summary>
+/// User Settings model
+/// </summary>
+public class UserSettings
+{
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string? Id { get; set; }
+
+    [BsonElement("UserId")]
+    public string? UserId { get; set; }
+
+    public string? CountryName { get; set; }
+
+    public CurrencyUnit CurrencyUnit { get; set; }
+    public CapacityUnit CapacityUnit { get; set; }
+    public DistanceUnit DistanceUnit { get; set; }
+
+    public decimal BaseDiscount { get; set; }
+    public decimal MinimumSpendForDiscount { get; set; }
+    public decimal LastPricePerCapacityUnit { get; set; }
+    public decimal AccruedDiscount { get; set; }
+    public decimal IdealDiscount { get; set; }
+
+    public int RoundTo { get; set; }
+    public int RoundUnitCostTo { get; set; }
+
+    public int CurrentBatchId { get; set; }
+    public int NextFillId { get; set; }
+    public decimal AvgCapacityUnitPerDistanceUnit { get; set; }
+    public decimal MaxVolumeQualifyingForDiscount { get; set; }
+
+    public static List<string> ValidateFieldUpdates(UserSettings original, UserSettings updated)
+    {
+        List<string> updatedFields = [];
+        // field validation elided for brevity
+        return updatedFields;
+    }
+}
+~~~
+
+The Controllers for these Model classes utilise their `ValidateFieldUpdates` methods to provide a List<string> of fields that have had updates.
+
+### Services
+
+We've got a `ServiceHelper` class, which the Service classes use to derive from.
+
+~~~cs
+// ./Services/ServiceHelper.cs
+
+public class ServiceHelper
+{
+    private readonly IConfiguration _configuration;
+    public readonly string? _connectionString;
+    public MongoClient _mongoClient;
+
+    public ServiceHelper(IConfiguration configuration, IOptions<PetroliqDatabaseSettings> petroliqDatabaseSettings)
+    {
+        _configuration = configuration;
+#if !DEBUG
+        _connectionString = petroliqDatabaseSettings.Value.ConnectionString; // from appsettings.json, inaccessible when hosted on IIS
+#else
+        _connectionString = _configuration["ConnectionString"]; // from secrets.json, inaccessible when hosted on IIS
+#endif
+        _mongoClient = new MongoClient(_connectionString);
+    }
+}
+~~~
+
+The `UserService` class which abstracts away the DB CRUD functionality for the `User` table.
+
+~~~cs
+// ./Services/UserService.cs
+
+public class UserService : ServiceHelper
+{
+    private readonly IMongoCollection<User>? _usersCollection;
+
+    public UserService(IOptions<PetroliqDatabaseSettings> petroliqDatabaseSettings, IConfiguration configuration) : base(configuration, petroliqDatabaseSettings)
+    {
+        IMongoDatabase mongoDatabase;
+
+        try
+        {
+            mongoDatabase = _mongoClient.GetDatabase(petroliqDatabaseSettings.Value.DatabaseName);
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("MongoDB initialisation error, UserService", ex);
+        }
+
+        try
+        {
+            _usersCollection = mongoDatabase.GetCollection<User>(petroliqDatabaseSettings.Value.UsersCollectionName);
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("Users Collection instantiation error", ex);
+        }
+    }
+
+    /// <summary>
+    /// Get all User objects
+    /// </summary>
+    /// <returns></returns>
+    public async Task<List<User>> GetAsync() =>
+        await _usersCollection.Find(_ => true).ToListAsync();
+
+    /// <summary>
+    /// Get a User object by their db Id value (User Id)
+    /// </summary>
+    /// <param name="dbId"></param>
+    /// <returns></returns>
+    public async Task<User?> GetAsync(string dbId) =>
+        await _usersCollection.Find(x => x.Id == dbId).FirstOrDefaultAsync();
+
+    /// <summary>
+    /// Get a User object by their db Email value
+    /// </summary>
+    /// <param name="email"></param>
+    /// <returns></returns>
+    public async Task<User?> GetByEmailAsync(string email) => 
+        await _usersCollection.Find(x => x.Email == email).FirstOrDefaultAsync();
+
+    /// <summary>
+    /// Create a new User object
+    /// </summary>
+    /// <param name="newUser"></param>
+    /// <returns></returns>
+    public async Task CreateAsync(User newUser)
+    {
+        if (newUser != null)
+        {
+            await _usersCollection.InsertOneAsync(newUser);
+        }
+    }        
+
+    /// <summary>
+    /// Update an existing User object
+    /// </summary>
+    /// <param name="id"></param>
+    /// <param name="updatedUserSettings"></param>
+    /// <returns></returns>
+    public async Task UpdateAsync(string id, User updatedUserSettings) =>
+        await _usersCollection.ReplaceOneAsync(x => x.Id == id, updatedUserSettings);
+
+    /// <summary>
+    /// Remove an existing User object
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
+    public async Task RemoveAsync(string id)
+    {
+        await _usersCollection.DeleteOneAsync(x => x.Id == id);
+    }
+        
+}
+~~~
+
+And the `UserSettingsService` class that does the same for the `UserSettings` DB table.
+
+CRUD functionality for this Service class is intentionally limited as `UserSettings` lifecycle is handled by the `UserController` (see more below).
+
+~~~cs
+// ./Services/UserSettingsService.cs
+
+public class UserSettingsService : ServiceHelper
+{
+    private readonly IMongoCollection<UserSettings> _userSettingsCollection;
+
+    public UserSettingsService(IOptions<PetroliqDatabaseSettings> petroliqDatabaseSettings, IConfiguration configuration) : base(configuration, petroliqDatabaseSettings)
+    {
+        IMongoDatabase mongoDatabase;
+
+        try
+        {
+            mongoDatabase = _mongoClient.GetDatabase(petroliqDatabaseSettings.Value.DatabaseName);
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("MongoDB initialisation error, UserSettingsService", ex);
+        }
+
+        try
+        {
+            _userSettingsCollection = mongoDatabase.GetCollection<UserSettings>(petroliqDatabaseSettings.Value.UserSettingsCollectionName);
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("UserSettings Collection instantiation error", ex);
+        }
+    }
+
+    /// <summary>
+    /// Get all UserForRegistration Settings objects
+    /// </summary>
+    /// <returns></returns>
+    public async Task<List<UserSettings>> GetAsync() =>
+        await _userSettingsCollection.Find(_ => true).ToListAsync();
+
+    /// <summary>
+    /// Get a UserForRegistration Settings object for a specific UserForRegistration
+    /// </summary>
+    /// <param name="id"></param>
+    /// <param name="useUserId"></param>
+    /// <returns></returns>
+    public async Task<UserSettings?> GetForUserAsync(string id, bool useUserId)
+    {
+        if (useUserId)
+        {
+            return await _userSettingsCollection.Find(x => x.UserId == id).FirstOrDefaultAsync();
+        }
+        else
+        {
+            return await _userSettingsCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
+        }            
+    }
+
+    /// <summary>
+    /// Create a UserForRegistration Settings object for a specific UserForRegistration
+    /// </summary>
+    /// <param name="newUserSettings"></param>
+    /// <returns></returns>
+    public async Task CreateForUserAsync(UserSettings newUserSettings) =>
+        await _userSettingsCollection.InsertOneAsync(newUserSettings);
+
+    /// <summary>
+    /// Update a UserForRegistration Settings object for a specific UserForRegistration
+    /// </summary>
+    /// <param name="userId"></param>
+    /// <param name="updatedUserSettings"></param>
+    /// <returns></returns>
+    public async Task UpdateForUserAsync(string userId, UserSettings updatedUserSettings) =>
+        await _userSettingsCollection.ReplaceOneAsync(x => x.UserId == userId, updatedUserSettings);
+
+    /// <summary>
+    /// Remove a UserForRegistration Settings object for a specific UserForRegistration
+    /// </summary>
+    /// <param name="userId"></param>
+    /// <returns></returns>
+    public async Task RemoveForUserAsync(string userId) =>
+        await _userSettingsCollection.DeleteOneAsync(x => x.UserId == userId);
+}
+~~~
+
+### Controllers
+
+#### AuthController
+
+The `AuthController`'s responsibility is all of the important stuff revolving around logging in, refreshing tokens and revocation of tokens. This Controller also handles propagation of the `HttpOnly` cookies to the client; note the presence of the `X-Access-Token` (JWT) and `X-Fingerprint` (hashed Refresh) cookies.
+
+~~~cs
+// ./Controllers/AuthController.cs
+
+/// <summary>
+/// Authentication Controller
+/// </summary>
+[Route("api/[controller]")]
+[ApiController]
+public class AuthController : ControllerBase
+{
+    private readonly IConfiguration _configuration;
+    private readonly UserService _userService;
+    private readonly IOptions<AuthSettings> _authSettings;
+
+    private readonly string _jwtAuthKey = string.Empty;
+    private readonly string _jwtIssuer = string.Empty;
+    private readonly string _jwtAudience = string.Empty;
+    private readonly int _refreshTokenValiditityDays = -1;
+    private readonly int _tokenValidityMinutes = -1;
+
+    /// <summary>
+    /// Authentication Controller
+    /// </summary>
+    /// <param name="configuration"></param>
+    /// <param name="userService"></param>
+    /// <param name="authSettings"></param>
+    public AuthController(IConfiguration configuration, UserService userService, IOptions<AuthSettings> authSettings)
+    {
+        _authSettings = authSettings;
+        _configuration = configuration;
+        _userService = userService;
+
+#if !DEBUG
+        _jwtAuthKey = _configuration["Auth:Key"]; // authSettings.Value.Key; // from appsettings.json, for IIS usage
+#else
+        _jwtAuthKey = _configuration["AuthKey"]; // from secrets.json, inaccessible when hosted on IIS            
+#endif
+
+        _jwtIssuer = _authSettings.Value.Issuer;
+        _jwtAudience = _authSettings.Value.Audience;
+        _refreshTokenValiditityDays = _authSettings.Value.RefreshTokenValiditityDays;
+        _tokenValidityMinutes = _authSettings.Value.TokenValidityMinutes;
+    }
+
+    /// <summary>
+    /// Authenticate with this Web API using a username and password, token is persisted to the HttpOnly cookie
+    /// </summary>
+    /// <param name="loginModel">LoginModel instance</param>
+    /// <returns>Bearer and Refresh tokens</returns>
+    /// <response code="200">Returns User Id, hashed Refresh token and Token expiry date if authentication was successful</response>
+    /// <response code="400">Nothing is returned if authentication fails or required values not provided</response>
+    /// <response code="401">Nothing is returned if the UserForRegistration is not authorised</response>
+    /// <response code="404">Nothing is returned if no UserForRegistration is found</response>
+    /// <response code="500">Nothing is returned if the internal configuration is incorrect; see message</response>
+    [HttpPost]
+    [Route("Login")]
+    [AllowAnonymous]
+    public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
+    {
+        if (string.IsNullOrEmpty(loginModel.Email) || string.IsNullOrEmpty(loginModel.Password))
+        {
+            return BadRequest();
+        }
+
+        User? user = await _userService.GetByEmailAsync(loginModel.Email);
+
+        if (user is null)
+        {
+            return NotFound();
+        }
+        else
+        {
+            bool passwordVerified = BCrypt.Net.BCrypt.Verify(loginModel.Password, user.Password);
+            if (!string.IsNullOrEmpty(user.Password) && !passwordVerified)
+            {
+                return Unauthorized();
+            }
+        }
+
+        List<Claim> userClaims = [];
+
+        if (!string.IsNullOrEmpty(user.Id) && !string.IsNullOrEmpty(user.Email))
+        {
+            userClaims.Add(new Claim("Id", user.Id));
+            userClaims.Add(new Claim(JwtRegisteredClaimNames.Sub, user.Email));
+            userClaims.Add(new Claim(JwtRegisteredClaimNames.Email, user.Email));
+            userClaims.Add(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
+
+            if (!string.IsNullOrEmpty(user.AssignedRoles))
+            {
+                var roles = user.AssignedRoles.Split(",");
+
+                if (roles.Length > 0)
+                {
+                    foreach (var role in roles)
+                    {
+                        userClaims.Add(new Claim(ClaimTypes.Role, role));
+                    }
+                }
+            }
+
+            if (string.IsNullOrEmpty(_jwtAuthKey))
+            {
+                return StatusCode(500, "Auth Key missing from configuration");
+            }
+            else if (string.IsNullOrEmpty(_jwtIssuer))
+            {
+                return StatusCode(500, "Auth Issuer missing from configuration");
+            }
+            else if (string.IsNullOrEmpty(_jwtAudience))
+            {
+                return StatusCode(500, "Auth Audience missing from configuration");
+            }
+            else
+            {
+                // generate tokens
+                var token = AuthHelpers.GenerateAuthToken(userClaims, _jwtAuthKey, _jwtIssuer, _jwtAudience, _tokenValidityMinutes);
+                var refreshToken = AuthHelpers.GenerateRefreshToken();
+
+                // generate a hashedFingerprint to use for validation of the Refresh token
+                string hashedFingerprint = BCrypt.Net.BCrypt.HashPassword(refreshToken);
+
+                // assess token validity
+                if (_refreshTokenValiditityDays != -1 && token != null)
+                {
+                    user.RefreshToken = refreshToken;
+                    user.RefreshTokenExpiryTime = DateTime.Now.AddDays(_refreshTokenValiditityDays);
+
+                    // update User record in db
+                    await _userService.UpdateAsync(user.Id, user);
+
+                    string tokenString = new JwtSecurityTokenHandler().WriteToken(token);
+                    Response.Cookies.Append("X-Access-Token", tokenString, new CookieOptions() { HttpOnly = true, Secure = true, SameSite = SameSiteMode.None, IsEssential = true });
+                    Response.Cookies.Append("X-Fingerprint", refreshToken, new CookieOptions() { HttpOnly = true, Secure = true, SameSite = SameSiteMode.None, IsEssential = true });
+
+                    return Ok(new
+                    {
+                        UserId = user.Id,
+                        RefreshToken = hashedFingerprint,
+                        Expiration = token.ValidTo
+                    });
+                }
+                else
+                {
+                    return BadRequest("Failed to generate Refresh Token");
+                }
+            }
+        }
+        else
+        {
+            return BadRequest("Required data is not present on User entity");
+        }
+    }
+
+    /// <summary>
+    /// Refresh an Access Token using a provided Refresh Token, token is persisted to the HttpOnly cookie
+    /// </summary>
+    /// <param name="tokenModel"></param>
+    /// <returns>Refreshed Bearer and Refresh tokens</returns>
+    /// <response code="200">Returns User Id, hashed Refresh token and Token expiry date if authentication was successful</response>
+    /// <response code="400">Nothing is returned if authentication fails, required values are not provided or fingerprint is missing</response>
+    /// <response code="401">Nothing is returned if fingerprint validation fails</response>
+    /// <response code="404">Nothing is returned if no User is not found or is in an invalid state</response>
+    /// <response code="500">Nothing is returned if the internal configuration is incorrect; see message</response>
+    [HttpPost]
+    [Route("Refresh")]
+    [AllowAnonymous]
+    public async Task<IActionResult> Refresh([FromBody] TokenModel tokenModel)
+    {
+        if (tokenModel == null)
+        {
+            return BadRequest("Invalid request, token model is null");
+        }
+
+        string? tokenCookie = Request.Cookies["X-Access-Token"];
+        string? refreshTokenCookie = Request.Cookies["X-Fingerprint"]; // unhashed refresh token
+
+        if (refreshTokenCookie != null && !string.IsNullOrEmpty(refreshTokenCookie))
+        {
+            string? refreshTokenFingerprint = tokenModel.RefreshTokenFingerprint;
+
+            bool fingerprintsMatch = BCrypt.Net.BCrypt.Verify(refreshTokenCookie, refreshTokenFingerprint);
+
+            if (!fingerprintsMatch)
+            {
+                return Unauthorized("Fingerprints don't match");
+            }
+            else if (string.IsNullOrEmpty(_jwtAuthKey))
+            {
+                return StatusCode(500, "Auth Key missing from configuration");
+            }
+            else if (string.IsNullOrEmpty(_jwtIssuer))
+            {
+                return StatusCode(500, "Auth Issuer missing from configuration");
+            }
+            else if (string.IsNullOrEmpty(_jwtAudience))
+            {
+                return StatusCode(500, "Auth Audience missing from configuration");
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(tokenModel.PrincipalId))
+                {
+                    bool userAndPrincipalMatch = false;
+
+                    // get User from database matching provided PrincipalId
+                    User? user = await _userService.GetAsync(tokenModel.PrincipalId);
+
+                    if (user == null || string.IsNullOrEmpty(user.Id))
+                    {
+                        return NotFound("User record state is invalid");
+                    }
+
+                    if (string.IsNullOrEmpty(user.RefreshToken) || !user.RefreshToken.Equals(refreshTokenCookie))
+                    {
+                        return Unauthorized("Refresh token cookie doens't match User record");
+                    }
+
+                    // get expired Principal from cookie if available
+                    ClaimsPrincipal? expiredPrincipal = null;
+                    if (tokenCookie != null && !string.IsNullOrEmpty(tokenCookie))
+                    {
+                        expiredPrincipal = AuthHelpers.GetPrincipalFromExpiredToken(tokenCookie, _jwtAuthKey);
+                    }
+
+                    if (expiredPrincipal != null)
+                    {
+                        var principalClaimId = expiredPrincipal.Claims.FirstOrDefault(c => c.Type == "Id");
+                        if (principalClaimId != null)
+                        {
+                            userAndPrincipalMatch = principalClaimId.Value == user.Id;
+                        }
+                    }
+
+                    if (!userAndPrincipalMatch)
+                    {
+                        return BadRequest("Mismatch in token data");
+                    }
+
+                    if (user.RefreshToken != refreshTokenCookie)
+                    {
+                        user.RefreshToken = null;
+                        await _userService.UpdateAsync(user.Id, user);
+
+                        return BadRequest("Invalid refresh token, User's Refresh Token has been revoked, they will need to log in again");
+                    }
+
+                    // force revocation of refresh tokens after expiry
+                    if (user.RefreshTokenExpiryTime <= DateTime.Now)
+                    {
+                        user.RefreshToken = null;
+                        await _userService.UpdateAsync(user.Id, user);
+
+                        return BadRequest("Expired refresh token, User's Refresh Token has been revoked for rotation, they'll need to log in again");
+                    }
+
+                    var newToken = AuthHelpers.GenerateAuthToken(expiredPrincipal.Claims.ToList(), _jwtAuthKey, _jwtIssuer, _jwtAudience, _tokenValidityMinutes);
+
+                    // generate a new hashedFingerprint to use for validation of the Refresh token, to replace the existing cookie
+                    string newHashedFingerprint = BCrypt.Net.BCrypt.HashPassword(refreshTokenCookie);
+
+                    string tokenString = new JwtSecurityTokenHandler().WriteToken(newToken);
+                    Response.Cookies.Delete("X-Access-Token");
+                    Response.Cookies.Append("X-Access-Token", tokenString, new CookieOptions() { HttpOnly = true, Secure = true, SameSite = SameSiteMode.None, IsEssential = true });
+                    Response.Cookies.Delete("X-Fingerprint");
+                    Response.Cookies.Append("X-Fingerprint", refreshTokenCookie, new CookieOptions() { HttpOnly = true, Secure = true, SameSite = SameSiteMode.None, IsEssential = true });
+
+                    return Ok(new
+                    {
+                        UserId = user.Id,
+                        RefreshToken = newHashedFingerprint,
+                        Expiration = newToken.ValidTo
+                    });
+                }
+                else
+                {
+                    return BadRequest("Tokens or Auth Key invalid");
+                }
+            }
+        }
+        else
+        {
+            return BadRequest("Fingerprint missing");
+        }            
+    }
+
+    /// <summary>
+    /// Revoke Refresh Tokens from a specific User in the database, this is an administrative action
+    /// </summary>
+    /// <param name="userIdOrEmailAddress"></param>
+    /// <returns>Nothing</returns>
+    /// <response code="204">Nothing is returned if this action is successful</response>
+    /// <response code="400">Nothing is returned if no userIdOrEmailAddress is provided</response>
+    /// <response code="404">Nothing is returned if no User record is found or the User record is in a bad state</response>
+    [HttpPost]
+    [Route("Revoke")]
+    [Authorize(Policy = "userAdmin")]
+    public async Task<IActionResult> Revoke(string userIdOrEmailAddress)
+    {
+        if (string.IsNullOrEmpty(userIdOrEmailAddress))
+        {
+            return BadRequest("User Id or Email Address null or empty");
+        }
+
+        User? user = await _userService.GetAsync(userIdOrEmailAddress);
+
+        if (user == null)
+        {
+            user = await _userService.GetByEmailAsync(userIdOrEmailAddress);
+
+            if (user == null)
+            {
+                return NotFound("Invalid User Id or Email Address");
+            }
+        }
+
+        if (string.IsNullOrEmpty(user.Id))
+        {
+            return NotFound("User record state is invalid");
+        }
+
+        user.RefreshToken = null;
+        await _userService.UpdateAsync(user.Id, user);
+
+        return NoContent();
+    }
+
+    /// <summary>
+    /// Revoke Refresh Tokens from all Users in the database, this is an administrative action
+    /// </summary>
+    /// <returns>Nothing</returns>
+    /// <response code="204">Nothing is returned if this action is successful</response>
+    /// <response code="404">Nothing is returned if no User records are found</response>
+    [HttpPost]
+    [Route("RevokeAll")]
+    [Authorize(Policy = "userAdmin")]
+    public async Task<IActionResult> RevokeAll()
+    {
+        List<User>? users = await _userService.GetAsync();
+
+        if (users == null || users.Count == 0)
+        {
+            return NotFound("No User records found");
+        }
+
+        users.ForEach(async u =>
+        {
+            if (!string.IsNullOrEmpty(u.Id))
+            {
+                u.RefreshToken = null;
+                await _userService.UpdateAsync(u.Id, u);
+            }
+        });
+
+        return NoContent();
+    }
+}
+~~~
+
+##### Auth helper functionality
+
+There's also additonal helper functionality to allow the `AuthController` to do its job.
+
+Roles are validated using a `RoleHandler` pattern, which I learned about from [Auth0.com > Core RBAC](https://auth0.com/docs/manage-users/access-control/configure-core-rbac/roles). I've modified it quite a bit to fit my purposes.
+
+First, functionality to validate whether a role is present.
+
+~~~cs
+// ./Authorisation/HasRoleRequirement.cs
+
+public class HasRoleRequirement(string issuer, string[] roles) : IAuthorizationRequirement
+{
+    public string Issuer { get; } = issuer ?? throw new ArgumentNullException(nameof(issuer));
+    public string[] Role { get; } = roles ?? throw new ArgumentNullException(nameof(roles));
+}
+~~~
+
+And then a handler to invoke the functionality.
+
+~~~cs
+// ./Authorisation/HasRoleHandler.cs
+
+public class HasRoleHandler : AuthorizationHandler<HasRoleRequirement>
+{
+    protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, HasRoleRequirement requirement)
+    {
+        // Check if UserForRegistration has a Role claim, if not exit
+        if (!context.User.HasClaim(c => c.Type.Contains("role") && c.Issuer == requirement.Issuer))
+        {
+            return Task.CompletedTask;
+        }
+
+        // Split the requirement roles if delimited
+        List<string>? requirementRoles = [.. requirement.Role];
+
+        // Split the roles string into an array
+        List<string>? roles = [];
+        if (context.User != null)
+        {
+            Claim? claim = context.User.FindFirst(c => c.Type.Contains("role") && c.Issuer == requirement.Issuer);
+            if (claim != null)
+            {
+                roles = [.. claim.Value.Split(' ')];
+            }
+
+            foreach (var role in requirementRoles)
+            {
+                if (context.User.IsInRole(role))
+                {
+                    context.Succeed(requirement);
+
+                    break;
+                }
+            }
+        }
+
+        return Task.CompletedTask;
+    }
+}
+~~~
+
+Remember this snippet from the entry point detailed above? These [Authorization Policies](https://learn.microsoft.com/en-us/aspnet/core/security/authorization/policies?view=aspnetcore-8.0) filter the incoming requests and ensure that a particular User can only access a Controller Action if they have the appropriate Role.
+
+~~~cs
+// ./Program.cs (rest elided for brevity)
+
+// configure RBAC roles for RoleHandler
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("admin", policy => policy.Requirements.Add(new HasRoleRequirement(jwtIssuer, ["administrator"])));
+    options.AddPolicy("userAdmin", policy => policy.Requirements.Add(new HasRoleRequirement(jwtIssuer, ["administrator", "users.read", "users.write", "userSettings.read", "userSettings.write"])));
+    options.AddPolicy("appUser", policy => policy.Requirements.Add(new HasRoleRequirement(jwtIssuer, ["appUser", "administrator", "users.read", "users.write", "userSettings.read", "userSettings.write"])));
+});
+
+builder.Services.AddSingleton<IAuthorizationHandler, HasRoleHandler>();
+~~~
+
+Which is controlled by way of the `Authorize` Attribute; e.g. Only an `appUser` can access the Delete User Action.
+
+~~~cs
+// ./UserController.cs > Delete Action
+
+**[Authorize(Policy = "appUser")]**
+public async Task<IActionResult> Delete([FromBody] DeleteUserModel deleteUserModel) { // implementation elided }
+~~~
+
+#### UserController
+
+The `UserController` is a simple implementation providing the functionality that you'd expect, though note that the `RegisterNewUser` Action creates both the `User` and `UserSettings` objects in the database.
+
+The `Update` and `Delete` Actions also manipulate both.
+
+~~~cs
+// ./Controllers/UserController.cs
+
+/// <summary>
+/// User Controller
+/// </summary>
+[ApiController]
+[Route("api/[Controller]")]
+[Produces("application/json")]
+public class UserController(UserService userService, UserSettingsService userSettingsService) : ControllerBase
+{
+    private readonly UserService _userService = userService;
+    private readonly UserSettingsService _userSettingsService = userSettingsService;
+
+    /// <summary>
+    /// Get all User objects
+    /// </summary>
+    /// <returns>All User objects</returns>
+    /// <response code="200">Returns all User Settings objects</response>
+    /// <response code="204">Returns no content if no objects can be found</response>
+    /// <response code="400">Nothing is returned if the objects are null</response>
+    /// <response code="401">Nothing is returned if the user is unauthorised</response>
+    /// <response code="403">Nothing is returned if the user is Forbidden</response>
+    [HttpGet]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [Authorize(Policy = "userAdmin")]
+    public async Task<List<User>> Get()
+    {
+        var users = await _userService.GetAsync();
+        // validation elided for brevity
+        return users;
+    }
+
+    /// <summary>
+    /// Get a User object by Id string
+    /// </summary>
+    /// <param name="fetchUserModel"></param>
+    /// <returns>The specified User object</returns>
+    /// <response code="200">Returns the User object</response>
+    /// <response code="401">Nothing is returned if the user is unauthorised or trying to access a record they're not allowed to access</response>
+    /// <response code="404">Nothing is returned if the object is null</response>
+    /// <response code="500">Nothing is returned if there is no User in the context (should be impossible)</response>
+    [HttpPost]
+    [Route("FetchById")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    [Authorize(Policy = "appUser")]
+    public async Task<ActionResult<User>> FetchById([FromBody] FetchUserModel fetchUserModel)
+    {
+        if (HttpContext.User == null)
+        {
+            return StatusCode(500, "No User in Context");
+        }
+
+        (bool retrieveAppUserOnly, string loggedInUserId) = AuthHelpers.ValidateAppUserRole(HttpContext);
+
+        if (fetchUserModel != null && !string.IsNullOrEmpty(fetchUserModel.Id))
+        {
+            var user = await _userService.GetAsync(fetchUserModel.Id);
+
+            if (user is null)
+            {
+                return NotFound();
+            }
+            else if (retrieveAppUserOnly && !loggedInUserId.Equals(user.Id))
+            {
+                return Unauthorized("Your assigned role means that you cannot search for other Users' data");
+            }
+            else
+            {
+                user.Password = string.Empty;
+                user.RefreshToken = string.Empty;
+                user.RefreshTokenExpiryTime = null;
+                return Ok(user);
+            }
+        }
+        else
+        {
+            return BadRequest("User Id malformed or not supplied");
+        }
+    }
+
+    /// <summary>
+    /// Create a new User and associated Settings
+    /// </summary>
+    /// <param name="userRegistrationModel">UserRegistrationModel DTO excluding Id fields</param>
+    /// <returns>New User object</returns>
+    /// <response code="201">Returns the newly created User object</response>
+    /// <response code="400">Nothing is returned if the object is null</response>
+    [HttpPost]
+    [ProducesResponseType(StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [Route("RegisterNewUser")]
+    [AllowAnonymous]
+    public async Task<IActionResult> RegisterNewUser([FromBody] UserRegistrationModel userRegistrationModel)
+    {
+        if (userRegistrationModel.User != null && userRegistrationModel.UserSettings != null)
+        {
+            string passwordHash = string.Empty;
+            if (string.IsNullOrEmpty(userRegistrationModel.User.Password)) // TODO flesh out password complexity requirements
+            {
+                return base.BadRequest("Password was not provided or did not meet complexity requirements");
+            }
+            else
+            {
+                passwordHash = BCrypt.Net.BCrypt.HashPassword((string)userRegistrationModel.User.Password);
+
+                // create a new UserForRegistration object
+                User user = new()
+                {
+                    FirstName = userRegistrationModel.User.FirstName,
+                    LastName = userRegistrationModel.User.LastName,
+                    UserName = userRegistrationModel.User.UserName,
+                    Email = userRegistrationModel.User.Email,
+                    Password = passwordHash,
+                    AssignedRoles = "appUser"
+                };
+
+                await _userService.CreateAsync(user);
+
+                // add the Settings object for this UserForRegistration
+                UserSettings userSettings = new ()
+                {
+                    UserId = user.Id,
+                    CountryName = userRegistrationModel.UserSettings.CountryName,
+                    CurrencyUnit = (CurrencyUnit)Convert.ToInt64(userRegistrationModel.UserSettings.CurrencyUnit),
+                    CapacityUnit = (CapacityUnit)Convert.ToInt64(userRegistrationModel.UserSettings.CapacityUnit),
+                    DistanceUnit = (DistanceUnit)Convert.ToInt64(userRegistrationModel.UserSettings.DistanceUnit),
+                    BaseDiscount = userRegistrationModel.UserSettings.BaseDiscount,
+                    MinimumSpendForDiscount = userRegistrationModel.UserSettings.MinimumSpendForDiscount,
+                    LastPricePerCapacityUnit = userRegistrationModel.UserSettings.LastPricePerCapacityUnit,
+                    AccruedDiscount = userRegistrationModel.UserSettings.AccruedDiscount,
+                    RoundTo = userRegistrationModel.UserSettings.RoundTo
+                };
+
+                await _userSettingsService.CreateForUserAsync(userSettings);
+
+                return base.CreatedAtAction(nameof(Get), new { id = user.Id }, $"{user.Email}");
+            }
+        }
+
+        return BadRequest("User to malformed or not supplied");
+    }
+
+    /// <summary>
+    /// Update an existing User
+    /// </summary>
+    /// <param name="userUpdateModel"></param>
+    /// <returns>Updated User object</returns>
+    /// <response code="200">Returns the updated User object</response>
+    /// <response code="401">Nothing is returned if the user is unauthorised</response>
+    /// <response code="404">Returns 404 if a User object couldn't be found for the User</response>
+    /// <response code="500">Nothing is returned if there is no User in the context (should be impossible)</response>
+    [HttpPut]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    [Authorize(Policy = "appUser")]
+    public async Task<IActionResult> Update([FromBody] UserUpdateModel userUpdateModel)
+    {
+        if (HttpContext.User == null)
+        {
+            return StatusCode(500, "No User in Context");
+        }
+
+        (bool retrieveAppUserOnly, string loggedInUserId) = AuthHelpers.ValidateAppUserRole(HttpContext);
+
+        if (userUpdateModel != null && !string.IsNullOrEmpty(userUpdateModel.Id) && userUpdateModel.UpdatedUser != null && userUpdateModel.UpdatedUserSettings != null)
+        {
+            User? user = await _userService.GetAsync(userUpdateModel.Id);
+            UserSettings? userSettings = await _userSettingsService.GetForUserAsync(userUpdateModel.Id, true);
+
+            if (user == null || userSettings == null)
+            {
+                return NotFound();
+            }
+            else if (retrieveAppUserOnly && !loggedInUserId.Equals(user.Id))
+            {
+                return Unauthorized("Your assigned role means that you cannot update other Users' data");
+            }
+            else
+            {
+                userUpdateModel.UpdatedUser.Id = user.Id;
+                userUpdateModel.UpdatedUser.Password = user.Password;
+                userUpdateModel.UpdatedUser.AssignedRoles = user.AssignedRoles;
+                userUpdateModel.UpdatedUser.RefreshToken = user.RefreshToken;
+                userUpdateModel.UpdatedUser.RefreshTokenExpiryTime = user.RefreshTokenExpiryTime;
+
+                await _userService.UpdateAsync(userUpdateModel.Id, userUpdateModel.UpdatedUser);
+                List<string> updatedUserFields = Model.User.ValidateFieldUpdates(user, userUpdateModel.UpdatedUser);
+
+                userUpdateModel.UpdatedUserSettings.Id = userSettings.Id;
+                userUpdateModel.UpdatedUserSettings.UserId = userSettings.UserId;
+
+                await _userSettingsService.UpdateForUserAsync(userUpdateModel.Id, userUpdateModel.UpdatedUserSettings);
+                List<string> updatedUserSettingsFields = UserSettings.ValidateFieldUpdates(userSettings, userUpdateModel.UpdatedUserSettings);
+
+                userUpdateModel.UpdatedUser.Password = string.Empty;
+                userUpdateModel.UpdatedUser.RefreshToken = string.Empty;
+                userUpdateModel.UpdatedUser.RefreshTokenExpiryTime = null;
+
+                return Ok(new
+                {
+                    User = userUpdateModel.UpdatedUser,
+                    UpdatedUserFields = updatedUserFields.ToArray(),
+                    UserSettings = userUpdateModel.UpdatedUserSettings,
+                    UpdatedUserSettingsFields = updatedUserSettingsFields
+                });
+            }
+        }
+        else
+        {
+            return BadRequest("User or UserSettings to update malformed or not provided");
+        }            
+    }
+
+    /// <summary>
+    /// Change the Password for the specified User by userId
+    /// </summary>
+    /// <param name="passwordChangeModel"></param>
+    /// <response code="200">Returns a 200 response without payload if the password was successfully updated</response>
+    /// <response code="400">Nothing is returned if required values not provided</response>
+    /// <response code="401">Nothing is returned if the Password for the User doesn't match what they've provided</response>
+    /// <response code="404">Nothing is returned if User is not found</response>
+    /// <response code="500">Nothing is returned if there is no User in the context (should be impossible)</response>
+    [HttpPost]
+    [Route("ChangePassword")]
+    [Authorize(Policy = "appUser")]
+    public async Task<IActionResult> ChangePassword([FromBody] PasswordChangeModel passwordChangeModel)
+    {
+        if (HttpContext.User == null)
+        {
+            return StatusCode(500, "No User in Context");
+        }
+
+        (bool retrieveAppUserOnly, string loggedInUserId) = AuthHelpers.ValidateAppUserRole(HttpContext);
+
+        if (string.IsNullOrEmpty(passwordChangeModel.UserId) || string.IsNullOrEmpty(passwordChangeModel.OldPassword) || string.IsNullOrEmpty(passwordChangeModel.NewPassword))
+        {
+            return BadRequest();
+        }
+
+        var user = await _userService.GetAsync(passwordChangeModel.UserId);
+
+        if (user is null)
+        {
+            return NotFound();
+        }
+        else
+        {
+            bool passwordVerified = BCrypt.Net.BCrypt.Verify(passwordChangeModel.OldPassword, user.Password);
+            if (!string.IsNullOrEmpty(user.Password) && !passwordVerified)
+            {
+                return Unauthorized();
+            }
+            else if (string.IsNullOrEmpty(user.Id))
+            {
+                return BadRequest();
+            }
+            else if (retrieveAppUserOnly && !loggedInUserId.Equals(user.Id))
+            {
+                return Unauthorized("Your assigned role means that you cannot update other Users' data");
+            }
+            else
+            {
+                string passwordHash = BCrypt.Net.BCrypt.HashPassword(passwordChangeModel.NewPassword);
+                user.Password = passwordHash;
+
+                await _userService.UpdateAsync(user.Id, user);
+
+                user.Password = string.Empty;
+                user.RefreshToken = string.Empty;
+                user.RefreshTokenExpiryTime = null;
+                string[] updatedFields = ["Password"];
+
+                return Ok(new
+                {
+                    User = user,
+                    UpdatedUserFields = updatedFields
+                });
+            }
+        }
+    }
+
+    /// <summary>
+    /// Delete an existing User, including their Settings
+    /// </summary>
+    /// <param name="deleteUserModel"></param>
+    /// <returns>No Content</returns>
+    /// <response code="204">Returns nothing upon User and Settings object deletion</response>
+    /// <response code="401">Nothing is returned if the user is unauthorised</response>
+    /// <response code="404">Returns 404 if a User Settings object couldn't be found for the User</response>
+    /// <response code="500">Nothing is returned if there is no User in the context (should be impossible)</response>
+    [HttpDelete]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    [Authorize(Policy = "appUser")]
+    public async Task<IActionResult> Delete([FromBody] DeleteUserModel deleteUserModel)
+    {
+        if (HttpContext.User == null)
+        {
+            return StatusCode(500, "No User in Context");
+        }
+
+        (bool retrieveAppUserOnly, string loggedInUserId) = AuthHelpers.ValidateAppUserRole(HttpContext);
+
+        if (deleteUserModel == null || deleteUserModel.Id == null)
+        {
+            return BadRequest("DeleteUserModel malformed or missing required data");
+        }
+
+        var user = await _userService.GetAsync(deleteUserModel.Id);
+
+        if (user is not null && user.Id is not null)
+        {
+            if (retrieveAppUserOnly && !loggedInUserId.Equals(user.Id))
+            {
+                return Unauthorized("Your assigned role means that you cannot delete other Users' data");
+            }
+
+            var userSettings = await _userSettingsService.GetForUserAsync(user.Id, true);
+
+            if (userSettings is null)
+            {
+                return NotFound();
+            }
+
+            // attempt to delete this User's Settings object
+            await _userSettingsService.RemoveForUserAsync(deleteUserModel.Id);
+
+            // attempt to delete this User
+            await _userService.RemoveAsync(deleteUserModel.Id);
+        }
+        else
+        {
+            return NotFound();
+        }            
+
+        return NoContent();
     }
 }
 ~~~
