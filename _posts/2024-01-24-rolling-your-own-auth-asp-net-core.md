@@ -1306,8 +1306,8 @@ Which is controlled by way of the `Authorize` Attribute; e.g. Only an `appUser` 
 ~~~cs
 // ./UserController.cs > Delete Action
 
-**[Authorize(Policy = "appUser")]**
-public async Task<IActionResult> Delete([FromBody] DeleteUserModel deleteUserModel) { // implementation elided }
+[Authorize(Policy = "appUser")]
+public async Task<IActionResult> Delete([FromBody] DeleteUserModel deleteUserModel) { /* implementation elided */ }
 ~~~
 
 Next up are more helper methods. These provide role validation functionality for the User in the HttpContext, Access token generation, retrieval of Principal from expired Access tokens and Refresh token generation.
