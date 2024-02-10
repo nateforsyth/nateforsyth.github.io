@@ -7,9 +7,9 @@ category: Dev
 tags: [job search, asp.net core, web api, server sent events, react, repository pattern]
 ---
 
-It's no secret that I lost my job before Xmas, with that comes the need to interview and complete take-home projects. This blog post is intended to provide an overview of the project, some trials and tribulations, and a bit of detail revolving around my implementation. This is not intended to be a tutorial, but feel free to answer any questions.
+It's no secret that I lost my job before Xmas, with that comes the need to interview and complete take-home projects. This blog post is intended to provide an overview of the project, some trials and tribulations, and a bit of detail revolving around my implementation. This is not intended to be a tutorial, merely a readme of sorts to be linked to the repo, but feel free to ask any questions below.
 
-# Server Sent Events in ASP.NET Core 8 and React
+## A simple Messaging App with ASP.NET Core back-end
 
 This was a project to support my job search.
 
@@ -17,32 +17,32 @@ I was given this project as a pre-technical interview task.
 
 I only had a handful of days to complete this task, which I have done. I struggled with Docker (which I hadn't been exposed to) due to WSL on Windows 11. Time constraints mean that this is far from perfect, but it sufficed for its intended purpose.
 
-# Project requirements
+## Project requirements
 
 The project requirements are pretty generic, I've seen very similar posted on Reddit before, and suspect it's a lift-and-shift from a repository somewhere.
 
-## Overview
+### Overview
 
 We invite you, a skilled software engineer, to apply for a position that demands proficiency in .NET Core for server-side development, web applications, and edge and IoT compute. Your task is to tackle a challenging problem: implement a messaging system facilitating message distribution between open web pages, without necessitating user actions (e.g., utilizing server-sent sockets). While the selection of tools is flexible, we strongly recommend leveraging .NET Core whenever feasible.
 
-## Challenges
+### Challenges
 
 1. Implement a robust .NET Core server-side solution.
 2. Craft web applications with a tool of your choice, emphasizing a messaging system that efficiently distributes messages among open web pages, eliminating the need for user actions (e.g., using server-sent sockets).
 3. Develop a web application enabling users to set their name, compose messages, and view previous messages, complete with date-time, user, and message details in a scrollable list.
 4. Ensure message data persistence in a second Docker container, orchestrating two containers—one for the web service/API and another for data persistence. Messages displayed upon user page reloads should be retrieved from the second Docker container. Persistence is required only as long as the containers are running and can be reset between restarts.
 
-## Requirements
+### Requirements
 
 - Demonstrate your development process by committing work to a cloud repository, showcasing regular commits throughout the development lifecycle.
 - Design the solution to be easily cloneable. The cloned repository should encompass all necessary files, allowing the solution to be run with a single command line.
 - If dependencies are necessary for running the solution, comprehensively document them in a README file to facilitate straightforward installation.
 
-## Evaluation
+### Evaluation
 
 The primary objective is not merely to identify the best solution but to gain insights into your working process. Feel free to pose questions throughout the process. If selected for a technical interview, you may be prompted to elucidate and demonstrate your solution. Expect discussions on the decisions made during the implementation, focusing on understanding your approach, problem-solving prowess, and the rationale behind your choices.
 
-# Implementation
+## Implementation
 
 I chose to implement multiple containers within Visual Studio, including a React app (which was external until it had been implemented). You'll note that this was in a separate folder off the root of the project until [Commit #ca3cfd1](https://github.com/nateforsyth/Project-SEE/commit/ca3cfd12def5a169b921e4e744822911f1877575) where I moved it into the solution (by way of scaffolding a new .NET React stand-alone project for the VS gubbins).
 
@@ -64,11 +64,11 @@ Upon connection, the Client app directly interrogates the Messaging*Scheduler* t
 
 **Important**: There is currently no access control on the *live* Messaging*Scheduler* or Messaging*Server* cloud services as it wasn't a part of the requirements. I'm aware that this is risky, however as there is no data persistence, it's trivial for me to bring down either service if necessary to restore it to a clean state. See `Known TODOs` below.
 
-## messagingapp
+### messagingapp
 
 The `messagingapp` is a standard React App with TypeScript and nothing else.
 
-### Dependencies
+#### Dependencies
 
 These are the dependencies for the React app at the time of writing this README.
 
@@ -113,11 +113,11 @@ These are the dependencies for the React app at the time of writing this README.
 }
 ```
 
-#### Justifying dependencies
+##### Justifying dependencies
 
 There are only a few dependencies that warrant further justification.
 
-##### Auth0
+###### Auth0
 
 While I don't permanently store any user data on the scheduler or server (see relevant sections), I did need a way to validate who a person is. I chose [Auth0](https://auth0.com/) for this because I didn't want to have to provide any functionality within this implementation to create user accounts and the like.
 
@@ -125,15 +125,15 @@ Auth0 is extremely simple to set up, and they provide an npm package to simplify
 
 The beauty of using this dependency is that it will make it (relatively) trivial to flesh out more advanced functionality in future if necessary.
 
-##### @microsoft/fetch-event-source
+###### @microsoft/fetch-event-source
 
 Microsoft provides [fetch-event-source](https://www.npmjs.com/package/@microsoft/fetch-event-source) as a standard `EventSource` consumption package for TypeScript.
 
-##### MUI
+###### MUI
 
 I chose [Material UI](https://mui.com/) due to my comfort in using it - it's simple, consistent and elegant.
 
-##### Axios
+###### Axios
 
 [Axios](https://www.npmjs.com/package/axios) is a recognised go-to for simplifying the consumption of APIs in node based projects. It provides an elegant and easy to use syntax.
 
@@ -143,17 +143,17 @@ I only use this for a couple of the Controller Action invocations within this ap
 - ./Messaging/MessagingScheduler/[MessageController](https://github.com/nateforsyth/Project-SEE/blob/main/Messaging/MessagingScheduler/MessageController.cs)/PostMessage
 
 
-##### linq-to-typescript
+###### linq-to-typescript
 
 As a .NET Developer, I love LINQ, so naturally I would go looking for something similar for TypeScript; queue [linq-to-typescript](https://www.npmjs.com/package/linq-to-typescript).
 
 While this does greatly simplify collection manipulation in TypeScript, it is quite heavy, but when under time pressure you use what you are comfortable with - it is what it is.
 
-##### zod
+###### zod
 
 I use [Zod](https://www.npmjs.com/package/zod) specifically for React form validation, mainly because it's suggested in many MUI tutorials. In a nutshell, it's used for schema and type validation and is quite easy to use.
 
-## MessagingScheduler
+### MessagingScheduler
 
 The Messaging*Scheduler* is configured as a service, specifically implementing `IHostedService` and `IAsyncDisposable`, and utilises the aforementioned `Respository` pattern by way of Dependency Injection.
 
@@ -165,15 +165,15 @@ Upon successful Post, the sent Message has its `New` property toggled from `true
 
 **SwaggerUi is intentionally disabled on the Release build of the Scheduler project**
 
-## MessagingServer
+### MessagingServer
 
 The Messaging*Server* is configured as a standard ASP.NET Core Web API with a single Controller, `MessagingController` which consumes a `MessageQueue` via Dependency Injection.
 
-### MessagingController
+#### MessagingController
 
 There are 3 important Action methods within this Controller:
 
-#### MessageQueue
+##### MessageQueue
 
 This is the subscription method that a Client app can invoke. It'll simply dequeue Message objects from the `MessageQueue`, it requires an `id: string` be provided as part of the Uri. This is done for logging purposes currently, but is also intended to enable simple extensibility of the functionality late on (if necessary).
 
@@ -181,7 +181,7 @@ This is the subscription method that a Client app can invoke. It'll simply deque
 - method: `GET`
 - headers: `{ "Accept": "text/event-stream" }`
 
-#### QueueMessage
+##### QueueMessage
 
 This is an Action method that is intended to only be accessible by the Messaging*Scheduler*.
 
@@ -189,7 +189,7 @@ Messages are Posted to this end-point and subsequently queued for broadcasting t
 
 **SwaggerUi is intentionally disabled on the Release build of the Server project**
 
-## Project structure
+### Project structure
 
 ```
 📦 Server Sent Events in ASP.NET Core 8 and React
@@ -252,7 +252,7 @@ Messages are Posted to this end-point and subsequently queued for broadcasting t
 ```
 ©generated by [Project Tree Generator](https://woochanleee.github.io/project-tree-generator)
 
-# Known TODOs
+## Known TODOs
 
 - Implement access control (using Auth0 and RBAC)
   - Messaging*Scheduler*
@@ -263,7 +263,7 @@ Messages are Posted to this end-point and subsequently queued for broadcasting t
   - MessagingServer.Controllers.MessagingController.QueueMessage
     - Intended to be accessible only by the Scheduler.
 
-# Deployment
+## Deployment
 
 In addition to implementing a multi-container `docker-compose` solution, I decided to host this project on [Google Cloud Run](https://console.cloud.google.com/run) to expost it to the outside world.
 
@@ -278,18 +278,18 @@ Google Cloud Run uses the following naming convention for Dockerhub repos; `dock
 
 Google Cloud Run will tell you which DNS records to add, I needed to add a single new CNAME record; `CNAME > [appname] > ghs.googlehosted.com`
 
-## Continuous Deployment
+### Continuous Deployment
 
 For the final project, I needed to implement Continuous Deployment from the Github repo to Dockerhub.
 
 Target:
 `Github repo > Messaging/messagingapp/Dockerfile`
 
-# Curly issues and solutions
+## Curly issues and solutions
 
 There were only a handful of notable issues encountered, and I'm struggling to remember them all, however the ones worth mentioning are below.
 
-## Thread safe element manipulation in .NET Collections
+### Thread safe element manipulation in .NET Collections
 
 This could do with a blog post all its own; I tripped up while using ConcurrentDictionary within the Messaging*Scheduler* project (and implemented my learnings in the Messaging*Server* project).
 
@@ -374,6 +374,6 @@ public bool AddMessage(Message message)
 
 Important takeaway is that I utilise retrieval of the `Environment.CurrentManagedThreadId` for further validation when attempting to add an item.
 
-# In closing
+## In closing
 
 This project proved challenging, not from the code perspective, but from the Linux/WSL and Docker side of things that I hadn't worked with much before. I've thoroughly enjoyed every minute, and hope to come back to the project in future to further flesh it out.
