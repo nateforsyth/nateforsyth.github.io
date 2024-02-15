@@ -25,7 +25,8 @@ description: A journey in code!
 navbar-links:
   Resume: "resume"
   About Me: "aboutme"
-  Learning and portfolio: "portfolio"
+  Learning and portfolio:
+    - Portfolio: "portfolio"
     - The floor is lava: "thefloorislava"
   Resources:
     - .NET Fiddle: "https://dotnetfiddle.net/"
