@@ -26,8 +26,7 @@ navbar-links:
   Resume: "resume"
   About Me: "aboutme"
   Learning and portfolio: "portfolio"
-    - Unity:
-      - The floor is lava: "thefloorislava"
+    - The floor is lava: "thefloorislava"
   Resources:
     - .NET Fiddle: "https://dotnetfiddle.net/"
     - TypeScript Fiddle: "https://jsfiddle.net/boilerplate/typescript"
