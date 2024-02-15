@@ -17,6 +17,7 @@ The learning pieces on this page are intended to show the progress I make so I c
 
 As part of the [Unity Essentials Pathway](https://learn.unity.com/pathway/unity-essentials), you must create a simple physics based scene where the goal is to ensure that the ball doesn't touch the *lava*.
 
-[![The floor is lava](/img/Portfolio_FloorIsLava/scene)](/thefloorislava)
+<!-- [![The floor is lava](/img/Portfolio_FloorIsLava/scene.png)](/thefloorislava) -->
+<a href="/thefloorislava"><img src="/img/Portfolio_FloorIsLava/scene.png" alt="The floor is lava" class="img-thumbnail"></a>
 
 ## In-flight
