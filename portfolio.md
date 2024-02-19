@@ -13,11 +13,18 @@ The learning pieces on this page are intended to show the progress I make so I c
 
 ### Unity
 
-#### 1) The floor is lava
+#### 1, Scenes
+
+#### 1b, The floor is lava
+
+As part of the [Unity Essentials Pathway](https://learn.unity.com/pathway/unity-essentials), the second tutorial has you creating a simple 2D scene reminiscent of *Pachinko*, which uses various standard 2D components to bounce a *ball* around obstacles, trying to reach the boxes at the bottom.
+
+<a href="/pachinko"><img src="/img/Portfolio_Pachinko/Pachinko.png" alt="Pachinko scene" class="img-thumbnail"></a>
+
+#### 1a, The floor is lava
 
 As part of the [Unity Essentials Pathway](https://learn.unity.com/pathway/unity-essentials), you must create a simple physics based scene where the goal is to ensure that the ball doesn't touch the *lava*.
 
-<!-- [![The floor is lava](/img/Portfolio_FloorIsLava/scene.png)](/thefloorislava) -->
-<a href="/thefloorislava"><img src="/img/Portfolio_FloorIsLava/scene.png" alt="The floor is lava" class="img-thumbnail"></a>
+<a href="/thefloorislava"><img src="/img/Portfolio_FloorIsLava/scene.png" alt="The floor is lava scene" class="img-thumbnail"></a>
 
 ## In-flight

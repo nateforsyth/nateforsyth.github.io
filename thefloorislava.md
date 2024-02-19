@@ -27,7 +27,7 @@ The final part of the tutorial consists of publishing the finished scene online,
 <div>
   <iframe id="TheFloorIsLava"
       title="The Floor Is Lava"
-      width="800"
+      width="960"
       height="600"
       src="/Builds/TheFloorIsLava/index.html">
   </iframe>
