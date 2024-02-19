@@ -32,6 +32,6 @@ The apples have the following components:
       title="Pachinko"
       width="960"
       height="600"
-      src="/Builds/Pachinko/index.html">
+      src="/Builds/PachinkoScene/index.html">
   </iframe>
 </div>
