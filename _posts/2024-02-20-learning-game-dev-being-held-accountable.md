@@ -97,148 +97,67 @@ I want to complete two games.
 
 This section is filled in by me, the person learning, to hold myself accountable to my own timeline. This will hopefully prove useful for holding myself accountable and finally getting to where I want to be with my game dev aspirations.
 
-| **Milestones to reach my goal**                | **Actions I will take to reach my goal**                                                                                                                                                                                                                                                                                                  | **Timeline for each action** | **Outcome so I know I’m on the right path to reach my goal**                                                                                                                                                                                                                                                                       |
-| ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **1 month**                                    |                                                                                                                                                                                                                                                                                                                                           |                              |                                                                                                                                                                                                                                                                                                                                    |
-| _Initial scope: First game MVP._               | *   _Document:_
-    
-    *   _High level requirements._
-        
-    *   _Basic game loop._
-        
-    *   _High level story elements (if applicable)._
-        
-    *   _Setting._
-        
-    *   _What the player will get out of it._
-        
-*   _Identify required skills._
-    
-*   _Scope effort._
-    
-*   _Cut down scope._ | _20th March 2024_            | *   Game will have been decided upon.
-    
-*   Game will have been scoped.
-    
-*   Scope will be in a blog post/dev log video (both?).                                                                                                                                                                                            |
-| _Initial scope: Second game MVP._              | *   _Document:_
-    
-    *   _High level requirements._
-        
-    *   _Basic game loop._
-        
-    *   _High level story elements (if applicable)._
-        
-    *   _Setting._
-        
-    *   _What the player will get out of it._
-        
-*   _Identify required skills._
-    
-*   _Scope effort._
-    
-*   _Cut down scope._ | _20th March 2024_            | *   Game will have been decided upon.
-    
-*   Game will have been scoped.
-    
-*   Scope will be in a blog post/dev log video (both?).                                                                                                                                                                                            |
-| _First game MVP will have been prototyped._    | *   _Implement scoped features and nothing more._
-    
-*   _Include placeholder assets._                                                                                                                                                                                                                                                  | _20th March 2024_            | *   Basic game loop will have been created.
-    
-*   Game will be able to be played in a web browser to validate whether the core functionality is "fun".                                                                                                                                                                          |
-| **2 months**                                   |                                                                                                                                                                                                                                                                                                                                           |                              |                                                                                                                                                                                                                                                                                                                                    |
-| **_Comfortable using Unity._**                 | *   _Complete Unity Essentials Pathway(s)._                                                                                                                                                                                                                                                                                               | _20th April 2024_            | *   _This isn't exhaustive; I don't know what else I'll learn yet._
-    
-*   I will be comfortable using all aspects of the Unity editor.
-    
-*   I will be able to use:
-    
-    *   Modelling tools.
-        
-    *   Tilemaps.
-        
-    *   Sprite editor.
-        
-    *   Animation tools.
-        
-    *   Audio tools. |
-| _Able to model basic objects in Blender._      | *   _Complete some basic Blender training (TBC)._                                                                                                                                                                                                                                                                                         | _20th April 2024_            | *   Can create basic 3D assets in Blender.
-    
-*   Can texture basic 3D assets in Blender.
-    
-*   Can export basic 3D assets from Blender and use in Unity.                                                                                                                                                                     |
-| _Complete the first game MVP._                 | *   _Confirm whether the prototype was fun._
-    
-    *   _If not, abandon._
-        
-*   _Develop MVP._                                                                                                                                                                                                                                  | _20th April 2024_            | *   First game has been validated.
-    
-*   First game MVP has been completed.
-    
-*   A web page exists for the first game.
-    
-*   I will have begun seeking feedback for the first game in public forums.                                                                                                                     |
-| _Second game MVP will have been prototyped._   | *   _Implement scoped features and nothing more._
-    
-*   _Include placeholder assets._                                                                                                                                                                                                                                                  | _20th April 2024_            | *   Basic game loop will have been created.
-    
-*   Game will be able to be played in a web browser to validate whether the core functionality is "fun".                                                                                                                                                                          |
-| **3 months**                                   |                                                                                                                                                                                                                                                                                                                                           |                              |                                                                                                                                                                                                                                                                                                                                    |
-| _Complete the second game MVP._                | *   _Confirm whether the prototype was fun._
-    
-    *   _If not, abandon._
-        
-*   _Develop MVP._                                                                                                                                                                                                                                  | _20th May 2024_              | *   Second game has been validated.
-    
-*   Second game MVP has been completed.
-    
-*   A web page exists for the second game.
-    
-*   I will have begun seeking feedback for the second game in public forums.                                                                                                                 |
-| _First game MVP will have gained feedback._    | *   _Active in public forums and with any play testers to get feedback._                                                                                                                                                                                                                                                                  | _20th May 2024_              | *   Feedback will have been collated and categorised:
-    
-    *   Now.
-        
-    *   Future.
-        
-    *   Wish-lists.                                                                                                                                                                                                      |
-| _Comfortable with Blender._                    | *   _Taken a deep-dive into using Blender._                                                                                                                                                                                                                                                                                               | _20th May 2024_              | *   Can create complex 3D assets in Blender.
-    
-*   Can texture complex 3D assets in Blender.
-    
-*   Can export complex 3D assets from Blender and use in Unity.                                                                                                                                                               |
-| **4+ months**                                  |                                                                                                                                                                                                                                                                                                                                           |                              |                                                                                                                                                                                                                                                                                                                                    |
-| _Exposed to composing music and mixing audio._ | *   _Learn how to use audio tools._
-    
-*   _Learn how to use music tools._                                                                                                                                                                                                                                                              | _20th April 2024_            | *   Can capture sample audio and turn into interesting sound effects.
-    
-*   Can compose basic musical scores.
-    
-*   Can use both in Unity.
-    
-*   Can implement spatial audio.                                                                                                                                             |
-| _Begin production of my chosen game._          | *   _Choose which of the first 2 MVPs to focus on._
-    
-*   _Estimate time required._
-    
-*   _Scope features for completion._
-    
-*   _Seek feedback._                                                                                                                                                                                | _20th April 2024_            | *   Chosen game will be in active development.
-    
-*   Critical path will have been documented.
-    
-*   These things will have been fleshed out and defined to be considered for project completion.
-    
-    *   Risks
-        
-    *   Actions
-        
-    *   Issues
-        
-    *   Decisions                              |
-
-> Table generated by [Table to Markdown](https://tabletomarkdown.com/generate-markdown-table/)
+| **Milestones to reach my goal** | **Actions I will take to reach my goal** | **Timeline for each action** | **Outcome so I know I’m on the right path to reach my goal** |
+| ---- | ---- | ---- | ---- |
+|  |  |  |  |
+| **1 month** | | | |
+| *Initial scope: First game MVP.* | Document: | 20th March 2024 | &#9745; Game will have been decided upon. |
+| | &#x2022; High level requirements. | | &#9744; Game will have been scoped. |
+| | &#x2022; Basic game loop. | | &#9744; Scope will be in a blog post/dev log video (both?). |
+| | &#x2022; Setting. | | |
+| | &#x2022; What the player will get out of it. | | |
+|  |  |  |  |
+| **2 months** | | | |
+| *Initial scope: First game MVP.* | Document: | 20th March 2024 | &#9745; Game will have been decided upon. |
+| | &#x2022; High level requirements. | | &#9744; Game will have been scoped. |
+| | &#x2022; Basic game loop. | | &#9744; Scope will be in a blog post/dev log video (both?). |
+| | &#x2022; Setting. | | |
+| | &#x2022; What the player will get out of it. | | |
+| *First game MVP will have been prototyped.* | Implement scoped features and nothing more. | 20th March 2024 | &#9744; Basic game loop will have been created. |
+|  | Include placeholder assets. |  | &#9744; Game will be able to be played in a web browser to validate whether the core functionality is "fun". |
+| **Comfortable using Unity.** | Complete Unity Essentials Pathway(s). | 20th April 2024 | *This isn't exhaustive; I don't know what else I'll learn yet.* |
+|  |  |  | &#9744; I will be comfortable using all aspects of the Unity editor. |
+|  |  |  | &#9744; I will be able to use: |
+|  |  |  | &#x2022; &#9744; Modelling tools. |
+|  |  |  | &#x2022; &#9744; Tilemaps. |
+|  |  |  | &#x2022; &#9744; Sprite editor. |
+|  |  |  | &#x2022; &#9744; Animation tools. |
+|  |  |  | &#x2022; &#9744; Audio tools. |
+| Able to model basic objects in Blender. | Complete some basic Blender training (TBC). | 20th April 2024 | &#9744; Can create basic 3D assets in Blender. |
+|  |  |  | &#9744; Can texture basic 3D assets in Blender. |
+|  |  |  | &#9744; Can export basic 3D assets from Blender and use in Unity. |
+| Complete the first game MVP. | Confirm whether the prototype was fun. | 20th April 2024 | &#9744; First game has been validated. |
+|  | &#x2022; If not, abandon. |  | &#9744; First game MVP has been completed. |
+|  | Develop MVP. |  | &#9744; A web page exists for the first game. |
+|  |  |  | &#9744; I will have begun seeking feedback for the first game in public forums. |
+| *Second game MVP will have been prototyped.* | Implement scoped features and nothing more. | 20th April 2024 | &#9744; Basic game loop will have been created. |
+|  | Include placeholder assets. |  | &#9744; Game will be able to be played in a web browser to validate whether the core functionality is "fun". |
+|  |  |  |  |
+| **3 months** |  |  |  |
+| Complete the second game MVP. | Confirm whether the prototype was fun. | 20th May 2024 | &#9744; Second game has been validated. |
+|  | &#x2022; If not, abandon. |  | &#9744; Second game MVP has been completed. |
+|  | Develop MVP. |  | &#9744; A web page exists for the second game. |
+|  |  |  | &#9744; I will have begun seeking feedback for the second game in public forums. |
+| First game MVP will have gained feedback. | Active in public forums and with any play testers to get feedback. | 20th May 2024 | &#9744; Feedback will have been collated and categorised: |
+|  |  |  | &#x2022; &#9744; Now. |
+|  |  |  | &#x2022; &#9744; Future. |
+|  |  |  | &#x2022; &#9744; Wish-lists. |
+| Comfortable with Blender. | Taken a deep-dive into using Blender. | 20th May 2024 | &#9744; Can create complex 3D assets in Blender. |
+|  |  |  | &#9744; Can texture complex 3D assets in Blender. |
+|  |  |  | &#9744; Can export complex 3D assets from Blender and use in Unity. |
+|  |  |  |  |
+| **4+ months** |  |  |  |
+| Exposed to composing music and mixing audio. | Learn how to use audio tools. | 20th April 2024 | &#9744; Can capture sample audio and turn into interesting sound effects. |
+|  | Learn how to use music tools. |  | &#9744; Can compose basic musical scores. |
+|  |  |  | &#9744; Can use both in Unity. |
+|  |  |  | &#9744; Can implement spatial audio. |
+| Begin production of my chosen game. | Choose which of the first 2 MVPs to focus on. | 20th April 2024 | &#9744; Chosen game will be in active development. |
+|  | Estimate time required. |  | &#9744; Critical path will have been documented. |
+|  | Scope features for completion. |  | &#9744; These things will have been fleshed out and defined to be considered for project completion (RAID). |
+|  | Seek feedback. |  | &#x2022; &#9744; Risks. |
+|  |  |  | &#x2022; &#9744; Actions. |
+|  |  |  | &#x2022; &#9744; Issues. |
+|  |  |  | &#x2022; &#9744; Decisions. |
 
 ## In closing
 
