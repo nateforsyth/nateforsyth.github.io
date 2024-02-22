@@ -27,6 +27,7 @@ navbar-links:
   About Me: "aboutme"
   Learning and portfolio:
     - Portfolio: "portfolio"
+    - 2a, Feed the animals: "feedtheanimals"
     - 1b, Pachinko: "pachinko"
     - 1a, The floor is lava: "thefloorislava"
   Resources:

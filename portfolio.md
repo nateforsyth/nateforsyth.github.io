@@ -11,17 +11,27 @@ This page organises the projects I am working on, consider all of them WIP unles
 
 The learning pieces on this page are intended to show the progress I make so I can look back later on to see how far I've come.
 
+Many of these start off as very basic, however I'm following a series of Learning Paths for Unity intended to ensure that motivation isn't lost.
+
 ### Unity
+
+#### 2, Games
+
+##### 2a, Feed the animals
+
+As part of the [Unity Junior Programmer Pathway](https://learn.unity.com/pathway/junior-programmer), the second tutorial has you creating your first feature rich game. specifically a simple game where animals rush towards you and you need to *feed* them by firing a food item at them.
+
+<a href="/pachinko"><img src="/img/Portfolio_FeedTheAnimals/FeedTheAnimalsScene.png" alt="Pachinko scene" class="img-thumbnail"></a>
 
 #### 1, Scenes
 
-#### 1b, The floor is lava
+##### 1b, The floor is lava
 
 As part of the [Unity Essentials Pathway](https://learn.unity.com/pathway/unity-essentials), the second tutorial has you creating a simple 2D scene reminiscent of *Pachinko*, which uses various standard 2D components to bounce a *ball* around obstacles, trying to reach the boxes at the bottom.
 
 <a href="/pachinko"><img src="/img/Portfolio_Pachinko/Pachinko.png" alt="Pachinko scene" class="img-thumbnail"></a>
 
-#### 1a, The floor is lava
+##### 1a, The floor is lava
 
 As part of the [Unity Essentials Pathway](https://learn.unity.com/pathway/unity-essentials), you must create a simple physics based scene where the goal is to ensure that the ball doesn't touch the *lava*.
 
