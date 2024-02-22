@@ -21,7 +21,7 @@ Many of these start off as very basic, however I'm following a series of Learnin
 
 As part of the [Unity Junior Programmer Pathway](https://learn.unity.com/pathway/junior-programmer), the second tutorial has you creating your first feature rich game. specifically a simple game where animals rush towards you and you need to *feed* them by firing a food item at them.
 
-<a href="/pachinko"><img src="/img/Portfolio_FeedTheAnimals/FeedTheAnimalsScene.png" alt="Pachinko scene" class="img-thumbnail"></a>
+<a href="/feedtheanimals"><img src="/img/Portfolio_FeedTheAnimals/FeedTheAnimalsScene.png" alt="Feed the animals scene" class="img-thumbnail"></a>
 
 #### 1, Scenes
 
