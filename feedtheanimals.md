@@ -4,11 +4,37 @@ title: Feed the animals
 subtitle: Learning
 ---
 
-As part of the [Unity Junior Programmer Pathway](https://learn.unity.com/pathway/junior-programmer), the second tutorial has you creating your first feature rich game. specifically a simple game where animals rush towards you and you need to *feed* them by firing a food item at them.
+As part of the [Unity Junior Programmer Pathway](https://learn.unity.com/pathway/junior-programmer), the second tutorial has you creating your first feature rich game. specifically a simple game where animals rush towards you and you need to *feed* them by firing a food item at them. The animal and the food item will despawn when they catch the food (it hits them).
 
 This tutorial is the first introduction to [Prefabs](https://docs.unity3d.com/Manual/Prefabs.html) which are preconfigured [GameObject](https://docs.unity3d.com/ScriptReference/GameObject.html)s that can be instantiated with settings and components as originally designed.
 
-You can try this game out at the bottom of this page. To reset the game, you'll need to refresh your browser (I've not bothered to implement restart functionality as it's not part of the scope of the tutorial).
+You can try this game out just below (scroll down). To reset the game, you'll need to refresh your browser (I've not bothered to implement restart functionality as it's not part of the scope of the tutorial).
+
+## Controls
+
+The control scheme is pretty simple, but only supports PC.
+
+- A (or left arrow)
+  - Move `Left`
+- D (or right arrow)
+  - Move `Right`
+- Spacebar
+  - Fire a cookie at the animals
+
+## Feed the animals
+
+<div>
+  <iframe id="FeedTheAnimals"
+      title="Feed the animals"
+      width="960"
+      height="600"
+      src="/Builds/FeedTheAnimals/index.html">
+  </iframe>
+</div>
+
+# How it was built
+
+While this was part of a tutorial, I find it useful to treat these like a blog post of sorts, this ensures that I can articulate how everything works and means that it is sinking in.
 
 ## Prefabs
 
@@ -236,25 +262,3 @@ public class SpawnManager : MonoBehaviour
     }
 }
 ```
-
-
-
-
-
-![Pachinko ball of ice components](/img/Portfolio_Pachinko/Ball of ice components.png)
-
-The apples have the following components:
-
-- Sprite Renderer (default)
-- Capsule Collider 2D
-
-![Apple components](/img/Portfolio_Pachinko/Apple components.png)
-
-<div>
-  <iframe id="Pachinko"
-      title="Pachinko"
-      width="960"
-      height="600"
-      src="/Builds/FeedTheAnimals/index.html">
-  </iframe>
-</div>
