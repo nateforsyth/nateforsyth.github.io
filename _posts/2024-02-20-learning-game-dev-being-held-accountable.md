@@ -108,7 +108,7 @@ This section is filled in by me, the person learning, to hold myself accountable
 | | &#x2022; What the player will get out of it. | | |
 |  |  |  |  |
 | **2 months** | | | |
-| *Initial scope: First game MVP.* | Document: | 20th March 2024 | &#9745; Game will have been decided upon. |
+| *Initial scope: Second game MVP.* | Document: | 20th March 2024 | &#9745; Game will have been decided upon. |
 | | &#x2022; High level requirements. | | &#9744; Game will have been scoped. |
 | | &#x2022; Basic game loop. | | &#9744; Scope will be in a blog post/dev log video (both?). |
 | | &#x2022; Setting. | | |
