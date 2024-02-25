@@ -10,6 +10,8 @@ This is the first introduction to using a script to generate a [Primitive Object
 
 You can view this scene just below (scroll down). There's no UI functionality, however you can reload this page to see a different cube each time (more detail below).
 
+**IMPORTANT**: You *may* need to clear your cache to see a different set of properties being reflected in the rendered cube; open Dev Tools and right clicking the refreshing button, click *Empty cache and hard reload*.
+
 ## Mod The Cube Challenge
 
 <div>
