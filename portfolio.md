@@ -25,6 +25,14 @@ As part of the [Unity Junior Programmer Pathway](https://learn.unity.com/pathway
 
 #### 1, Scenes
 
+##### 1c, Mod the cube
+
+As part of the [Unity Junior Programmer Pathway](https://learn.unity.com/pathway/junior-programmer), the final quiz for the `Create with Code 1` module tutorial has you modifying an existing scene.
+
+This is the first introduction to using a script to generate a [Primitive Object](https://docs.unity3d.com/510/Documentation/Manual/PrimitiveObjects.html).
+
+<a href="/modthecube"><img src="/img/Portfolio_ModTheCube/Screenshot.png" alt="Cube modified by code scene" class="img-thumbnail"></a>
+
 ##### 1b, The floor is lava
 
 As part of the [Unity Essentials Pathway](https://learn.unity.com/pathway/unity-essentials), the second tutorial has you creating a simple 2D scene reminiscent of *Pachinko*, which uses various standard 2D components to bounce a *ball* around obstacles, trying to reach the boxes at the bottom.
