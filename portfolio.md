@@ -27,7 +27,7 @@ As part of the [Unity Junior Programmer Pathway](https://learn.unity.com/pathway
 
 ##### 1c, Mod the cube
 
-As part of the [Unity Junior Programmer Pathway](https://learn.unity.com/pathway/junior-programmer), the final quiz for the `Create with Code 1` module tutorial has you modifying an existing scene.
+As part of the [Unity Junior Programmer Pathway](https://learn.unity.com/pathway/junior-programmer), the final quiz for the `Create with Code 1` module tutorial in `Unit 2` has you modifying an existing scene.
 
 This is the first introduction to using a script to generate a [Primitive Object](https://docs.unity3d.com/510/Documentation/Manual/PrimitiveObjects.html).
 
