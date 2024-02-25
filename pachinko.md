@@ -30,8 +30,8 @@ The apples have the following components:
 <div>
   <iframe id="Pachinko"
       title="Pachinko"
-      width="960"
-      height="600"
+      width="100%"
+      height="700"
       src="/Builds/PachinkoScene/index.html">
   </iframe>
 </div>

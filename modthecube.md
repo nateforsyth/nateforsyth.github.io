@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Feed the animals
+title: Modifying Primitive objects with code
 subtitle: Learning
 ---
 
@@ -17,8 +17,8 @@ You can view this scene just below (scroll down). There's no UI functionality, h
 <div>
   <iframe id="ModTheCubeChallenge"
       title="Mod The Cube Challenge"
-      width="960"
-      height="600"
+      width="100%"
+      height="700"
       src="/Builds/ModTheCubeChallenge/index.html">
   </iframe>
 </div>

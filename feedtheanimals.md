@@ -26,8 +26,8 @@ The control scheme is pretty simple, but only supports PC.
 <div>
   <iframe id="FeedTheAnimals"
       title="Feed the animals"
-      width="960"
-      height="600"
+      width="100%"
+      height="700"
       src="/Builds/FeedTheAnimals/index.html">
   </iframe>
 </div>
